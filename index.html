@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="FERNER Academia de Conducción. Conoce nuestros cursos, instructores y programas de formación vial.">
+
+    <title>Inicio | FERNER Academia de Conducción</title>
+
+    <!-- estilos generales -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- iconos -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- selector de modo oscuro -->
+
+    <input type="checkbox"
+           id="modo-oscuro"
+           class="tema-checkbox">
+
+    <label for="modo-oscuro" class="tema-boton">
+        <span class="tema-oscuro">🌙 Oscuro</span>
+        <span class="tema-claro">☀️ Claro</span>
+    </label>
+
+
+    <!-- encabezado principal -->
+
+    <header class="encabezado">
+
+        <div class="barra-informativa">
+            <p>Formación vial para futuros conductores</p>
+        </div>
+
+        <div class="encabezado-principal">
+
+            <!-- logotipo -->
+
+            <a href="index.html" class="logo">
+                <img src="assets/icons/ferner-logo.png"
+                     alt="FERNER Academia de Conducción">
+            </a>
+
+            <!-- navegación de escritorio -->
+
+            <nav class="nav-escritorio"
+                 aria-label="Navegación principal">
+
+                <ul class="menu">
+                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="sobre.html">Nosotros</a></li>
+                    <li><a href="instructores.html">Instructores</a></li>
+                    <li><a href="vehiculos.html">Vehículos</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+
+            </nav>
+
+
+            <!-- navegación móvil -->
+
+            <details class="nav-movil">
+
+                <summary aria-label="Abrir o cerrar el menú">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16"/>
+                    </svg>
+                </summary>
+
+                <nav aria-label="Navegación móvil">
+
+                    <ul class="nav-movil-lista">
+                        <li><a href="index.html" aria-current="page">Inicio</a></li>
+                        <li><a href="sobre.html">Nosotros</a></li>
+                        <li><a href="instructores.html">Instructores</a></li>
+                        <li><a href="vehiculos.html">Vehículos</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                </nav>
+
+            </details>
+
+
+            <!-- botón de agendamiento -->
+
+            <a href="agenda.html" class="boton-agendar">
+                Agenda tu clase
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- contenido principal -->
+
+    <main id="contenido">
+
+        <!-- presentación principal -->
+
+        <section class="hero" aria-labelledby="titulo-hero">
+
+            <div class="hero-contenedor">
+
+                <!-- contenido de bienvenida -->
+
+                <div class="hero-contenido">
+
+                    <p class="hero-etiqueta">
+                        Formación vial integral
+                    </p>
+
+                    <h1 id="titulo-hero">
+                        Aprende a conducir con
+                        <span class="texto-resaltado">seguridad,</span>
+                        confianza y responsabilidad.
+                    </h1>
+
+                    <p>
+                        En FERNER queremos acompañarte en tu
+                        proceso de aprendizaje para que desarrolles
+                        las habilidades necesarias al volante.
+                    </p>
+
+                    <div class="hero-botones">
+
+                        <a href="cursos.html" class="boton-primario">
+                            Conoce nuestros cursos
+                        </a>
+
+                        <a href="sobre.html" class="boton-secundario">
+                            Sobre FERNER
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- carrusel de fotografías -->
+
+                <div class="hero-carrusel">
+
+                    <img src="assets/img/flota-sedan.png"
+                         alt="Automóvil de formación FERNER">
+
+                    <img src="assets/img/curso-motocicleta.png"
+                         alt="Motocicleta de formación FERNER">
+
+                    <img src="assets/img/maquinaria-motoniveladora.png"
+                         alt="Maquinaria de formación FERNER">
+
+                    <img src="assets/img/hero-inicial-ferner.png"
+                         alt="Vehículo de la academia FERNER">
+
+                    <img src="assets/img/maquinaria-rodillo.png"
+                         alt="Fotografía de vehículo FERNER">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- beneficios de ferner -->
+
+        <section class="beneficios"
+                 aria-label="Beneficios de FERNER">
+
+            <div class="beneficios-contenedor">
+
+                <!-- instructores preparados -->
+
+                <div class="beneficio">
+
+                    <svg class="icono-beneficio"
+                         viewBox="0 0 24 24"
+                         aria-hidden="true">
+
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/>
+                        <path d="m9 12 2 2 4-4"/>
+
+                    </svg>
+
+                    <h2>Instructores preparados</h2>
+
+                </div>
+
+
+                <!-- vehículos modernos -->
+
+                <div class="beneficio">
+
+                    <svg class="icono-beneficio"
+                         viewBox="0 0 24 24"
+                         aria-hidden="true">
+
+                        <path d="M5 17H3v-5l2-6h14l2 6v5h-2"/>
+                        <path d="M5 17h14M5 17v2h3v-2m8 0v2h3v-2"/>
+                        <circle cx="7.5" cy="13.5" r="1"/>
+                        <circle cx="16.5" cy="13.5" r="1"/>
+                        <path d="M3 11h18"/>
+
+                    </svg>
+
+                    <h2>Vehículos modernos</h2>
+
+                </div>
+
+
+                <!-- formación teórica y práctica -->
+
+                <div class="beneficio">
+
+                    <svg class="icono-beneficio"
+                         viewBox="0 0 24 24"
+                         aria-hidden="true">
+
+                        <path d="m2 10 10-5 10 5-10 5-10-5Z"/>
+                        <path d="M6 12v6c4 3 8 3 12 0v-6"/>
+                        <path d="M22 10v7"/>
+
+                    </svg>
+
+                    <h2>Formación teórica y práctica</h2>
+
+                </div>
+
+
+                <!-- acompañamiento personalizado -->
+
+                <div class="beneficio">
+
+                    <svg class="icono-beneficio"
+                         viewBox="0 0 24 24"
+                         aria-hidden="true">
+
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/>
+                        <path d="M16 3a4 4 0 0 1 0 8"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+
+                    </svg>
+
+                    <h2>Acompañamiento personalizado</h2>
+
+                </div>
+
+
+                <!-- horarios flexibles -->
+
+                <div class="beneficio">
+
+                    <svg class="icono-beneficio"
+                         viewBox="0 0 24 24"
+                         aria-hidden="true">
+
+                        <circle cx="12" cy="12" r="9"/>
+                        <path d="M12 7v5l3 2"/>
+
+                    </svg>
+
+                    <h2>Horarios flexibles</h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- programas de formación -->
+
+        <section class="programas"
+                 aria-labelledby="titulo-programas">
+
+            <div class="programas-contenedor">
+
+                <!-- encabezado de programas -->
+
+                <div class="programas-encabezado">
+
+                    <div>
+
+                        <h2 id="titulo-programas">
+                            Nuestros programas de formación
+                        </h2>
+
+                        <p>
+                            Elige el curso que se adapta
+                            a tus necesidades.
+                        </p>
+
+                    </div>
+
+                    <a href="cursos.html" class="enlace-programas">
+                        Ver todos los cursos
+                        <i class="bi bi-arrow-right"
+                           aria-hidden="true"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- galería de programas -->
+
+                <div class="programas-grid">
+
+                    <!-- curso de automóvil -->
+
+                    <a href="cursos.html#programas"
+                       class="tarjeta-curso tarjeta-destacada">
+
+                        <div class="tarjeta-curso-imagen">
+
+                            <img src="assets/img/conducir_carro.png"
+                                 alt="Automóvil de formación en una pista de conducción"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="tarjeta-curso-contenido">
+
+                            <span class="tarjeta-curso-etiqueta">
+                                FORMACIÓN VIAL
+                            </span>
+
+                            <h3>Curso de Automóvil</h3>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- curso de motocicleta -->
+
+                    <a href="cursos.html#programas"
+                       class="tarjeta-curso tarjeta-horizontal">
+
+                        <div class="tarjeta-curso-imagen">
+
+                            <img src="assets/img/conducir_moto.png"
+                                 alt="Motocicleta de formación en una pista de práctica"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="tarjeta-curso-contenido">
+
+                            <span class="tarjeta-curso-etiqueta">
+                                CONDUCCIÓN DE MOTOCICLETAS
+                            </span>
+
+                            <h3>Curso de Motocicleta</h3>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- capacitación en maquinaria -->
+
+                    <a href="cursos.html#maquinaria"
+                       class="tarjeta-curso tarjeta-maquinaria">
+
+                        <div class="tarjeta-curso-imagen">
+
+                            <img src="assets/img/maquinaria-tractor.png"
+                                 alt="Maquinaria pesada y agrícola de formación FERNER"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="tarjeta-curso-contenido">
+
+                            <span class="tarjeta-curso-etiqueta">
+                                MAQUINARIA PESADA
+                            </span>
+
+                            <h3>Capacitación de maquinaria</h3>
+
+                        </div>
+
+                    </a>
+
+
+                    <!-- curso de refuerzo -->
+
+                    <a href="cursos.html#programas"
+                       class="tarjeta-curso tarjeta-refuerzo">
+
+                        <div class="tarjeta-curso-imagen">
+
+                            <img src="assets/img/conos_refuerzo.png"
+                                 alt="Circuito de entrenamiento con conos de tránsito"
+                                 loading="lazy">
+
+                        </div>
+
+                        <div class="tarjeta-curso-contenido">
+
+                            <span class="tarjeta-curso-etiqueta">
+                                PERFECCIONAMIENTO
+                            </span>
+
+                            <h3>Curso de Refuerzo</h3>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- razones para elegir ferner -->
+
+        <section class="razones"
+                 aria-labelledby="titulo-razones">
+
+            <div class="razones-contenedor">
+
+                <!-- fotografía -->
+
+                <div class="razones-imagen">
+
+                    <img src="assets/img/instructor-home.png"
+                         alt="Instructor de FERNER durante una actividad de formación"
+                         loading="lazy">
+
+                </div>
+
+
+                <!-- información -->
+
+                <div class="razones-informacion">
+
+                    <p class="razones-etiqueta">
+                        ¿Por qué elegir FERNER?
+                    </p>
+
+                    <h2 id="titulo-razones">
+                        Formación confiable y de calidad
+                    </h2>
+
+                    <p>
+                        Más que una academia, somos tu aliado
+                        en el camino hacia una conducción segura,
+                        responsable y autónoma.
+                    </p>
+
+                </div>
+
+
+                <!-- ventajas -->
+
+                <ul class="razones-lista">
+
+                    <li>
+                        <i class="bi bi-mortarboard"
+                           aria-hidden="true"></i>
+                        Métodos de enseñanza actualizados
+                    </li>
+
+                    <li>
+                        <i class="bi bi-shield-check"
+                           aria-hidden="true"></i>
+                        Enfoque en seguridad vial
+                    </li>
+
+                    <li>
+                        <i class="bi bi-people"
+                           aria-hidden="true"></i>
+                        Ambiente de aprendizaje respetuoso
+                    </li>
+
+                    <li>
+                        <i class="bi bi-person-vcard"
+                           aria-hidden="true"></i>
+                        Orientación en trámites de licencia
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- pie de página -->
+
+    <footer class="footer-ferner">
+
+        <!-- invitación a agendar -->
+
+        <section class="footer-cta"
+                 aria-labelledby="titulo-footer-cta">
+
+            <div class="footer-cta-contenedor">
+
+                <div class="footer-cta-icono">
+
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true">
+
+                        <rect x="3" y="5"
+                              width="18" height="16" rx="2"/>
+                        <path d="M7 3v4M17 3v4M3 10h18"/>
+                        <path d="M8 14h3M8 17h3M14 14h2M14 17h2"/>
+
+                    </svg>
+
+                </div>
+
+                <div class="footer-cta-texto">
+
+                    <h2 id="titulo-footer-cta">
+                        Tu primera clase está más cerca
+                        de lo que piensas.
+                    </h2>
+
+                    <p>
+                        Agenda hoy y comienza tu proceso
+                        de formación.
+                    </p>
+
+                </div>
+
+                <div class="footer-cta-divisor"></div>
+
+                <a href="agenda.html" class="footer-cta-boton">
+                    Agendar ahora
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- contenido principal del footer -->
+
+        <div class="footer-principal">
+
+            <div class="footer-principal-contenedor">
+
+                <!-- identidad de ferner -->
+
+                <div class="footer-col footer-brand">
+
+                    <a href="index.html"
+                       class="footer-logo-enlace">
+
+                        <img src="assets/icons/ferner-logo.svg"
+                             alt="FERNER Academia de Conducción">
+
+                    </a>
+
+                    <p class="footer-frase">
+                        Formamos conductores,
+                        construimos confianza.
+                    </p>
+
+                    <!-- especialidades de la academia -->
+
+                    <div class="footer-especialidades"
+                         aria-label="Nuestras especialidades">
+
+                        <span title="Conducción de automóviles">
+                            <i class="bi bi-car-front-fill"
+                               aria-hidden="true"></i>
+                        </span>
+
+                        <span title="Conducción de motocicletas">
+                            <i class="bi bi-bicycle"
+                               aria-hidden="true"></i>
+                        </span>
+
+                        <span title="Maquinaria y vehículos pesados">
+                            <i class="bi bi-truck-front-fill"
+                               aria-hidden="true"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- enlaces principales -->
+
+                <div class="footer-col">
+
+                    <h3>Enlaces</h3>
+
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre.html">Nosotros</a></li>
+                        <li><a href="instructores.html">Instructores</a></li>
+                        <li><a href="vehiculos.html">Vehículos</a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- programas de formación -->
+
+                <div class="footer-col">
+
+                    <h3>Programas</h3>
+
+                    <ul>
+                        <li>
+                            <a href="cursos.html#programas">
+                                Automóvil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cursos.html#programas">
+                                Motocicleta
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cursos.html#maquinaria">
+                                Maquinaria
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cursos.html#programas">
+                                Refuerzo
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- información de contacto -->
+
+                <div class="footer-col">
+
+                    <h3>Contacto</h3>
+
+                    <ul class="footer-contacto">
+
+                        <li>
+                            <i class="bi bi-telephone"
+                               aria-hidden="true"></i>
+                            <span>+57 300 123 4567</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-envelope"
+                               aria-hidden="true"></i>
+                            <span>info@ferner.edu.co</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-geo-alt"
+                               aria-hidden="true"></i>
+                            <span>Bogotá, Colombia</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- redes sociales de referencia -->
+
+                <div class="footer-col">
+
+                    <h3>Síguenos</h3>
+
+                    <div class="footer-redes"
+                         role="group"
+                         aria-label="Redes sociales de referencia">
+
+                        <img src="assets/icons/facebook.svg"
+                             alt="Facebook">
+
+                        <img src="assets/icons/instagram.svg"
+                             alt="Instagram">
+
+                        <img src="assets/icons/youtube.svg"
+                             alt="YouTube">
+
+                        <img src="assets/icons/tiktok.svg"
+                             alt="TikTok">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- franja inferior -->
+
+        <div class="footer-inferior">
+
+            <div class="footer-inferior-contenedor">
+
+                <!-- derechos de autor -->
+
+                <p>
+                    &copy; 2026 FERNER Academia de Conducción.
+                    Todos los derechos reservados.
+                </p>
+
+                <!-- enlaces legales -->
+
+                <div class="footer-legales">
+
+                    <a href="privacidad.html">
+                        Política de privacidad
+                    </a>
+
+                    <a href="terminos.html">
+                        Términos de uso
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

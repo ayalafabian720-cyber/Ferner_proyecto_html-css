@@ -1,0 +1,1036 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Conoce la flota de FERNER Academia de Conducción. Explora automóviles, motocicletas, vehículos especiales y maquinaria pesada y agrícola.">
+
+    <title>Vehículos | FERNER Academia de Conducción</title>
+
+    <!-- estilos generales -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- iconos -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+    <!-- estilos de vehículos -->
+    <link rel="stylesheet" href="css/vehiculos.css">
+</head>
+
+<body>
+
+    <!-- selector de modo oscuro -->
+
+    <input type="checkbox"
+           id="modo-oscuro"
+           class="tema-checkbox">
+
+    <label for="modo-oscuro" class="tema-boton">
+        <span class="tema-oscuro">🌙 Oscuro</span>
+        <span class="tema-claro">☀️ Claro</span>
+    </label>
+
+
+    <!-- encabezado principal -->
+
+    <header class="encabezado">
+
+        <div class="barra-informativa">
+            <p>Formación vial para futuros conductores</p>
+        </div>
+
+        <div class="encabezado-principal">
+
+            <!-- logotipo -->
+
+            <a href="index.html" class="logo">
+                <img src="assets/icons/ferner-logo.png"
+                     alt="FERNER Academia de Conducción">
+            </a>
+
+            <!-- navegación de escritorio -->
+
+            <nav class="nav-escritorio"
+                 aria-label="Navegación principal">
+
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre.html">Nosotros</a></li>
+                    <li><a href="instructores.html">Instructores</a></li>
+                    <li>
+                        <a href="vehiculos.html"
+                           aria-current="page">Vehículos</a>
+                    </li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+
+            </nav>
+
+            <!-- navegación móvil -->
+
+            <details class="nav-movil">
+
+                <summary aria-label="Abrir o cerrar el menú">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16"/>
+                    </svg>
+                </summary>
+
+                <nav aria-label="Navegación móvil">
+
+                    <ul class="nav-movil-lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre.html">Nosotros</a></li>
+                        <li><a href="instructores.html">Instructores</a></li>
+                        <li>
+                            <a href="vehiculos.html"
+                               aria-current="page">Vehículos</a>
+                        </li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                </nav>
+
+            </details>
+
+            <!-- botón de agendamiento -->
+
+            <a href="agenda.html" class="boton-agendar">
+                Agenda tu clase
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- contenido principal -->
+
+    <main id="contenido">
+
+        <!-- presentación de vehículos -->
+
+        <section class="vehiculos-hero"
+                 aria-labelledby="titulo-vehiculos">
+
+            <div class="vehiculos-hero-contenedor">
+
+                <div class="vehiculos-hero-texto">
+
+                    <p class="vehiculos-etiqueta">
+                        NUESTRA FLOTA
+                    </p>
+
+                    <h1 id="titulo-vehiculos">
+                        Conoce nuestra
+                        <span>flota de vehículos</span>
+                    </h1>
+
+                    <p class="vehiculos-hero-descripcion">
+                        Una flota pensada para acompañarte
+                        en cada etapa de tu formación,
+                        con vehículos adaptados a diferentes
+                        prácticas de conducción.
+                    </p>
+
+                    <div class="vehiculos-hero-beneficios">
+
+                        <div class="vehiculo-beneficio">
+                            <span aria-hidden="true">✓</span>
+                            <p>Seguridad vial</p>
+                        </div>
+
+                        <div class="vehiculo-beneficio">
+                            <span aria-hidden="true">✓</span>
+                            <p>Mantenimiento</p>
+                        </div>
+
+                        <div class="vehiculo-beneficio">
+                            <span aria-hidden="true">✓</span>
+                            <p>Variedad de prácticas</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- fotografía panorámica -->
+
+                <div class="vehiculos-hero-imagen">
+                    <img src="assets/img/vehiculos-hero.png"
+                         alt="Representación ilustrativa de la flota vehicular de FERNER">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- flota de vehículos de conducción -->
+
+        <section class="flota"
+                 aria-labelledby="titulo-flota">
+
+            <div class="flota-contenedor">
+
+                <!-- presentación del catálogo -->
+
+                <div class="flota-encabezado">
+
+                    <div>
+                        <p class="flota-etiqueta">
+                            CONOCE NUESTRA FLOTA
+                        </p>
+
+                        <h2 id="titulo-flota">
+                            Vehículos para cada etapa
+                            de tu aprendizaje
+                        </h2>
+                    </div>
+
+                    <p class="flota-descripcion">
+                        Explora nuestra propuesta de automóviles,
+                        motocicletas y vehículos especiales
+                        para diferentes experiencias de conducción.
+                    </p>
+
+                </div>
+
+
+                <!-- filtros por categoría -->
+
+                <div class="flota-filtros"
+                     role="radiogroup"
+                     aria-label="Filtrar vehículos por categoría">
+
+                    <input type="radio"
+                           id="filtro-todos"
+                           name="filtro-flota"
+                           checked>
+
+                    <label for="filtro-todos" class="flota-filtro">
+                        Todos
+                    </label>
+
+                    <input type="radio"
+                           id="filtro-autos"
+                           name="filtro-flota">
+
+                    <label for="filtro-autos" class="flota-filtro">
+                        Automóviles
+                    </label>
+
+                    <input type="radio"
+                           id="filtro-motos"
+                           name="filtro-flota">
+
+                    <label for="filtro-motos" class="flota-filtro">
+                        Motocicletas
+                    </label>
+
+                    <input type="radio"
+                           id="filtro-especiales"
+                           name="filtro-flota">
+
+                    <label for="filtro-especiales" class="flota-filtro">
+                        Especiales
+                    </label>
+
+                </div>
+
+
+                <!-- tarjetas de vehículos -->
+
+                <div class="flota-grid">
+
+                    <!-- sedán -->
+
+                    <article class="flota-tarjeta"
+                             data-categoria="automoviles">
+
+                        <div class="flota-imagen">
+
+                            <img src="assets/img/flota-sedan.png"
+                                 alt="Sedán de formación FERNER"
+                                 loading="lazy">
+
+                            <span class="flota-categoria">
+                                Automóvil
+                            </span>
+
+                        </div>
+
+                        <div class="flota-informacion">
+
+                            <h3>Sedán de formación</h3>
+
+                            <p>
+                                Ideal para familiarizarse con
+                                la conducción urbana y las
+                                maniobras básicas.
+                            </p>
+
+                            <div class="flota-detalles">
+                                <span>Conducción</span>
+                                <span>Parqueo</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- suv -->
+
+                    <article class="flota-tarjeta"
+                             data-categoria="automoviles">
+
+                        <div class="flota-imagen">
+
+                            <img src="assets/img/flota-suv.png"
+                                 alt="SUV de formación FERNER"
+                                 loading="lazy">
+
+                            <span class="flota-categoria">
+                                Automóvil
+                            </span>
+
+                        </div>
+
+                        <div class="flota-informacion">
+
+                            <h3>SUV de formación</h3>
+
+                            <p>
+                                Conoce el manejo de vehículos
+                                de mayor tamaño y desarrolla
+                                confianza al maniobrar.
+                            </p>
+
+                            <div class="flota-detalles">
+                                <span>Control</span>
+                                <span>Maniobras</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- motocicleta urbana -->
+
+                    <article class="flota-tarjeta"
+                             data-categoria="motocicletas">
+
+                        <div class="flota-imagen">
+
+                            <img src="assets/img/flota-moto-urbana.png"
+                                 alt="Motocicleta urbana FERNER"
+                                 loading="lazy">
+
+                            <span class="flota-categoria">
+                                Motocicleta
+                            </span>
+
+                        </div>
+
+                        <div class="flota-informacion">
+
+                            <h3>Motocicleta urbana</h3>
+
+                            <p>
+                                Desarrolla habilidades de
+                                equilibrio, coordinación y
+                                control en la conducción.
+                            </p>
+
+                            <div class="flota-detalles">
+                                <span>Equilibrio</span>
+                                <span>Control</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- motocicleta mixta -->
+
+                    <article class="flota-tarjeta"
+                             data-categoria="motocicletas">
+
+                        <div class="flota-imagen">
+
+                            <img src="assets/img/flota-moto-mixta.png"
+                                 alt="Motocicleta mixta FERNER"
+                                 loading="lazy">
+
+                            <span class="flota-categoria">
+                                Motocicleta
+                            </span>
+
+                        </div>
+
+                        <div class="flota-informacion">
+
+                            <h3>Motocicleta mixta</h3>
+
+                            <p>
+                                Practica técnicas de
+                                maniobrabilidad, estabilidad
+                                y conducción responsable.
+                            </p>
+
+                            <div class="flota-detalles">
+                                <span>Estabilidad</span>
+                                <span>Práctica</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- cuatrimoto todoterreno -->
+
+                    <article class="flota-tarjeta"
+                             data-categoria="especiales">
+
+                        <div class="flota-imagen">
+
+                            <img src="assets/img/flota-cuatrimoto.png"
+                                 alt="Cuatrimoto todoterreno FERNER"
+                                 loading="lazy">
+
+                            <span class="flota-categoria">
+                                Especial
+                            </span>
+
+                        </div>
+
+                        <div class="flota-informacion">
+
+                            <h3>Cuatrimoto todoterreno</h3>
+
+                            <p>
+                                Conoce las técnicas básicas
+                                de manejo, estabilidad y control
+                                en terrenos especiales.
+                            </p>
+
+                            <div class="flota-detalles">
+                                <span>Todoterreno</span>
+                                <span>Control</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- camioneta -->
+
+                    <article class="flota-tarjeta"
+                             data-categoria="especiales">
+
+                        <div class="flota-imagen">
+
+                            <img src="assets/img/flota-camioneta.png"
+                                 alt="Camioneta de práctica FERNER"
+                                 loading="lazy">
+
+                            <span class="flota-categoria">
+                                Especial
+                            </span>
+
+                        </div>
+
+                        <div class="flota-informacion">
+
+                            <h3>Camioneta de práctica</h3>
+
+                            <p>
+                                Explora técnicas de conducción
+                                y maniobra en vehículos
+                                de mayor dimensión.
+                            </p>
+
+                            <div class="flota-detalles">
+                                <span>Dimensiones</span>
+                                <span>Maniobras</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- van -->
+
+                    <article class="flota-tarjeta"
+                             data-categoria="especiales">
+
+                        <div class="flota-imagen">
+
+                            <img src="assets/img/flota-van.png"
+                                 alt="Van de formación FERNER"
+                                 loading="lazy">
+
+                            <span class="flota-categoria">
+                                Especial
+                            </span>
+
+                        </div>
+
+                        <div class="flota-informacion">
+
+                            <h3>Van de formación</h3>
+
+                            <p>
+                                Conoce las características
+                                de los vehículos destinados
+                                al transporte de pasajeros.
+                            </p>
+
+                            <div class="flota-detalles">
+                                <span>Espacio</span>
+                                <span>Precaución</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- bus -->
+
+                    <article class="flota-tarjeta"
+                             data-categoria="especiales">
+
+                        <div class="flota-imagen">
+
+                            <img src="assets/img/flota-bus.png"
+                                 alt="Bus de formación FERNER"
+                                 loading="lazy">
+
+                            <span class="flota-categoria">
+                                Especial
+                            </span>
+
+                        </div>
+
+                        <div class="flota-informacion">
+
+                            <h3>Bus de formación</h3>
+
+                            <p>
+                                Representación de las prácticas
+                                especializadas de conducción
+                                de vehículos de pasajeros.
+                            </p>
+
+                            <div class="flota-detalles">
+                                <span>Transporte</span>
+                                <span>Seguridad</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- camión -->
+
+                    <article class="flota-tarjeta"
+                             data-categoria="especiales">
+
+                        <div class="flota-imagen">
+
+                            <img src="assets/img/flota-camion.png"
+                                 alt="Camión de práctica FERNER"
+                                 loading="lazy">
+
+                            <span class="flota-categoria">
+                                Especial
+                            </span>
+
+                        </div>
+
+                        <div class="flota-informacion">
+
+                            <h3>Camión de práctica</h3>
+
+                            <p>
+                                Representación de la formación
+                                especializada en vehículos
+                                destinados al transporte de carga.
+                            </p>
+
+                            <div class="flota-detalles">
+                                <span>Carga</span>
+                                <span>Control</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- maquinaria pesada y agrícola -->
+
+        <section class="flota-maquinaria"
+                 id="maquinaria"
+                 aria-labelledby="titulo-maquinaria">
+
+            <div class="flota-maquinaria-contenedor">
+
+                <!-- presentación de maquinaria -->
+
+                <div class="flota-maquinaria-encabezado">
+
+                    <p>FORMACIÓN ESPECIALIZADA</p>
+
+                    <h2 id="titulo-maquinaria">
+                        Maquinaria pesada, industrial y agrícola
+                    </h2>
+
+                    <p>
+                        Descubre equipos para distintas labores
+                        agrícolas, industriales y de construcción.
+                        Conoce sus aplicaciones y nuestra propuesta
+                        de capacitación.
+                    </p>
+
+                </div>
+
+
+                <!-- catálogo de maquinaria -->
+
+                <div class="flota-maquinaria-grid">
+
+                    <!-- tractor agrícola -->
+
+                    <article class="flota-maquina">
+
+                        <img src="assets/img/tractor-ferner-presentacion.png"
+                             alt="Tractor agrícola en una zona de trabajo"
+                             loading="lazy">
+
+                        <div class="flota-maquina-info">
+                            <span>Agrícola</span>
+                            <h3>Tractor agrícola</h3>
+                            <p>Operación y manejo de implementos.</p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- excavadora hidráulica -->
+
+                    <article class="flota-maquina">
+
+                        <img src="assets/img/maquinaria-excavadora.png"
+                             alt="Excavadora hidráulica"
+                             loading="lazy">
+
+                        <div class="flota-maquina-info">
+                            <span>Maquinaria pesada</span>
+                            <h3>Excavadora hidráulica</h3>
+                            <p>Excavación y movimiento de tierra.</p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- retroexcavadora -->
+
+                    <article class="flota-maquina">
+
+                        <img src="assets/img/maquinaria-retro.png"
+                             alt="Retroexcavadora"
+                             loading="lazy">
+
+                        <div class="flota-maquina-info">
+                            <span>Maquinaria pesada</span>
+                            <h3>Retroexcavadora</h3>
+                            <p>Excavación y cargue de materiales.</p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- montacargas -->
+
+                    <article class="flota-maquina">
+
+                        <img src="assets/img/maquinaria-montacargas.png"
+                             alt="Montacargas industrial"
+                             loading="lazy">
+
+                        <div class="flota-maquina-info">
+                            <span>Equipo industrial</span>
+                            <h3>Montacargas</h3>
+                            <p>Manipulación y elevación de cargas.</p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- cosechadora -->
+
+                    <article class="flota-maquina">
+
+                        <img src="assets/img/maquinaria-cosechadora.png"
+                             alt="Cosechadora agrícola"
+                             loading="lazy">
+
+                        <div class="flota-maquina-info">
+                            <span>Agrícola</span>
+                            <h3>Cosechadora</h3>
+                            <p>Operación y recolección mecanizada.</p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- minicargador -->
+
+                    <article class="flota-maquina">
+
+                        <img src="assets/img/maquinaria-minicargador.png"
+                             alt="Minicargador de construcción"
+                             loading="lazy">
+
+                        <div class="flota-maquina-info">
+                            <span>Maquinaria pesada</span>
+                            <h3>Minicargador</h3>
+                            <p>Maniobras y movimiento de materiales.</p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- bulldozer -->
+
+                    <article class="flota-maquina">
+
+                        <img src="assets/img/maquinaria-bulldozer.png"
+                             alt="Bulldozer de orugas para movimiento de tierras"
+                             loading="lazy">
+
+                        <div class="flota-maquina-info">
+                            <span>Maquinaria industrial</span>
+                            <h3>Bulldozer</h3>
+                            <p>Empuje y movimiento de grandes volúmenes de tierra.</p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- motoniveladora -->
+
+                    <article class="flota-maquina">
+
+                        <img src="assets/img/maquinaria-motoniveladora.png"
+                             alt="Motoniveladora utilizada para nivelar terrenos"
+                             loading="lazy">
+
+                        <div class="flota-maquina-info">
+                            <span>Maquinaria industrial</span>
+                            <h3>Motoniveladora</h3>
+                            <p>Nivelación y preparación de superficies.</p>
+                        </div>
+
+                    </article>
+
+
+                    <!-- rodillo compactador -->
+
+                    <article class="flota-maquina">
+
+                        <img src="assets/img/maquinaria-rodillo.png"
+                             alt="Rodillo compactador para obras viales"
+                             loading="lazy">
+
+                        <div class="flota-maquina-info">
+                            <span>Maquinaria industrial</span>
+                            <h3>Rodillo compactador</h3>
+                            <p>Compactación de suelos y superficies viales.</p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- enlace a capacitaciones -->
+
+                <a href="cursos.html#maquinaria"
+                   class="flota-maquinaria-boton">
+                    Conoce nuestras capacitaciones →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- pie de página -->
+
+    <footer class="footer-ferner">
+
+        <!-- invitación a agendar -->
+
+        <section class="footer-cta"
+                 aria-labelledby="titulo-footer-cta">
+
+            <div class="footer-cta-contenedor">
+
+                <div class="footer-cta-icono">
+
+                    <svg viewBox="0 0 24 24"
+                         aria-hidden="true">
+
+                        <rect x="3" y="5"
+                              width="18" height="16" rx="2"/>
+
+                        <path d="M7 3v4M17 3v4M3 10h18"/>
+                        <path d="M8 14h3M8 17h3M14 14h2M14 17h2"/>
+
+                    </svg>
+
+                </div>
+
+                <div class="footer-cta-texto">
+
+                    <h2 id="titulo-footer-cta">
+                        Tu primera clase está más cerca
+                        de lo que piensas.
+                    </h2>
+
+                    <p>
+                        Agenda hoy y comienza tu proceso
+                        de formación.
+                    </p>
+
+                </div>
+
+                <div class="footer-cta-divisor"></div>
+
+                <a href="agenda.html"
+                   class="footer-cta-boton">
+                    Agendar ahora
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- contenido principal del footer -->
+
+        <div class="footer-principal">
+
+            <div class="footer-principal-contenedor">
+
+                <!-- identidad de ferner -->
+
+                <div class="footer-col footer-brand">
+
+                    <a href="index.html"
+                       class="footer-logo-enlace">
+
+                        <img src="assets/icons/ferner-logo.svg"
+                             alt="FERNER Academia de Conducción">
+
+                    </a>
+
+                    <p class="footer-frase">
+                        Formamos conductores,
+                        construimos confianza.
+                    </p>
+
+                    <div class="footer-especialidades"
+                         aria-label="Nuestras especialidades">
+
+                        <span title="Conducción de automóviles">
+                            <i class="bi bi-car-front-fill"
+                               aria-hidden="true"></i>
+                        </span>
+
+                        <span title="Conducción de motocicletas">
+                            <i class="bi bi-bicycle"
+                               aria-hidden="true"></i>
+                        </span>
+
+                        <span title="Maquinaria y vehículos pesados">
+                            <i class="bi bi-truck-front-fill"
+                               aria-hidden="true"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- enlaces principales -->
+
+                <div class="footer-col">
+
+                    <h3>Enlaces</h3>
+
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre.html">Nosotros</a></li>
+                        <li><a href="instructores.html">Instructores</a></li>
+                        <li><a href="vehiculos.html">Vehículos</a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- programas -->
+
+                <div class="footer-col">
+
+                    <h3>Programas</h3>
+
+                    <ul>
+                        <li>
+                            <a href="cursos.html#programas">
+                                Automóvil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cursos.html#programas">
+                                Motocicleta
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cursos.html#maquinaria">
+                                Maquinaria
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cursos.html#programas">
+                                Refuerzo
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- información de contacto -->
+
+                <div class="footer-col">
+
+                    <h3>Contacto</h3>
+
+                    <ul class="footer-contacto">
+
+                        <li>
+                            <i class="bi bi-telephone"
+                               aria-hidden="true"></i>
+                            <span>+57 300 123 4567</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-envelope"
+                               aria-hidden="true"></i>
+                            <span>info@ferner.edu.co</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-geo-alt"
+                               aria-hidden="true"></i>
+                            <span>Bogotá, Colombia</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- redes sociales de referencia -->
+
+                <div class="footer-col">
+
+                    <h3>Síguenos</h3>
+
+                    <div class="footer-redes"
+                         role="group"
+                         aria-label="Redes sociales de referencia">
+
+                        <img src="assets/icons/facebook.svg"
+                             alt="Facebook">
+
+                        <img src="assets/icons/instagram.svg"
+                             alt="Instagram">
+
+                        <img src="assets/icons/youtube.svg"
+                             alt="YouTube">
+
+                        <img src="assets/icons/tiktok.svg"
+                             alt="TikTok">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- franja inferior -->
+
+        <div class="footer-inferior">
+
+            <div class="footer-inferior-contenedor">
+
+                <p>
+                    &copy; 2026 FERNER Academia de Conducción.
+                    Todos los derechos reservados.
+                </p>
+
+                <div class="footer-legales">
+
+                    <a href="privacidad.html">
+                        Política de privacidad
+                    </a>
+
+                    <a href="terminos.html">
+                        Términos de uso
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

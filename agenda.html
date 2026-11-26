@@ -1,0 +1,1493 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Solicita tu inscripción en los cursos de conducción y capacitaciones de FERNER.">
+
+    <title>Agenda | FERNER Academia de Conducción</title>
+
+    <!-- Estilos generales -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+    <!-- Estilos exclusivos de Agenda -->
+    <link rel="stylesheet" href="css/agenda.css">
+</head>
+
+<body>
+
+    <!-- MODO CLARO Y OSCURO -->
+
+    <input type="checkbox"
+           id="modo-oscuro"
+           class="tema-checkbox">
+
+    <label for="modo-oscuro" class="tema-boton">
+        <span class="tema-oscuro">🌙 Oscuro</span>
+        <span class="tema-claro">☀️ Claro</span>
+    </label>
+
+
+    <!-- ENCABEZADO -->
+
+    <header class="encabezado">
+
+        <div class="barra-informativa">
+            <p>Formación vial para futuros conductores</p>
+        </div>
+
+        <div class="encabezado-principal">
+
+            <a href="index.html" class="logo">
+                <img src="assets/icons/ferner-logo.png"
+                     alt="FERNER Academia de Conducción">
+            </a>
+
+            <nav class="nav-escritorio"
+                 aria-label="Navegación principal">
+
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre.html">Nosotros</a></li>
+                    <li><a href="instructores.html">Instructores</a></li>
+                    <li><a href="vehiculos.html">Vehículos</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li>
+                        <a href="agenda.html" aria-current="page">
+                            Agenda
+                        </a>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+
+            </nav>
+
+            <!-- MENÚ MÓVIL -->
+
+            <details class="nav-movil">
+
+                <summary aria-label="Abrir o cerrar menú">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16"/>
+                    </svg>
+                </summary>
+
+                <nav aria-label="Navegación móvil">
+                    <ul class="nav-movil-lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre.html">Nosotros</a></li>
+                        <li><a href="instructores.html">Instructores</a></li>
+                        <li><a href="vehiculos.html">Vehículos</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="agenda.html" aria-current="page">Agenda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+
+            </details>
+
+            <a href="#formulario-agenda" class="boton-agendar">
+                Agenda tu clase
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main id="contenido" class="agenda-pagina">
+
+        <!-- =====================================
+             1. HERO DE AGENDA
+             ===================================== -->
+
+        <section class="agenda-hero"
+                 aria-labelledby="titulo-agenda">
+
+            <div class="agenda-hero-contenedor">
+
+                <p class="agenda-etiqueta">
+                    <i class="bi bi-calendar-check"
+                       aria-hidden="true"></i>
+                    AGENDA TU FORMACIÓN
+                </p>
+
+                <h1 id="titulo-agenda">
+                    Tu próximo paso
+                    <span>comienza aquí.</span>
+                </h1>
+
+                <p class="agenda-hero-descripcion">
+                    Elige tu programa, indica cuándo deseas
+                    comenzar y envía tu solicitud.
+                    Nuestro equipo te orientará en el proceso
+                    de inscripción a FERNER.
+                </p>
+
+                <div class="agenda-hero-botones">
+
+                    <a href="#formulario-agenda"
+                       class="agenda-hero-principal">
+                        <i class="bi bi-calendar2-check"
+                           aria-hidden="true"></i>
+                        Solicitar inscripción
+                    </a>
+
+                    <a href="cursos.html"
+                       class="agenda-hero-secundario">
+                        Ver programas
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             2. FORMULARIO Y RESUMEN
+             ===================================== -->
+
+        <section class="agenda-seccion"
+                 aria-labelledby="titulo-formacion">
+
+            <div class="agenda-contenido">
+
+                <!-- FORMULARIO -->
+
+                <form class="agenda-formulario"
+                      id="formulario-agenda">
+
+                    <!-- CURSOS DE CONDUCCIÓN -->
+
+                    <span id="curso-a2" class="agenda-destino"></span>
+                    <span id="curso-b1" class="agenda-destino"></span>
+                    <span id="curso-c1" class="agenda-destino"></span>
+                    <span id="curso-c2" class="agenda-destino"></span>
+                    <span id="curso-combo" class="agenda-destino"></span>
+                    <span id="curso-refuerzo" class="agenda-destino"></span>
+
+                    <!-- CAPACITACIONES DE MAQUINARIA -->
+
+                    <span id="curso-tractor" class="agenda-destino"></span>
+                    <span id="curso-excavadora" class="agenda-destino"></span>
+                    <span id="curso-retro" class="agenda-destino"></span>
+                    <span id="curso-montacargas" class="agenda-destino"></span>
+                    <span id="curso-cosechadora" class="agenda-destino"></span>
+                    <span id="curso-minicargador" class="agenda-destino"></span>
+
+                    <!-- NUEVAS CAPACITACIONES -->
+
+                    <span id="curso-bulldozer" class="agenda-destino"></span>
+                    <span id="curso-motoniveladora" class="agenda-destino"></span>
+                    <span id="curso-rodillo" class="agenda-destino"></span>
+
+
+                    <!-- AVISO DE CURSO IDENTIFICADO -->
+
+                    <p class="agenda-aviso-seleccion">
+                        <i class="bi bi-check-circle"
+                           aria-hidden="true"></i>
+                        Identificamos el programa que te interesa.
+                        Confírmalo en el selector para continuar
+                        con tu solicitud.
+                    </p>
+
+
+                    <div class="agenda-titulo-formulario">
+
+                        <i class="bi bi-calendar2-week"
+                           aria-hidden="true"></i>
+
+                        <div>
+                            <p>SOLICITUD DE INSCRIPCIÓN</p>
+                            <h2 id="titulo-formacion">
+                                Agenda tu formación
+                            </h2>
+                        </div>
+
+                    </div>
+
+                    <p class="agenda-introduccion">
+                        Completa tus datos para que nuestro
+                        equipo pueda contactarte y revisar
+                        la disponibilidad de tu formación.
+                    </p>
+
+
+                    <!-- =====================================
+                         BLOQUE 1: PROGRAMA
+                         ===================================== -->
+
+                    <fieldset class="agenda-bloque">
+
+                        <legend>
+                            <span>01</span>
+                            Selecciona tu formación
+                        </legend>
+
+                        <div class="agenda-campos">
+
+                            <div class="agenda-campo agenda-ancho-total">
+
+                                <label for="agenda-programa">
+                                    Programa de formación *
+                                </label>
+
+                                <select id="agenda-programa"
+                                        name="programa_manual"
+                                        required>
+
+                                    <option value="" selected disabled>
+                                        Selecciona el programa
+                                    </option>
+
+                                    <!-- CURSOS DE CONDUCCIÓN -->
+
+                                    <optgroup label="Cursos de conducción">
+
+                                        <option value="a2">
+                                            Motocicleta A2
+                                        </option>
+
+                                        <option value="b1">
+                                            Automóvil particular B1
+                                        </option>
+
+                                        <option value="c1">
+                                            Servicio público liviano C1
+                                        </option>
+
+                                        <option value="c2">
+                                            Vehículos pesados C2
+                                        </option>
+
+                                        <option value="combo">
+                                            Combo A2 + B1
+                                        </option>
+
+                                        <option value="refuerzo">
+                                            Refuerzo de conducción
+                                        </option>
+
+                                    </optgroup>
+
+
+                                    <!-- CAPACITACIÓN EN MAQUINARIA -->
+
+                                    <optgroup label="Capacitación en maquinaria">
+
+                                        <option value="tractor">
+                                            Tractor agrícola
+                                        </option>
+
+                                        <option value="excavadora">
+                                            Excavadora hidráulica
+                                        </option>
+
+                                        <option value="retro">
+                                            Retroexcavadora
+                                        </option>
+
+                                        <option value="montacargas">
+                                            Montacargas industrial
+                                        </option>
+
+                                        <option value="cosechadora">
+                                            Cosechadora agrícola
+                                        </option>
+
+                                        <option value="minicargador">
+                                            Minicargador
+                                        </option>
+
+                                        <!-- NUEVAS MÁQUINAS -->
+
+                                        <option value="bulldozer">
+                                            Bulldozer
+                                        </option>
+
+                                        <option value="motoniveladora">
+                                            Motoniveladora
+                                        </option>
+
+                                        <option value="rodillo">
+                                            Rodillo compactador
+                                        </option>
+
+                                    </optgroup>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- TIPO DE SOLICITUD -->
+
+                            <div class="agenda-campo">
+
+                                <label for="tipo-solicitud">
+                                    Tipo de solicitud *
+                                </label>
+
+                                <select id="tipo-solicitud"
+                                        name="tipo_solicitud"
+                                        required>
+
+                                    <option value="" selected disabled>
+                                        Selecciona una opción
+                                    </option>
+
+                                    <option value="inscripcion">
+                                        Solicitar inscripción
+                                    </option>
+
+                                    <option value="informacion">
+                                        Recibir asesoría
+                                    </option>
+
+                                    <option value="refuerzo">
+                                        Consultar clases prácticas
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <!-- MODALIDAD -->
+
+                            <div class="agenda-campo">
+
+                                <label for="modalidad">
+                                    Modalidad preferida *
+                                </label>
+
+                                <select id="modalidad"
+                                        name="modalidad"
+                                        required>
+
+                                    <option value="" selected disabled>
+                                        Selecciona una opción
+                                    </option>
+
+                                    <option value="teorica-practica">
+                                        Teórica y práctica
+                                    </option>
+
+                                    <option value="practica">
+                                        Práctica
+                                    </option>
+
+                                    <option value="por-definir">
+                                        Necesito orientación
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <a href="cursos.html#maquinaria"
+                           class="agenda-enlace-maquinaria">
+
+                            <i class="bi bi-truck-front"
+                               aria-hidden="true"></i>
+
+                            ¿Buscas capacitación en maquinaria?
+                            Conoce nuestros programas →
+
+                        </a>
+
+                    </fieldset>
+
+
+                    <!-- =====================================
+                         RADIOS DE CONFIRMACIÓN
+                         ===================================== -->
+
+                    <!-- CONDUCCIÓN -->
+
+                    <input type="radio"
+                           id="confirmar-a2"
+                           name="programa_elegido"
+                           value="a2"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-b1"
+                           name="programa_elegido"
+                           value="b1"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-c1"
+                           name="programa_elegido"
+                           value="c1"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-c2"
+                           name="programa_elegido"
+                           value="c2"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-combo"
+                           name="programa_elegido"
+                           value="combo"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-refuerzo"
+                           name="programa_elegido"
+                           value="refuerzo"
+                           class="agenda-radio">
+
+
+                    <!-- MAQUINARIA EXISTENTE -->
+
+                    <input type="radio"
+                           id="confirmar-tractor"
+                           name="programa_elegido"
+                           value="tractor"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-excavadora"
+                           name="programa_elegido"
+                           value="excavadora"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-retro"
+                           name="programa_elegido"
+                           value="retro"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-montacargas"
+                           name="programa_elegido"
+                           value="montacargas"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-cosechadora"
+                           name="programa_elegido"
+                           value="cosechadora"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-minicargador"
+                           name="programa_elegido"
+                           value="minicargador"
+                           class="agenda-radio">
+
+
+                    <!-- NUEVAS MÁQUINAS -->
+
+                    <input type="radio"
+                           id="confirmar-bulldozer"
+                           name="programa_elegido"
+                           value="bulldozer"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-motoniveladora"
+                           name="programa_elegido"
+                           value="motoniveladora"
+                           class="agenda-radio">
+
+                    <input type="radio"
+                           id="confirmar-rodillo"
+                           name="programa_elegido"
+                           value="rodillo"
+                           class="agenda-radio">
+
+
+                    <!-- =====================================
+                         BLOQUE 2: FECHA Y HORARIO
+                         ===================================== -->
+
+                    <fieldset class="agenda-bloque">
+
+                        <legend>
+                            <span>02</span>
+                            Fecha y horario preferidos
+                        </legend>
+
+                        <div class="agenda-campos">
+
+                            <div class="agenda-campo">
+
+                                <label for="fecha-clase">
+                                    Fecha preferida *
+                                </label>
+
+                                <input type="date"
+                                       id="fecha-clase"
+                                       name="fecha_preferida"
+                                       required>
+
+                            </div>
+
+                            <div class="agenda-campo">
+
+                                <label for="jornada">
+                                    Jornada *
+                                </label>
+
+                                <select id="jornada"
+                                        name="jornada"
+                                        required>
+
+                                    <option value="" selected disabled>
+                                        Elige un horario
+                                    </option>
+
+                                    <option value="manana">
+                                        Mañana
+                                    </option>
+
+                                    <option value="tarde">
+                                        Tarde
+                                    </option>
+
+                                    <option value="fin-semana">
+                                        Fin de semana
+                                    </option>
+
+                                    <option value="flexible">
+                                        Horario flexible
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <p class="agenda-aclaracion">
+
+                            <i class="bi bi-info-circle"
+                               aria-hidden="true"></i>
+
+                            La fecha y jornada son preferencias.
+                            El equipo FERNER deberá confirmar
+                            la disponibilidad.
+
+                        </p>
+
+                    </fieldset>
+
+
+                    <!-- =====================================
+                         BLOQUE 3: DATOS PERSONALES
+                         ===================================== -->
+
+                    <fieldset class="agenda-bloque">
+
+                        <legend>
+                            <span>03</span>
+                            Tus datos de contacto
+                        </legend>
+
+                        <div class="agenda-campos">
+
+                            <div class="agenda-campo agenda-ancho-total">
+
+                                <label for="nombre-estudiante">
+                                    Nombres y apellidos *
+                                </label>
+
+                                <input type="text"
+                                       id="nombre-estudiante"
+                                       name="nombre"
+                                       autocomplete="name"
+                                       placeholder="Escribe tu nombre completo"
+                                       required>
+
+                            </div>
+
+
+                            <div class="agenda-campo">
+
+                                <label for="telefono-estudiante">
+                                    Teléfono *
+                                </label>
+
+                                <input type="tel"
+                                       id="telefono-estudiante"
+                                       name="telefono"
+                                       autocomplete="tel"
+                                       placeholder="Ej. 300 123 4567"
+                                       required>
+
+                            </div>
+
+
+                            <div class="agenda-campo">
+
+                                <label for="correo-estudiante">
+                                    Correo electrónico *
+                                </label>
+
+                                <input type="email"
+                                       id="correo-estudiante"
+                                       name="correo"
+                                       autocomplete="email"
+                                       placeholder="ejemplo@correo.com"
+                                       required>
+
+                            </div>
+
+
+                            <div class="agenda-campo">
+
+                                <label for="ciudad-estudiante">
+                                    Ciudad o municipio *
+                                </label>
+
+                                <input type="text"
+                                       id="ciudad-estudiante"
+                                       name="ciudad"
+                                       autocomplete="address-level2"
+                                       placeholder="Tu ciudad"
+                                       required>
+
+                            </div>
+
+
+                            <div class="agenda-campo">
+
+                                <label for="medio-contacto">
+                                    Medio de contacto preferido *
+                                </label>
+
+                                <select id="medio-contacto"
+                                        name="medio_contacto"
+                                        required>
+
+                                    <option value="" selected disabled>
+                                        Selecciona una opción
+                                    </option>
+
+                                    <option value="whatsapp">
+                                        WhatsApp
+                                    </option>
+
+                                    <option value="llamada">
+                                        Llamada telefónica
+                                    </option>
+
+                                    <option value="correo">
+                                        Correo electrónico
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="agenda-campo agenda-ancho-total">
+
+                                <label for="observaciones">
+                                    Observaciones (opcional)
+                                </label>
+
+                                <textarea id="observaciones"
+                                          name="observaciones"
+                                          rows="4"
+                                          placeholder="Cuéntanos si tienes alguna pregunta o necesidad especial."></textarea>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- PRIVACIDAD Y ENVÍO -->
+
+                    <div class="agenda-final-formulario">
+
+                        <label class="agenda-privacidad">
+
+                            <input type="checkbox"
+                                   name="acepta_privacidad"
+                                   value="si"
+                                   required>
+
+                            <span>
+                                He leído y acepto la
+                                <a href="privacidad.html">
+                                    política de tratamiento de datos
+                                </a>
+                                para gestionar mi solicitud.
+                            </span>
+
+                        </label>
+
+                        <button type="submit"
+                                class="agenda-enviar"
+                                disabled>
+
+                            <i class="bi bi-send"
+                               aria-hidden="true"></i>
+
+                            Enviar solicitud
+
+                        </button>
+
+                        <p class="agenda-aclaracion">
+                            El envío real se habilitará al
+                            conectar un servicio receptor
+                            de formularios.
+                        </p>
+
+                    </div>
+
+                </form>
+
+
+                <!-- =====================================
+                     3. RESUMEN DE LA SOLICITUD
+                     ===================================== -->
+
+                <aside class="agenda-resumen"
+                       aria-labelledby="titulo-resumen">
+
+                    <div class="agenda-resumen-cabecera">
+
+                        <i class="bi bi-clipboard-check"
+                           aria-hidden="true"></i>
+
+                        <h2 id="titulo-resumen">
+                            Resumen de tu solicitud
+                        </h2>
+
+                    </div>
+
+
+                    <div class="agenda-resumen-cuerpo">
+
+                        <!-- MENSAJE INICIAL -->
+
+                        <div class="agenda-resumen-vacio">
+
+                            <i class="bi bi-car-front"
+                               aria-hidden="true"></i>
+
+                            <h3>Elige un programa</h3>
+
+                            <p>
+                                Cuando selecciones una formación,
+                                aquí verás su información,
+                                duración y precio.
+                            </p>
+
+                        </div>
+
+
+                        <!-- =====================================
+                             RESÚMENES DE CONDUCCIÓN
+                             ===================================== -->
+
+                        <!-- MOTOCICLETA A2 -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="a2">
+
+                            <img src="assets/img/curso-motocicleta.png"
+                                 alt="Motocicleta FERNER">
+
+                            <h3>Motocicleta A2</h3>
+
+                            <p>Duración propuesta: 40 horas</p>
+
+                            <strong>$945.000 COP</strong>
+
+                            <label for="confirmar-a2"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- AUTOMÓVIL B1 -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="b1">
+
+                            <img src="assets/img/curso-automovil.png"
+                                 alt="Automóvil FERNER">
+
+                            <h3>Automóvil particular B1</h3>
+
+                            <p>Duración propuesta: 50 horas</p>
+
+                            <strong>$1.035.000 COP</strong>
+
+                            <label for="confirmar-b1"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- SERVICIO PÚBLICO C1 -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="c1">
+
+                            <img src="assets/img/curso-servivio-publico.png"
+                                 alt="Vehículo de servicio público">
+
+                            <h3>Servicio público C1</h3>
+
+                            <p>Duración propuesta: 60 horas</p>
+
+                            <strong>$1.215.000 COP</strong>
+
+                            <label for="confirmar-c1"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- VEHÍCULOS PESADOS C2 -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="c2">
+
+                            <img src="assets/img/curso-vehiculos-pesados.png"
+                                 alt="Vehículo pesado FERNER">
+
+                            <h3>Vehículos pesados C2</h3>
+
+                            <p>Duración propuesta: 60 horas</p>
+
+                            <strong>$1.440.000 COP</strong>
+
+                            <label for="confirmar-c2"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- COMBO MOTO Y CARRO -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="combo">
+
+                            <img src="assets/img/curso-combo.png"
+                                 alt="Combo de moto y carro">
+
+                            <h3>Combo moto + carro</h3>
+
+                            <p>Duración propuesta: 90 horas</p>
+
+                            <strong>$1.890.000 COP</strong>
+
+                            <label for="confirmar-combo"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- REFUERZO -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="refuerzo">
+
+                            <img src="assets/img/curso-refuerzo.png"
+                                 alt="Práctica de conducción">
+
+                            <h3>Refuerzo de conducción</h3>
+
+                            <p>Duración personalizada</p>
+
+                            <strong>Desde $350.000 COP</strong>
+
+                            <label for="confirmar-refuerzo"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- =====================================
+                             RESÚMENES DE MAQUINARIA
+                             ===================================== -->
+
+                        <!-- TRACTOR -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="tractor">
+
+                            <img src="assets/img/maquinaria-tractor.png"
+                                 alt="Tractor agrícola FERNER">
+
+                            <h3>Tractor agrícola</h3>
+
+                            <p>Duración propuesta: 40 horas</p>
+
+                            <strong>$890.000 COP</strong>
+
+                            <label for="confirmar-tractor"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- EXCAVADORA -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="excavadora">
+
+                            <img src="assets/img/maquinaria-excavadora.png"
+                                 alt="Excavadora FERNER">
+
+                            <h3>Excavadora hidráulica</h3>
+
+                            <p>Duración propuesta: 60 horas</p>
+
+                            <strong>$1.250.000 COP</strong>
+
+                            <label for="confirmar-excavadora"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- RETROEXCAVADORA -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="retro">
+
+                            <img src="assets/img/maquinaria-retro.png"
+                                 alt="Retroexcavadora FERNER">
+
+                            <h3>Retroexcavadora</h3>
+
+                            <p>Duración propuesta: 50 horas</p>
+
+                            <strong>$950.000 COP</strong>
+
+                            <label for="confirmar-retro"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- MONTACARGAS -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="montacargas">
+
+                            <img src="assets/img/maquinaria-montacargas.png"
+                                 alt="Montacargas FERNER">
+
+                            <h3>Montacargas industrial</h3>
+
+                            <p>Duración propuesta: 40 horas</p>
+
+                            <strong>$600.000 COP</strong>
+
+                            <label for="confirmar-montacargas"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- COSECHADORA -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="cosechadora">
+
+                            <img src="assets/img/maquinaria-cosechadora.png"
+                                 alt="Cosechadora agrícola FERNER">
+
+                            <h3>Cosechadora agrícola</h3>
+
+                            <p>Duración por definir</p>
+
+                            <strong>Precio por cotizar</strong>
+
+                            <label for="confirmar-cosechadora"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- MINICARGADOR -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="minicargador">
+
+                            <img src="assets/img/maquinaria-minicargador.png"
+                                 alt="Minicargador FERNER">
+
+                            <h3>Minicargador</h3>
+
+                            <p>Duración propuesta: 40 horas</p>
+
+                            <strong>$850.000 COP</strong>
+
+                            <label for="confirmar-minicargador"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- =====================================
+                             NUEVAS CAPACITACIONES
+                             ===================================== -->
+
+                        <!-- BULLDOZER -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="bulldozer">
+
+                            <img src="assets/img/maquinaria-bulldozer.png"
+                                 alt="Bulldozer de formación FERNER"
+                                 loading="lazy">
+
+                            <h3>Bulldozer</h3>
+
+                            <p>
+                                Movimiento de tierras
+                                y operación segura.
+                            </p>
+
+                            <p>Duración por confirmar</p>
+
+                            <strong>Precio por cotizar</strong>
+
+                            <label for="confirmar-bulldozer"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- MOTONIVELADORA -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="motoniveladora">
+
+                            <img src="assets/img/maquinaria-motoniveladora.png"
+                                 alt="Motoniveladora de formación FERNER"
+                                 loading="lazy">
+
+                            <h3>Motoniveladora</h3>
+
+                            <p>
+                                Nivelación de terrenos
+                                y maniobras de precisión.
+                            </p>
+
+                            <p>Duración por confirmar</p>
+
+                            <strong>Precio por cotizar</strong>
+
+                            <label for="confirmar-motoniveladora"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- RODILLO COMPACTADOR -->
+
+                        <article class="agenda-resumen-item"
+                                 data-programa="rodillo">
+
+                            <img src="assets/img/maquinaria-rodillo.png"
+                                 alt="Rodillo compactador de formación FERNER"
+                                 loading="lazy">
+
+                            <h3>Rodillo compactador</h3>
+
+                            <p>
+                                Compactación de suelos
+                                y preparación de superficies.
+                            </p>
+
+                            <p>Duración por confirmar</p>
+
+                            <strong>Precio por cotizar</strong>
+
+                            <label for="confirmar-rodillo"
+                                   class="agenda-accion">
+
+                                <i class="bi bi-arrow-right-circle"
+                                   aria-hidden="true"></i>
+
+                                Continuar con este programa
+
+                            </label>
+
+                        </article>
+
+
+                        <!-- BENEFICIOS DE LA SOLICITUD -->
+
+                        <div class="agenda-resumen-beneficios">
+
+                            <h3>Tu solicitud contempla:</h3>
+
+                            <p>
+                                <i class="bi bi-check-circle"
+                                   aria-hidden="true"></i>
+                                Revisión de disponibilidad
+                            </p>
+
+                            <p>
+                                <i class="bi bi-check-circle"
+                                   aria-hidden="true"></i>
+                                Orientación de un asesor
+                            </p>
+
+                            <p>
+                                <i class="bi bi-check-circle"
+                                   aria-hidden="true"></i>
+                                Información sobre requisitos
+                            </p>
+
+                            <p>
+                                <i class="bi bi-check-circle"
+                                   aria-hidden="true"></i>
+                                Confirmación posterior
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             4. CÓMO FUNCIONA
+             ===================================== -->
+
+        <section class="agenda-proceso"
+                 aria-labelledby="titulo-proceso">
+
+            <div class="agenda-proceso-contenedor">
+
+                <h2 id="titulo-proceso">
+                    Así de fácil es solicitar tu formación
+                </h2>
+
+                <div class="agenda-proceso-grid">
+
+                    <article>
+
+                        <i class="bi bi-journal-check"
+                           aria-hidden="true"></i>
+
+                        <h3>1. Elige tu programa</h3>
+
+                        <p>
+                            Selecciona el curso o capacitación
+                            que necesitas.
+                        </p>
+
+                    </article>
+
+
+                    <article>
+
+                        <i class="bi bi-calendar-event"
+                           aria-hidden="true"></i>
+
+                        <h3>2. Indica tu disponibilidad</h3>
+
+                        <p>
+                            Escoge la fecha y jornada
+                            que mejor se adapten a ti.
+                        </p>
+
+                    </article>
+
+
+                    <article>
+
+                        <i class="bi bi-headset"
+                           aria-hidden="true"></i>
+
+                        <h3>3. Recibe orientación</h3>
+
+                        <p>
+                            Un asesor revisará tu solicitud
+                            y te explicará cómo continuar.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
+
+    <footer class="footer-ferner">
+
+        <div class="footer-principal">
+
+            <div class="footer-principal-contenedor">
+
+                <!-- LOGOTIPO -->
+
+                <div class="footer-col footer-brand">
+
+                    <a href="index.html"
+                       class="footer-logo-enlace">
+
+                        <img src="assets/icons/ferner-logo.svg"
+                             alt="FERNER Academia de Conducción">
+
+                    </a>
+
+                </div>
+
+
+                <!-- ENLACES -->
+
+                <div class="footer-col">
+
+                    <h3>Enlaces</h3>
+
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre.html">Nosotros</a></li>
+                        <li><a href="instructores.html">Instructores</a></li>
+                        <li><a href="vehiculos.html">Vehículos</a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- PROGRAMAS -->
+
+                <div class="footer-col">
+
+                    <h3>Programas</h3>
+
+                    <ul>
+                        <li>
+                            <a href="cursos.html#programas">
+                                Conducción
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cursos.html#maquinaria">
+                                Maquinaria
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="agenda.html">
+                                Inscripciones
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACTO -->
+
+                <div class="footer-col">
+
+                    <h3>Contacto</h3>
+
+                    <ul class="footer-contacto">
+                        <li>+57 300 123 4567</li>
+                        <li>info@ferner.edu.co</li>
+                        <li>Bogotá, Colombia</li>
+                    </ul>
+
+                </div>
+
+
+                <!-- REDES SOCIALES -->
+
+                <div class="footer-col">
+
+                    <h3>Síguenos</h3>
+
+                    <div class="footer-redes"
+                         role="group"
+                         aria-label="Redes sociales de referencia">
+
+                        <img src="assets/icons/facebook.svg"
+                             alt="Facebook">
+
+                        <img src="assets/icons/instagram.svg"
+                             alt="Instagram">
+
+                        <img src="assets/icons/youtube.svg"
+                             alt="YouTube">
+
+                        <img src="assets/icons/tiktok.svg"
+                             alt="TikTok">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FRANJA INFERIOR -->
+
+        <div class="footer-inferior">
+
+            <div class="footer-inferior-contenedor">
+
+                <p>
+                    &copy; 2026 FERNER Academia de Conducción.
+                    Todos los derechos reservados.
+                </p>
+
+                <div class="footer-legales">
+
+                    <a href="privacidad.html">
+                        Política de privacidad
+                    </a>
+
+                    <a href="terminos.html">
+                        Términos de uso
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

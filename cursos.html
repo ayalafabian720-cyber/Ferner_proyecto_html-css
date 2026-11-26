@@ -1,0 +1,1655 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Conoce los cursos de conducción y las capacitaciones en maquinaria de FERNER Academia de Conducción.">
+
+    <title>Cursos | FERNER Academia de Conducción</title>
+
+    <!-- estilos generales -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- iconos -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+
+    <!-- estilos de cursos -->
+    <link rel="stylesheet" href="css/cursos.css">
+</head>
+
+<body>
+
+    <!-- selector de modo oscuro -->
+
+    <input type="checkbox"
+           id="modo-oscuro"
+           class="tema-checkbox">
+
+    <label for="modo-oscuro" class="tema-boton">
+        <span class="tema-oscuro">🌙 Oscuro</span>
+        <span class="tema-claro">☀️ Claro</span>
+    </label>
+
+
+    <!-- encabezado principal -->
+
+    <header class="encabezado">
+
+        <div class="barra-informativa">
+            <p>Formación vial para futuros conductores</p>
+        </div>
+
+        <div class="encabezado-principal">
+
+            <!-- logotipo -->
+
+            <a href="index.html" class="logo">
+                <img src="assets/icons/ferner-logo.png"
+                     alt="FERNER Academia de Conducción">
+            </a>
+
+            <!-- navegación de escritorio -->
+
+            <nav class="nav-escritorio"
+                 aria-label="Navegación principal">
+
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobre.html">Nosotros</a></li>
+                    <li><a href="instructores.html">Instructores</a></li>
+                    <li><a href="vehiculos.html">Vehículos</a></li>
+                    <li><a href="cursos.html" aria-current="page">Cursos</a></li>
+                    <li><a href="agenda.html">Agenda</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+
+            </nav>
+
+            <!-- navegación móvil -->
+
+            <details class="nav-movil">
+
+                <summary aria-label="Abrir o cerrar el menú">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 7h16M4 12h16M4 17h16"/>
+                    </svg>
+                </summary>
+
+                <nav aria-label="Navegación móvil">
+
+                    <ul class="nav-movil-lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre.html">Nosotros</a></li>
+                        <li><a href="instructores.html">Instructores</a></li>
+                        <li><a href="vehiculos.html">Vehículos</a></li>
+                        <li><a href="cursos.html" aria-current="page">Cursos</a></li>
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+
+                </nav>
+
+            </details>
+
+            <a href="agenda.html" class="boton-agendar">
+                Agenda tu clase
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <main id="contenido">
+
+        <!-- presentación principal -->
+
+        <section class="portada-cursos"
+                 aria-labelledby="titulo-cursos">
+
+            <div class="portada-cursos-contenedor">
+
+                <div class="portada-cursos-texto">
+
+                    <p class="portada-cursos-etiqueta">
+                        ENCUENTRA TU PRÓXIMO PASO
+                    </p>
+
+                    <h1 id="titulo-cursos">
+                        Elige tu formación.
+                        <span>Prepárate para nuevos caminos.</span>
+                    </h1>
+
+                    <p class="portada-cursos-descripcion">
+                        Explora nuestros cursos de conducción
+                        y capacitaciones en maquinaria.
+                        Compara programas, conoce sus precios
+                        y elige la mejor opción para ti.
+                    </p>
+
+                    <!-- botones principales -->
+
+                    <div class="portada-cursos-botones">
+
+                        <a href="#programas"
+                           class="portada-boton-principal">
+                            Explorar programas
+                        </a>
+
+                        <a href="#maquinaria"
+                           class="portada-boton-secundario">
+                            Ver capacitaciones
+                        </a>
+
+                    </div>
+
+                    <!-- beneficios de formación -->
+
+                    <div class="portada-cursos-beneficios">
+
+                        <div>
+                            <i class="bi bi-journal-check"
+                               aria-hidden="true"></i>
+                            <span>Formación práctica</span>
+                        </div>
+
+                        <div>
+                            <i class="bi bi-people"
+                               aria-hidden="true"></i>
+                            <span>Instructores expertos</span>
+                        </div>
+
+                        <div>
+                            <i class="bi bi-car-front"
+                               aria-hidden="true"></i>
+                            <span>Flota moderna</span>
+                        </div>
+
+                        <div>
+                            <i class="bi bi-shield-check"
+                               aria-hidden="true"></i>
+                            <span>Acompañamiento</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- fotografía principal -->
+
+                <div class="portada-cursos-imagen">
+
+                    <img src="assets/img/cursos-hero-nuevo.png"
+                         alt="Instructor de FERNER acompañando a una estudiante durante su práctica"
+                         loading="eager">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- programas de conducción -->
+
+        <section class="cursos-programas"
+                 id="programas"
+                 aria-labelledby="titulo-programas">
+
+            <div class="programas-contenedor">
+
+                <div class="programas-encabezado">
+
+                    <p class="programas-etiqueta">
+                        ENCUENTRA TU PROGRAMA IDEAL
+                    </p>
+
+                    <h2 id="titulo-programas">
+                        Programas de formación
+                    </h2>
+
+                    <p>
+                        Conoce nuestros cursos, precios
+                        y beneficios. Elige la categoría
+                        de licencia que necesitas.
+                    </p>
+
+                </div>
+
+                <!-- filtros de programas -->
+
+                <div class="programas-filtros"
+                     role="group"
+                     aria-label="Filtrar programas de formación">
+
+                    <input type="radio"
+                           id="curso-todos"
+                           name="filtro-cursos"
+                           checked>
+                    <label for="curso-todos" class="programa-filtro">
+                        Todos los cursos
+                    </label>
+
+                    <input type="radio"
+                           id="curso-motos"
+                           name="filtro-cursos">
+                    <label for="curso-motos" class="programa-filtro">
+                        Motocicleta
+                    </label>
+
+                    <input type="radio"
+                           id="curso-autos"
+                           name="filtro-cursos">
+                    <label for="curso-autos" class="programa-filtro">
+                        Automóvil
+                    </label>
+
+                    <input type="radio"
+                           id="curso-publico"
+                           name="filtro-cursos">
+                    <label for="curso-publico" class="programa-filtro">
+                        Servicio público
+                    </label>
+
+                    <input type="radio"
+                           id="curso-otros"
+                           name="filtro-cursos">
+                    <label for="curso-otros" class="programa-filtro">
+                        Otros programas
+                    </label>
+
+                </div>
+
+
+                <!-- galería de cursos -->
+
+                <div class="programas-grid">
+
+                    <!-- motocicleta a2 -->
+
+                    <article class="programa-tarjeta"
+                             data-tipo="motocicleta">
+
+                        <div class="programa-imagen">
+
+                            <img src="assets/img/curso-motocicleta.png"
+                                 alt="Motocicleta de formación FERNER"
+                                 loading="lazy">
+
+                            <span class="programa-categoria">A2</span>
+
+                        </div>
+
+                        <div class="programa-informacion">
+
+                            <h3>Motocicleta</h3>
+
+                            <p class="programa-descripcion">
+                                Conduce motos de cualquier cilindraje
+                                con seguridad y control.
+                            </p>
+
+                            <ul class="programa-datos">
+                                <li>Duración: 40 horas</li>
+                                <li>Edad mínima: 16 años</li>
+                                <li>Licencia categoría: A2</li>
+                            </ul>
+
+                            <div class="programa-precios">
+
+                                <div class="programa-precio-anterior">
+                                    <del>$1.050.000</del>
+                                    <span class="programa-descuento">-10%</span>
+                                </div>
+
+                                <strong class="programa-precio">
+                                    $945.000
+                                </strong>
+
+                            </div>
+
+                            <a href="agenda.html#curso-a2"
+                               class="programa-boton">
+                                Elegir este curso
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- automóvil b1 -->
+
+                    <article class="programa-tarjeta"
+                             data-tipo="automovil">
+
+                        <div class="programa-imagen">
+
+                            <img src="assets/img/curso-automovil.png"
+                                 alt="Automóvil de formación FERNER"
+                                 loading="lazy">
+
+                            <span class="programa-categoria">B1</span>
+
+                        </div>
+
+                        <div class="programa-informacion">
+
+                            <h3>Automóvil particular</h3>
+
+                            <p class="programa-descripcion">
+                                Aprende a conducir carros y camionetas
+                                particulares de forma segura.
+                            </p>
+
+                            <ul class="programa-datos">
+                                <li>Duración: 50 horas</li>
+                                <li>Edad mínima: 16 años</li>
+                                <li>Licencia categoría: B1</li>
+                            </ul>
+
+                            <div class="programa-precios">
+
+                                <div class="programa-precio-anterior">
+                                    <del>$1.150.000</del>
+                                    <span class="programa-descuento">-10%</span>
+                                </div>
+
+                                <strong class="programa-precio">
+                                    $1.035.000
+                                </strong>
+
+                            </div>
+
+                            <a href="agenda.html#curso-b1"
+                               class="programa-boton">
+                                Elegir este curso
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- servicio público c1 -->
+
+                    <article class="programa-tarjeta"
+                             data-tipo="publico">
+
+                        <div class="programa-imagen">
+
+                            <img src="assets/img/curso-servivio-publico.png"
+                                 alt="Van ilustrativa de formación FERNER"
+                                 loading="lazy">
+
+                            <span class="programa-categoria">C1</span>
+
+                        </div>
+
+                        <div class="programa-informacion">
+
+                            <h3>Servicio público liviano</h3>
+
+                            <p class="programa-descripcion">
+                                Formación para conducir vehículos
+                                de servicio público liviano.
+                            </p>
+
+                            <ul class="programa-datos">
+                                <li>Duración: 60 horas</li>
+                                <li>Edad mínima: 18 años</li>
+                                <li>Licencia categoría: C1</li>
+                            </ul>
+
+                            <div class="programa-precios">
+
+                                <div class="programa-precio-anterior">
+                                    <del>$1.350.000</del>
+                                    <span class="programa-descuento">-10%</span>
+                                </div>
+
+                                <strong class="programa-precio">
+                                    $1.215.000
+                                </strong>
+
+                            </div>
+
+                            <a href="agenda.html#curso-c1"
+                               class="programa-boton">
+                                Elegir este curso
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- vehículos pesados c2 -->
+
+                    <article class="programa-tarjeta"
+                             data-tipo="publico">
+
+                        <div class="programa-imagen">
+
+                            <img src="assets/img/curso-vehiculos-pesados.png"
+                                 alt="Bus ilustrativo de formación FERNER"
+                                 loading="lazy">
+
+                            <span class="programa-categoria">C2</span>
+
+                        </div>
+
+                        <div class="programa-informacion">
+
+                            <h3>Vehículos pesados</h3>
+
+                            <p class="programa-descripcion">
+                                Conducción de buses y camiones rígidos
+                                de servicio público.
+                            </p>
+
+                            <ul class="programa-datos">
+                                <li>Duración: 60 horas</li>
+                                <li>Edad mínima: 18 años</li>
+                                <li>Licencia categoría: C2</li>
+                            </ul>
+
+                            <div class="programa-precios">
+
+                                <div class="programa-precio-anterior">
+                                    <del>$1.600.000</del>
+                                    <span class="programa-descuento">-10%</span>
+                                </div>
+
+                                <strong class="programa-precio">
+                                    $1.440.000
+                                </strong>
+
+                            </div>
+
+                            <a href="agenda.html#curso-c2"
+                               class="programa-boton">
+                                Elegir este curso
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- combo a2 y b1 -->
+
+                    <article class="programa-tarjeta programa-popular"
+                             data-tipo="otros">
+
+                        <div class="programa-imagen">
+
+                            <img src="assets/img/curso-combo.png"
+                                 alt="Motocicleta ilustrativa del combo moto y carro"
+                                 loading="lazy">
+
+                            <span class="programa-categoria">A2 + B1</span>
+
+                            <span class="programa-popular-etiqueta">
+                                ★ MÁS POPULAR
+                            </span>
+
+                        </div>
+
+                        <div class="programa-informacion">
+
+                            <h3>Combo moto + carro</h3>
+
+                            <p class="programa-descripcion">
+                                Obtén dos categorías en un solo plan
+                                de formación y aprovecha el ahorro.
+                            </p>
+
+                            <ul class="programa-datos">
+                                <li>Duración: 90 horas</li>
+                                <li>Edad mínima: 16 años</li>
+                                <li>Licencias: A2 y B1</li>
+                            </ul>
+
+                            <div class="programa-precios">
+
+                                <div class="programa-precio-anterior">
+                                    <del>$2.100.000</del>
+                                    <span class="programa-descuento">-10%</span>
+                                </div>
+
+                                <strong class="programa-precio">
+                                    $1.890.000
+                                </strong>
+
+                            </div>
+
+                            <a href="agenda.html#curso-combo"
+                               class="programa-boton">
+                                Elegir este curso
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- refuerzo de conducción -->
+
+                    <article class="programa-tarjeta"
+                             data-tipo="otros">
+
+                        <div class="programa-imagen">
+
+                            <img src="assets/img/curso-refuerzo.png"
+                                 alt="Práctica de conducción al volante"
+                                 loading="lazy">
+
+                            <span class="programa-categoria">
+                                PRÁCTICA
+                            </span>
+
+                        </div>
+
+                        <div class="programa-informacion">
+
+                            <h3>Refuerzo de conducción</h3>
+
+                            <p class="programa-descripcion">
+                                Mejora tus habilidades, confianza
+                                y técnica al volante.
+                            </p>
+
+                            <ul class="programa-datos">
+                                <li>Duración: Personalizada</li>
+                                <li>Nivel: Básico o avanzado</li>
+                                <li>Enfoque: Práctico</li>
+                            </ul>
+
+                            <div class="programa-precios">
+
+                                <span class="programa-desde">
+                                    Desde
+                                </span>
+
+                                <strong class="programa-precio">
+                                    $350.000
+                                </strong>
+
+                            </div>
+
+                            <a href="agenda.html#curso-refuerzo"
+                               class="programa-boton">
+                                Solicitar información
+                                <span aria-hidden="true">→</span>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             TABLA COMPARATIVA DE CURSOS
+             ===================================== -->
+
+        <section class="comparativa-cursos"
+                 aria-labelledby="titulo-comparativa">
+
+            <div class="comparativa-contenedor">
+
+                <!-- encabezado de la tabla -->
+
+                <div class="comparativa-encabezado">
+
+                    <p class="comparativa-etiqueta">
+                        COMPARA Y ELIGE
+                    </p>
+
+                    <h2 id="titulo-comparativa">
+                        Compara nuestros programas
+                    </h2>
+
+                    <p>
+                        Consulta las categorías, duración y precios
+                        de nuestros cursos para encontrar
+                        la formación que necesitas.
+                    </p>
+
+                </div>
+
+
+                <!-- tabla comparativa -->
+
+                <div class="comparativa-desplazamiento">
+
+                    <table class="comparativa-tabla">
+
+                        <thead>
+
+                            <tr>
+                                <th scope="col">Programa</th>
+                                <th scope="col">Categoría</th>
+                                <th scope="col">Duración</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Inscripción</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <!-- motocicleta -->
+
+                            <tr>
+                                <td>Motocicleta</td>
+                                <td>A2</td>
+                                <td>40 horas</td>
+                                <td class="comparativa-precio">
+                                    $945.000
+                                </td>
+                                <td>
+                                    <a href="agenda.html#curso-a2">
+                                        Elegir curso
+                                    </a>
+                                </td>
+                            </tr>
+
+
+                            <!-- automóvil -->
+
+                            <tr>
+                                <td>Automóvil particular</td>
+                                <td>B1</td>
+                                <td>50 horas</td>
+                                <td class="comparativa-precio">
+                                    $1.035.000
+                                </td>
+                                <td>
+                                    <a href="agenda.html#curso-b1">
+                                        Elegir curso
+                                    </a>
+                                </td>
+                            </tr>
+
+
+                            <!-- servicio público -->
+
+                            <tr>
+                                <td>Servicio público liviano</td>
+                                <td>C1</td>
+                                <td>60 horas</td>
+                                <td class="comparativa-precio">
+                                    $1.215.000
+                                </td>
+                                <td>
+                                    <a href="agenda.html#curso-c1">
+                                        Elegir curso
+                                    </a>
+                                </td>
+                            </tr>
+
+
+                            <!-- vehículos pesados -->
+
+                            <tr>
+                                <td>Vehículos pesados</td>
+                                <td>C2</td>
+                                <td>60 horas</td>
+                                <td class="comparativa-precio">
+                                    $1.440.000
+                                </td>
+                                <td>
+                                    <a href="agenda.html#curso-c2">
+                                        Elegir curso
+                                    </a>
+                                </td>
+                            </tr>
+
+
+                            <!-- combo destacado -->
+
+                            <tr class="comparativa-destacado">
+                                <td>★ Combo moto + carro</td>
+                                <td>A2 + B1</td>
+                                <td>90 horas</td>
+                                <td class="comparativa-precio">
+                                    $1.890.000
+                                </td>
+                                <td>
+                                    <a href="agenda.html#curso-combo">
+                                        Elegir curso
+                                    </a>
+                                </td>
+                            </tr>
+
+
+                            <!-- refuerzo -->
+
+                            <tr>
+                                <td>Refuerzo de conducción</td>
+                                <td>Práctica</td>
+                                <td>Personalizada</td>
+                                <td class="comparativa-precio">
+                                    Desde $350.000
+                                </td>
+                                <td>
+                                    <a href="agenda.html#curso-refuerzo">
+                                        Consultar
+                                    </a>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- capacitaciones en maquinaria -->
+
+        <section class="cursos-maquinaria"
+                 id="maquinaria"
+                 aria-labelledby="titulo-maquinaria">
+
+            <div class="maquinaria-contenedor">
+
+                <!-- presentación de maquinaria -->
+
+                <div class="maquinaria-encabezado">
+
+                    <p class="maquinaria-etiqueta">
+                        FORMACIÓN ESPECIALIZADA
+                    </p>
+
+                    <h2 id="titulo-maquinaria">
+                        Maquinaria pesada y agrícola
+                    </h2>
+
+                    <p>
+                        Capacítate en la operación segura
+                        de equipos agrícolas, industriales
+                        y de construcción.
+                    </p>
+
+                </div>
+
+
+                <!-- galería de maquinaria -->
+
+                <div class="maquinaria-grid">
+
+                    <!-- tractor agrícola -->
+
+                    <article class="maquinaria-tarjeta">
+
+                        <img src="assets/img/tractor-ferner-presentacion.png"
+                             alt="Tractor agrícola FERNER"
+                             loading="lazy">
+
+                        <div class="maquinaria-informacion">
+
+                            <span class="maquinaria-categoria">
+                                AGRÍCOLA
+                            </span>
+
+                            <h3>Tractor agrícola</h3>
+
+                            <p>
+                                Operación, maniobras
+                                y mantenimiento básico.
+                            </p>
+
+                            <div class="maquinaria-datos">
+                                <span>40 horas propuestas</span>
+                                <span>Teórico-práctico</span>
+                            </div>
+
+                            <strong class="maquinaria-precio">
+                                $890.000
+                            </strong>
+
+                            <a href="contacto.html#formulario-contacto"
+                               class="maquinaria-boton">
+                                Consultar cupos →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- excavadora hidráulica -->
+
+                    <article class="maquinaria-tarjeta">
+
+                        <img src="assets/img/maquinaria-excavadora.png"
+                             alt="Excavadora hidráulica FERNER"
+                             loading="lazy">
+
+                        <div class="maquinaria-informacion">
+
+                            <span class="maquinaria-categoria">
+                                PESADA
+                            </span>
+
+                            <h3>Excavadora hidráulica</h3>
+
+                            <p>
+                                Excavación, controles hidráulicos
+                                y seguridad.
+                            </p>
+
+                            <div class="maquinaria-datos">
+                                <span>60 horas propuestas</span>
+                                <span>Teórico-práctico</span>
+                            </div>
+
+                            <strong class="maquinaria-precio">
+                                $1.250.000
+                            </strong>
+
+                            <a href="contacto.html#formulario-contacto"
+                               class="maquinaria-boton">
+                                Consultar cupos →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- retroexcavadora -->
+
+                    <article class="maquinaria-tarjeta">
+
+                        <img src="assets/img/maquinaria-retro.png"
+                             alt="Retroexcavadora FERNER"
+                             loading="lazy">
+
+                        <div class="maquinaria-informacion">
+
+                            <span class="maquinaria-categoria">
+                                PESADA
+                            </span>
+
+                            <h3>Retroexcavadora</h3>
+
+                            <p>
+                                Excavación, cargue y
+                                movimiento de tierra.
+                            </p>
+
+                            <div class="maquinaria-datos">
+                                <span>50 horas propuestas</span>
+                                <span>Teórico-práctico</span>
+                            </div>
+
+                            <strong class="maquinaria-precio">
+                                $950.000
+                            </strong>
+
+                            <a href="contacto.html#formulario-contacto"
+                               class="maquinaria-boton">
+                                Consultar cupos →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- montacargas -->
+
+                    <article class="maquinaria-tarjeta">
+
+                        <img src="assets/img/maquinaria-montacargas.png"
+                             alt="Montacargas industrial FERNER"
+                             loading="lazy">
+
+                        <div class="maquinaria-informacion">
+
+                            <span class="maquinaria-categoria">
+                                INDUSTRIAL
+                            </span>
+
+                            <h3>Montacargas</h3>
+
+                            <p>
+                                Manipulación de cargas
+                                y operación segura.
+                            </p>
+
+                            <div class="maquinaria-datos">
+                                <span>40 horas propuestas</span>
+                                <span>Teórico-práctico</span>
+                            </div>
+
+                            <strong class="maquinaria-precio">
+                                $600.000
+                            </strong>
+
+                            <a href="contacto.html#formulario-contacto"
+                               class="maquinaria-boton">
+                                Consultar cupos →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- cosechadora agrícola -->
+
+                    <article class="maquinaria-tarjeta">
+
+                        <img src="assets/img/maquinaria-cosechadora.png"
+                             alt="Cosechadora agrícola FERNER"
+                             loading="lazy">
+
+                        <div class="maquinaria-informacion">
+
+                            <span class="maquinaria-categoria">
+                                AGRÍCOLA
+                            </span>
+
+                            <h3>Cosechadora agrícola</h3>
+
+                            <p>
+                                Recolección mecanizada
+                                y seguridad en campo.
+                            </p>
+
+                            <div class="maquinaria-datos">
+                                <span>Duración por definir</span>
+                                <span>Práctica especializada</span>
+                            </div>
+
+                            <strong class="maquinaria-precio">
+                                Cotizar
+                            </strong>
+
+                            <a href="contacto.html#formulario-contacto"
+                               class="maquinaria-boton">
+                                Solicitar información →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- minicargador -->
+
+                    <article class="maquinaria-tarjeta">
+
+                        <img src="assets/img/maquinaria-minicargador.png"
+                             alt="Minicargador FERNER"
+                             loading="lazy">
+
+                        <div class="maquinaria-informacion">
+
+                            <span class="maquinaria-categoria">
+                                PESADA
+                            </span>
+
+                            <h3>Minicargador</h3>
+
+                            <p>
+                                Movimiento de materiales
+                                y maniobras precisas.
+                            </p>
+
+                            <div class="maquinaria-datos">
+                                <span>40 horas propuestas</span>
+                                <span>Teórico-práctico</span>
+                            </div>
+
+                            <strong class="maquinaria-precio">
+                                $850.000
+                            </strong>
+
+                            <a href="contacto.html#formulario-contacto"
+                               class="maquinaria-boton">
+                                Consultar cupos →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- bulldozer -->
+
+                    <article class="maquinaria-tarjeta">
+
+                        <img src="assets/img/maquinaria-bulldozer.png"
+                             alt="Bulldozer de maquinaria pesada FERNER"
+                             loading="lazy">
+
+                        <div class="maquinaria-informacion">
+
+                            <span class="maquinaria-categoria">
+                                PESADA
+                            </span>
+
+                            <h3>Bulldozer</h3>
+
+                            <p>
+                                Empuje, nivelación
+                                y movimiento de tierras.
+                            </p>
+
+                            <div class="maquinaria-datos">
+                                <span>Duración por definir</span>
+                                <span>Teórico-práctico</span>
+                            </div>
+
+                            <strong class="maquinaria-precio">
+                                Cotizar
+                            </strong>
+
+                            <a href="contacto.html#formulario-contacto"
+                               class="maquinaria-boton">
+                                Consultar cupos →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- motoniveladora -->
+
+                    <article class="maquinaria-tarjeta">
+
+                        <img src="assets/img/maquinaria-motoniveladora.png"
+                             alt="Motoniveladora de formación FERNER"
+                             loading="lazy">
+
+                        <div class="maquinaria-informacion">
+
+                            <span class="maquinaria-categoria">
+                                PESADA
+                            </span>
+
+                            <h3>Motoniveladora</h3>
+
+                            <p>
+                                Nivelación, perfilado
+                                y preparación de terrenos.
+                            </p>
+
+                            <div class="maquinaria-datos">
+                                <span>Duración por definir</span>
+                                <span>Teórico-práctico</span>
+                            </div>
+
+                            <strong class="maquinaria-precio">
+                                Cotizar
+                            </strong>
+
+                            <a href="contacto.html#formulario-contacto"
+                               class="maquinaria-boton">
+                                Consultar cupos →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- rodillo compactador -->
+
+                    <article class="maquinaria-tarjeta">
+
+                        <img src="assets/img/maquinaria-rodillo.png"
+                             alt="Rodillo compactador de formación FERNER"
+                             loading="lazy">
+
+                        <div class="maquinaria-informacion">
+
+                            <span class="maquinaria-categoria">
+                                INDUSTRIAL
+                            </span>
+
+                            <h3>Rodillo compactador</h3>
+
+                            <p>
+                                Compactación de suelos
+                                y superficies viales.
+                            </p>
+
+                            <div class="maquinaria-datos">
+                                <span>Duración por definir</span>
+                                <span>Teórico-práctico</span>
+                            </div>
+
+                            <strong class="maquinaria-precio">
+                                Cotizar
+                            </strong>
+
+                            <a href="contacto.html#formulario-contacto"
+                               class="maquinaria-boton">
+                                Consultar cupos →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- preguntas frecuentes -->
+
+        <section class="cursos-faq"
+                 aria-labelledby="titulo-faq">
+
+            <div class="faq-contenedor">
+
+                <div class="faq-encabezado">
+
+                    <h2 id="titulo-faq">
+                        Preguntas frecuentes
+                    </h2>
+
+                    <p>
+                        Resolvemos las dudas más comunes
+                        sobre nuestros cursos.
+                    </p>
+
+                </div>
+
+
+                <!-- primera pregunta -->
+
+                <details class="faq-pregunta">
+
+                    <summary>
+                        ¿El curso me entrega directamente la licencia?
+                    </summary>
+
+                    <div class="faq-respuesta">
+
+                        <p>
+                            No. Realizar un curso de conducción no
+                            significa recibir automáticamente la
+                            licencia. La formación es una de las
+                            etapas necesarias para aprender a
+                            conducir y avanzar en el proceso de
+                            obtención de este documento.
+                        </p>
+
+                        <p>
+                            Para obtener la licencia en Colombia,
+                            el aspirante debe cumplir los requisitos
+                            correspondientes a la categoría solicitada.
+                            Entre ellos pueden encontrarse la
+                            inscripción en el RUNT, la aprobación de
+                            las evaluaciones exigidas, los exámenes
+                            médicos en un centro autorizado y los
+                            trámites ante el organismo de tránsito.
+                        </p>
+
+                        <p>
+                            En FERNER buscamos prepararte para
+                            desarrollar habilidades de conducción
+                            segura y responsable. También podrás
+                            recibir orientación sobre las etapas del
+                            proceso y los requisitos que debes
+                            verificar antes de solicitar tu licencia.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <!-- segunda pregunta -->
+
+                <details class="faq-pregunta">
+
+                    <summary>
+                        ¿Cuáles son los requisitos de inscripción?
+                    </summary>
+
+                    <div class="faq-respuesta">
+
+                        <p>
+                            Los requisitos dependen del programa
+                            que quieras realizar. No es lo mismo
+                            inscribirse en un curso de motocicleta,
+                            automóvil o servicio público que solicitar
+                            una capacitación para operar maquinaria
+                            pesada o agrícola.
+                        </p>
+
+                        <p>
+                            Para los cursos de conducción, generalmente
+                            se requiere contar con un documento de
+                            identidad válido, cumplir la edad mínima
+                            correspondiente a la categoría y realizar
+                            los registros, evaluaciones y procedimientos
+                            que exija la normativa vigente.
+                        </p>
+
+                        <p>
+                            En el caso de las capacitaciones en
+                            maquinaria, pueden solicitarse condiciones
+                            adicionales relacionadas con la edad,
+                            la experiencia previa, la aptitud para
+                            operar equipos y las medidas de seguridad
+                            propias de cada actividad.
+                        </p>
+
+                        <p>
+                            Antes de comenzar, podrás consultar
+                            el programa que te interesa para conocer
+                            sus requisitos, la documentación necesaria
+                            y los pasos que debes seguir para inscribirte.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <!-- tercera pregunta -->
+
+                <details class="faq-pregunta">
+
+                    <summary>
+                        ¿Cuánto tiempo dura cada curso?
+                    </summary>
+
+                    <div class="faq-respuesta">
+
+                        <p>
+                            La duración depende del tipo de formación
+                            y de las actividades que incluya cada
+                            programa. Los cursos pueden combinar
+                            conocimientos teóricos, ejercicios prácticos
+                            y actividades de evaluación para fortalecer
+                            las habilidades del estudiante.
+                        </p>
+
+                        <p>
+                            Por ejemplo, nuestros programas de
+                            motocicleta, automóvil y servicio público
+                            presentan diferentes cargas horarias.
+                            También contamos con clases de refuerzo,
+                            cuya duración puede ajustarse según la
+                            experiencia y las necesidades de práctica
+                            de cada persona.
+                        </p>
+
+                        <p>
+                            En las capacitaciones de maquinaria pesada
+                            y agrícola, el tiempo de formación puede
+                            variar según el equipo. Aprender a operar
+                            un tractor, una excavadora, una motoniveladora
+                            o un montacargas requiere actividades
+                            y conocimientos específicos.
+                        </p>
+
+                        <p>
+                            Es importante aclarar que las duraciones
+                            publicadas en esta versión académica de
+                            FERNER son propuestas ilustrativas.
+                            En una oferta real, los horarios y las
+                            horas de formación deberán confirmarse
+                            de acuerdo con los requisitos aplicables
+                            y la disponibilidad del programa.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <!-- cuarta pregunta -->
+
+                <details class="faq-pregunta">
+
+                    <summary>
+                        ¿Los precios incluyen exámenes médicos y trámites?
+                    </summary>
+
+                    <div class="faq-respuesta">
+
+                        <p>
+                            No necesariamente. El precio de un curso
+                            de conducción debe diferenciarse de otros
+                            gastos relacionados con la obtención
+                            de la licencia, ya que algunos procedimientos
+                            pueden tener costos independientes.
+                        </p>
+
+                        <p>
+                            Entre estos gastos pueden encontrarse
+                            los exámenes médicos, las evaluaciones
+                            externas, los derechos de expedición
+                            de la licencia y otros trámites exigidos
+                            por las autoridades correspondientes.
+                            Los valores pueden variar según el
+                            procedimiento y las tarifas vigentes.
+                        </p>
+
+                        <p>
+                            En las capacitaciones de maquinaria
+                            también es importante verificar qué
+                            actividades están incluidas en el valor
+                            del programa, especialmente cuando se
+                            requiere formación práctica con equipos
+                            especializados.
+                        </p>
+
+                        <p>
+                            Los precios publicados en FERNER son
+                            ilustrativos y hacen parte de este
+                            proyecto académico. Antes de una inscripción
+                            real, se deberá entregar información clara
+                            sobre el costo de la formación, los
+                            servicios incluidos y los posibles
+                            pagos adicionales.
+                        </p>
+
+                    </div>
+
+                </details>
+
+
+                <!-- quinta pregunta -->
+
+                <details class="faq-pregunta">
+
+                    <summary>
+                        ¿Puedo pagar en cuotas o con diferentes medios de pago?
+                    </summary>
+
+                    <div class="faq-respuesta">
+
+                        <p>
+                            Las opciones de pago dependerán de las
+                            condiciones que establezca la academia
+                            para cada programa. Antes de inscribirte,
+                            es importante conocer el valor total
+                            de la formación, los posibles pagos
+                            iniciales y las fechas en las que
+                            deban realizarse los abonos.
+                        </p>
+
+                        <p>
+                            Si necesitas distribuir el costo del curso
+                            en varios pagos, puedes solicitar
+                            información sobre la posibilidad de un
+                            plan de cuotas. También podrás consultar
+                            cuáles son los medios de pago disponibles
+                            y si existen condiciones especiales para
+                            determinados programas.
+                        </p>
+
+                        <p>
+                            Ten presente que los descuentos y
+                            beneficios publicados en esta página
+                            son ilustrativos y no constituyen
+                            una oferta comercial vigente.
+                            Cualquier facilidad de pago deberá
+                            confirmarse antes de realizar
+                            una inscripción.
+                        </p>
+
+                        <p>
+                            Actualmente, FERNER es un proyecto
+                            académico y su sitio web no procesa
+                            pagos reales. El formulario de Agenda
+                            permite representar el proceso de
+                            solicitud de inscripción, pero no realiza
+                            cobros ni confirma transacciones.
+                        </p>
+
+                    </div>
+
+                </details>
+
+            </div>
+
+        </section>
+
+
+        <!-- banner de agendamiento -->
+
+        <section class="cursos-cta"
+                 aria-labelledby="titulo-cursos-cta">
+
+            <div class="cursos-cta-contenedor">
+
+                <div class="cursos-cta-icono"
+                     aria-hidden="true">
+                    📅
+                </div>
+
+                <div class="cursos-cta-texto">
+
+                    <h2 id="titulo-cursos-cta">
+                        ¿Listo para comenzar?
+                    </h2>
+
+                    <p>
+                        Elige tu curso, agenda tu inscripción
+                        y da el primer paso hacia tu licencia.
+                    </p>
+
+                </div>
+
+                <a href="agenda.html" class="cursos-cta-boton">
+                    Agenda tu curso ahora
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- pie de página -->
+
+    <footer class="footer-ferner">
+
+        <div class="footer-principal">
+
+            <div class="footer-principal-contenedor">
+
+                <!-- identidad de ferner -->
+
+                <div class="footer-col footer-brand">
+
+                    <a href="index.html"
+                       class="footer-logo-enlace">
+
+                        <img src="assets/icons/ferner-logo.svg"
+                             alt="FERNER Academia de Conducción">
+
+                    </a>
+
+                    <p class="footer-frase">
+                        Formamos conductores,
+                        construimos confianza.
+                    </p>
+
+                    <div class="footer-especialidades"
+                         aria-label="Nuestras especialidades">
+
+                        <span title="Conducción de automóviles">
+                            <i class="bi bi-car-front-fill"
+                               aria-hidden="true"></i>
+                        </span>
+
+                        <span title="Conducción de motocicletas">
+                            <i class="bi bi-bicycle"
+                               aria-hidden="true"></i>
+                        </span>
+
+                        <span title="Maquinaria y vehículos pesados">
+                            <i class="bi bi-truck-front-fill"
+                               aria-hidden="true"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- enlaces principales -->
+
+                <div class="footer-col">
+
+                    <h3>Enlaces</h3>
+
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="sobre.html">Nosotros</a></li>
+                        <li><a href="instructores.html">Instructores</a></li>
+                        <li><a href="vehiculos.html">Vehículos</a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- enlaces a programas -->
+
+                <div class="footer-col">
+
+                    <h3>Programas</h3>
+
+                    <ul>
+                        <li><a href="cursos.html#programas">Automóvil</a></li>
+                        <li><a href="cursos.html#programas">Motocicleta</a></li>
+                        <li><a href="cursos.html#maquinaria">Maquinaria</a></li>
+                        <li><a href="cursos.html#programas">Refuerzo</a></li>
+                    </ul>
+
+                </div>
+
+
+                <!-- información de contacto -->
+
+                <div class="footer-col">
+
+                    <h3>Contacto</h3>
+
+                    <ul class="footer-contacto">
+
+                        <li>
+                            <i class="bi bi-telephone"
+                               aria-hidden="true"></i>
+                            <span>+57 300 123 4567</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-envelope"
+                               aria-hidden="true"></i>
+                            <span>info@ferner.edu.co</span>
+                        </li>
+
+                        <li>
+                            <i class="bi bi-geo-alt"
+                               aria-hidden="true"></i>
+                            <span>Bogotá, Colombia</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- redes sociales -->
+
+                <div class="footer-col">
+
+                    <h3>Síguenos</h3>
+
+                    <div class="footer-redes"
+                         role="group"
+                         aria-label="Redes sociales de referencia">
+
+                        <img src="assets/icons/facebook.svg"
+                             alt="Facebook">
+
+                        <img src="assets/icons/instagram.svg"
+                             alt="Instagram">
+
+                        <img src="assets/icons/youtube.svg"
+                             alt="YouTube">
+
+                        <img src="assets/icons/tiktok.svg"
+                             alt="TikTok">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- derechos de autor y enlaces legales -->
+
+        <div class="footer-inferior">
+
+            <div class="footer-inferior-contenedor">
+
+                <p>
+                    &copy; 2026 FERNER Academia de Conducción.
+                    Todos los derechos reservados.
+                </p>
+
+                <div class="footer-legales">
+
+                    <a href="privacidad.html">
+                        Política de privacidad
+                    </a>
+
+                    <a href="terminos.html">
+                        Términos de uso
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

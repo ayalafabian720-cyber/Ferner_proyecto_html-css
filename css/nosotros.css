@@ -1,0 +1,1487 @@
+
+/* ==========================================
+   FERNER - PÁGINA SOBRE NOSOTROS
+   ========================================== */
+
+
+/* ==========================================
+   1. PRESENTACIÓN DE LA ACADEMIA
+   ========================================== */
+
+.nosotros-hero {
+    background-color: var(--color-fondo);
+    padding: 55px 24px;
+}
+
+.nosotros-hero-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 45px;
+}
+
+/* Contenido de presentación */
+
+.nosotros-hero-texto {
+    min-width: 0;
+}
+
+.nosotros-etiqueta {
+    margin-bottom: 15px;
+    color: #E66C12;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+.nosotros-hero h1 {
+    margin: 0 0 24px;
+    color: #202020;
+    font-size: clamp(34px, 3.5vw, 52px);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+
+.nosotros-hero-texto > p:not(.nosotros-etiqueta) {
+    max-width: 520px;
+    margin-bottom: 28px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Imagen del instructor y el alumno */
+
+.nosotros-hero-imagen {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 100px 16px 16px 16px;
+}
+
+.nosotros-hero-imagen img {
+    display: block;
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ==========================================
+   2. NUESTRA HISTORIA
+   ========================================== */
+
+.nosotros-historia {
+    background-color: #FFFFFF;
+    padding: 65px 24px;
+}
+
+.nosotros-historia-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 55px;
+}
+
+/* Fotografía del automóvil */
+
+.historia-imagen {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.historia-imagen img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Contenido de historia */
+
+.historia-contenido {
+    min-width: 0;
+}
+
+.historia-contenido h2 {
+    margin: 0 0 22px;
+    color: var(--color-primario);
+    font-size: clamp(28px, 2.8vw, 40px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.historia-contenido > p:not(.nosotros-etiqueta) {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ==========================================
+   3. MISIÓN Y VISIÓN DE FERNER
+   ========================================== */
+.nosotros-proposito {
+    background-color: var(--color-fondo);
+    padding: 65px 24px;
+}
+.proposito-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+/* Encabezado */
+.proposito-encabezado {
+    max-width: 720px;
+    margin-bottom: 35px;
+}
+
+/* ETIQUETA NUESTRO COMPROMISO */
+
+.proposito-encabezado .nosotros-etiqueta {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.proposito-encabezado h2 {
+    color: var(--color-primario);
+    font-size: clamp(30px, 3vw, 42px);
+    margin: 0 0 15px;
+}
+.proposito-encabezado > p:last-child {
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* Distribución de tarjetas */
+.proposito-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+.proposito-tarjeta {
+    background-color: #FFFFFF;
+    border: 1px solid #D9D1C5;
+    border-radius: 16px;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: 65px minmax(0, 1fr);
+    column-gap: 20px;
+    align-content: start;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+/* Iconos */
+.proposito-icono {
+    grid-row: 1 / 3;
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F5F1E8;
+    border-radius: 12px;
+}
+.proposito-icono svg {
+    width: 35px;
+    height: 35px;
+
+    fill: none;
+    stroke: var(--color-primario);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/*iconos de proposito y filosofia*/
+.proposito-icono .bi {
+    color: #0E4D3B;
+    font-size: 35px;
+}
+
+/* Textos */
+.proposito-tarjeta h3 {
+    margin: 0 0 12px;
+    color: var(--color-primario);
+    font-size: 24px;
+}
+.proposito-tarjeta p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.65;
+}
+/* Hover */
+.proposito-tarjeta:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-primario);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ==========================================
+   4. NUESTROS VALORES
+   ========================================== */
+
+.nosotros-valores {
+    background-color: #F7F3EC;
+    padding: 55px 24px;
+}
+
+.valores-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+
+.valores-encabezado {
+    margin-bottom: 30px;
+}
+
+.valores-encabezado h2 {
+    color: var(--color-primario);
+    font-size: clamp(30px, 3vw, 40px);
+    margin: 0 0 12px;
+}
+
+.valores-encabezado > p:last-child {
+    max-width: 600px;
+    font-size: 16px;
+}
+
+/* Distribución horizontal */
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+}
+
+.valor-tarjeta {
+    min-width: 0;
+    padding: 12px 22px;
+    border-right: 1px solid #D9D1C5;
+    transition: transform 0.3s ease;
+}
+
+.valor-tarjeta:first-child {
+    padding-left: 0;
+}
+
+.valor-tarjeta:last-child {
+    border-right: none;
+}
+
+
+/* ICONOS DE NUESTROS VALORES */
+
+.valor-icono {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    height: 42px;
+}
+
+.valor-icono svg {
+    width: 38px;
+    height: 38px;
+    fill: none;
+    stroke: #E66C12;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.valor-tarjeta h3 {
+    margin: 0 0 10px;
+    color: var(--color-primario);
+    font-size: 20px;
+}
+
+.valor-tarjeta p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.valor-tarjeta:hover {
+    transform: translateY(-4px);
+}
+
+/* ==========================================
+   5. TESTIMONIOS DE FERNER
+   ========================================== */
+
+.nosotros-testimonios {
+    background-color: #FFFFFF;
+    padding: 65px 24px;
+}
+
+.testimonios-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Encabezado de la sección */
+
+.testimonios-encabezado {
+    max-width: 750px;
+    margin-bottom: 32px;
+}
+
+.testimonios-encabezado h2 {
+    color: var(--color-primario);
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.2;
+    margin: 0 0 15px;
+}
+
+.testimonios-encabezado > p:last-child {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Distribución */
+
+.testimonios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Tarjetas */
+
+.testimonio-tarjeta {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+
+    padding: 25px;
+    background-color: #FFFFFF;
+    border: 1px solid #D9D1C5;
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.testimonio-tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Fotografías circulares */
+
+.testimonio-foto {
+    width: 85px;
+    height: 85px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #F5F1E8;
+}
+
+.testimonio-foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Contenido */
+
+.testimonio-contenido {
+    min-width: 0;
+}
+
+.testimonio-comillas {
+    display: block;
+    height: 26px;
+    color: #E66C12;
+    font-size: 55px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.testimonio-tarjeta blockquote {
+    margin: 12px 0 18px;
+    padding: 0;
+    border: none;
+}
+
+.testimonio-tarjeta blockquote p {
+    margin: 0;
+    color: #333333;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+/* Etiqueta inferior */
+
+.testimonio-tipo {
+    display: inline-block;
+    margin: 0;
+    padding: 8px 12px;
+
+    background-color: #FCE6C8;
+    border-radius: 8px;
+    color: #333333;
+    font-size: 13px;
+}
+
+/* ==========================================
+   6. INVITACIÓN FINAL DE FERNER
+   ========================================== */
+.nosotros-invitacion {
+    background-color: #0E4D3B;
+    padding: 38px 24px;
+}
+.invitacion-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 75px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 30px;
+}
+/* Icono */
+.invitacion-icono {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 14px;
+}
+.invitacion-icono svg {
+    width: 43px;
+    height: 43px;
+
+    fill: none;
+    stroke: #FFB743;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+/* Mensaje */
+.invitacion-texto {
+    min-width: 0;
+}
+.invitacion-texto h2 {
+    margin: 0 0 8px;
+    color: #FFFFFF;
+    font-size: clamp(23px, 2.2vw, 32px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+.invitacion-texto p {
+    margin: 0;
+    color: #F9DC96;
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* Botón */
+.invitacion-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 16px 24px;
+    background-color: #F28C28;
+    color: #202020;
+
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+.invitacion-boton:hover {
+    background-color: #FFAA43;
+    transform: translateY(-3px);
+}
+.invitacion-boton:focus-visible {
+    outline: 3px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+
+
+/* ==========================================
+   3. ADAPTACIÓN PARA TABLET
+   ========================================== */
+
+@media (max-width: 992px) {
+
+    .nosotros-hero-contenedor,
+    .nosotros-historia-contenedor {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .nosotros-hero-imagen img {
+        height: 360px;
+    }
+
+    .historia-imagen img {
+        height: 320px;
+    }
+
+    /* Misión y visión en tablet */
+
+    .proposito-grid {
+        grid-template-columns: 1fr;
+    }
+    /* TESTIMONIOS EN TABLET */
+
+    .testimonios-grid {
+    grid-template-columns: 1fr;
+}
+
+    /* Invitación final en tablet */
+
+    .invitacion-contenedor {
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .invitacion-boton {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+
+}
+
+
+/* ==========================================
+   4. ADAPTACIÓN PARA MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .nosotros-hero {
+        padding: 45px 18px;
+    }
+
+    .nosotros-hero h1 {
+        font-size: clamp(30px, 8vw, 38px);
+    }
+
+    .nosotros-hero-imagen {
+        border-radius: 55px 12px 12px 12px;
+    }
+
+    .nosotros-hero-imagen img {
+        height: 260px;
+    }
+
+    .nosotros-historia {
+        padding: 45px 18px;
+    }
+
+    .historia-imagen img {
+        height: 250px;
+    }
+
+    .historia-contenido h2 {
+        font-size: 28px;
+    }
+
+    /* Misión y visión en móvil */
+    .nosotros-proposito {
+        padding: 45px 18px;
+    }
+
+    .proposito-tarjeta {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 24px;
+    }
+
+    .proposito-icono {
+        grid-row: auto;
+    }
+
+
+    /* Invitación final en móvil */
+
+    .nosotros-invitacion {
+        padding: 35px 18px;
+    }
+
+    .invitacion-contenedor {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        text-align: center;
+    }
+
+    .invitacion-icono {
+        margin: 0 auto;
+    }
+
+    .invitacion-texto h2 {
+        font-size: 25px;
+    }
+
+    .invitacion-boton {
+        grid-column: 1;
+        justify-self: stretch;
+        white-space: normal;
+    }
+
+
+}
+
+
+/* Respetar preferencias de movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .proposito-tarjeta {
+        transition: none;
+    }
+}
+
+/*TESTIMONIOS EN MÓVIL*/
+.nosotros-testimonios {
+    padding: 45px 18px;
+}
+.testimonio-tarjeta {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 22px;
+}
+.testimonio-foto {
+    width: 75px;
+    height: 75px;
+}
+
+
+/* ==========================================
+   CORRECCIÓN RESPONSIVE DE VALORES
+   ========================================== */
+
+/*tablet: dos columnas*/
+@media (min-width: 601px) and (max-width: 992px) {
+    .nosotros-valores .valores-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+    .nosotros-valores .valor-tarjeta {
+        min-width: 0;
+        padding: 18px;
+        border-right: none;
+        border-bottom: 1px solid #D9D1C5;
+    }
+
+}
+
+/*movil: una sola columna*/
+@media (max-width: 600px) {
+    .nosotros-valores .valores-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+    .nosotros-valores .valor-tarjeta {
+        min-width: 0;
+        padding: 22px 0;
+        border-right: none;
+        border-bottom: 1px solid #D9D1C5;
+    }
+    .nosotros-valores .valor-tarjeta:last-child {
+        border-bottom: none;
+    }
+    .nosotros-valores .valor-tarjeta h3 {
+        overflow-wrap: break-word;
+    }
+
+}
+
+
+/* ==========================================
+   CINTA HORIZONTAL DE TESTIMONIOS
+   ========================================== */
+
+/* VENTANA DEL CARRUSEL */
+
+.testimonios-cinta {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 5%,
+        black 95%,
+        transparent
+    );
+}
+
+/* PISTA QUE SE DESPLAZA */
+
+.testimonios-pista {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+
+    animation: mover-testimonios 48s linear infinite;
+}
+
+/* DOS GRUPOS IDÉNTICOS */
+
+.testimonios-grupo {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+/* TARJETAS INDIVIDUALES */
+
+.testimonio-cinta-tarjeta {
+    width: 440px;
+    min-height: 285px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 25px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E4D6C8;
+    border-radius: 18px;
+
+    box-shadow: 0 5px 14px rgba(0,0,0,0.04);
+}
+
+/* RETRATOS E ICONOS */
+
+.testimonio-cinta-foto,
+.testimonio-cinta-avatar {
+    width: 75px;
+    height: 75px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonio-cinta-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonio-cinta-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #E8F0E5;
+    color: #0E4D3B;
+    font-size: 33px;
+}
+
+/* COMILLAS DECORATIVAS */
+
+.testimonio-cinta-comillas {
+    height: 40px;
+    margin-top: 8px;
+
+    color: #E66C12;
+    font-size: 65px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* MENSAJE */
+
+.testimonio-cinta-mensaje {
+    margin: 8px 0 20px;
+
+    color: #333333;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.55;
+}
+
+/* ETIQUETA INFERIOR */
+
+.testimonio-cinta-tipo {
+    display: inline-block;
+    margin-top: auto;
+    padding: 10px 14px;
+
+    background-color: #FFE7C8;
+    border-radius: 10px;
+
+    color: #4D321A;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ==========================================
+   ANIMACIÓN HORIZONTAL
+   ========================================== */
+
+@keyframes mover-testimonios {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 10px));
+    }
+
+}
+
+/* DETENER AL PASAR EL CURSOR */
+
+.testimonios-cinta:hover .testimonios-pista,
+.testimonios-cinta:focus-within .testimonios-pista {
+    animation-play-state: paused;
+}
+
+/* ==========================================
+   RESPONSIVE CELULAR
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .testimonio-cinta-tarjeta {
+        width: 300px;
+        min-height: 310px;
+        padding: 20px;
+    }
+
+    .testimonio-cinta-mensaje {
+        font-size: 14px;
+    }
+
+    .testimonios-pista,
+    .testimonios-grupo {
+        gap: 14px;
+    }
+
+    .testimonios-pista {
+        animation-duration: 55s;
+    }
+
+    .testimonios-cinta {
+        mask-image: none;
+    }
+
+    /* Ajuste de distancia para gap de 14px */
+    @keyframes mover-testimonios {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(calc(-50% - 7px));
+        }
+    }
+}
+
+/* ==========================================
+   MODO OSCURO
+   ========================================== */
+
+body:has(#modo-oscuro:checked)
+.testimonio-cinta-tarjeta {
+    background-color: #223A30;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked)
+.testimonio-cinta-mensaje {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked)
+.testimonio-cinta-avatar {
+    background-color: #365647;
+    color: #FFAA43;
+}
+
+body:has(#modo-oscuro:checked)
+.testimonio-cinta-tipo {
+    background-color: #365647;
+    color: #F2F7F3;
+}
+
+/*ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .testimonios-cinta {
+        overflow-x: auto;
+        mask-image: none;
+    }
+
+    .testimonios-pista {
+        animation: none;
+    }
+}
+
+
+
+/* ==========================================
+   FERNER EXPERIENCE
+   ANIMACIONES DEL HERO DE NOSOTROS
+   ========================================== */
+
+/* ETIQUETA SUPERIOR */
+
+.nosotros-hero .nosotros-etiqueta {
+    animation: nosotros-etiqueta-entrada 0.8s ease both;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.nosotros-hero h1 {
+    animation: nosotros-titulo-entrada 1s ease 0.2s both;
+}
+
+/* RESALTADO NARANJA QUE SE DIBUJA */
+
+.nosotros-hero .texto-resaltado {
+    background:
+        linear-gradient(
+            90deg,
+            #F5B65B,
+            #F5B65B
+        ) left center / 0% 100% no-repeat;
+
+    padding: 0 6px;
+    border-radius: 4px;
+
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+
+    animation: nosotros-marcador 1.3s ease 1s forwards;
+}
+
+/* DESCRIPCIÓN */
+
+.nosotros-hero-texto > p:not(.nosotros-etiqueta) {
+    animation: nosotros-texto-entrada 0.9s ease 0.7s both;
+}
+
+/* BOTÓN PRINCIPAL */
+
+.nosotros-hero .boton-primario {
+    animation: nosotros-texto-entrada 0.9s ease 1s both;
+
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.nosotros-hero .boton-primario:hover {
+    background-color: #FFAA43;
+    box-shadow: 0 8px 22px rgba(242,140,40,0.35);
+}
+
+/* ==========================================
+   FOTOGRAFÍA CINEMATOGRÁFICA
+   ========================================== */
+
+/* REVELACIÓN DIAGONAL */
+
+.nosotros-hero-imagen {
+    position: relative;
+    overflow: hidden;
+
+    animation: nosotros-foto-revelar 1.5s ease 0.3s both;
+}
+
+/* MOVIMIENTO LENTO DE CÁMARA */
+
+.nosotros-hero-imagen img {
+    display: block;
+    transform-origin: center center;
+
+    animation: nosotros-camara 13s ease-in-out 1.5s infinite alternate;
+}
+
+/* BORDE LUMINOSO INFERIOR */
+
+.nosotros-hero-imagen::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #0E4D3B,
+        #F28C28,
+        #FFD18B
+    );
+
+    transform-origin: left;
+    animation: nosotros-borde 1.1s ease 1.3s both;
+
+    pointer-events: none;
+}
+
+
+/*keyframes de nosotros*/
+
+/* ETIQUETA DESDE LA IZQUIERDA */
+
+@keyframes nosotros-etiqueta-entrada {
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* TÍTULO APARECIENDO DESDE ABAJO */
+
+@keyframes nosotros-titulo-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(45px);
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* FONDO NARANJA DEL TEXTO */
+
+@keyframes nosotros-marcador {
+    from {
+        background-size: 0% 100%;
+    }
+
+    to {
+        background-size: 100% 100%;
+    }
+}
+
+/* ENTRADA DE DESCRIPCIÓN Y BOTÓN */
+
+@keyframes nosotros-texto-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* APERTURA DIAGONAL DE LA IMAGEN */
+
+@keyframes nosotros-foto-revelar {
+    from {
+        opacity: 0;
+        clip-path: polygon(
+            100% 0,
+            100% 0,
+            100% 100%,
+            100% 100%
+        );
+    }
+
+    to {
+        opacity: 1;
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            0 100%
+        );
+    }
+}
+
+/* MOVIMIENTO CINEMATOGRÁFICO */
+
+@keyframes nosotros-camara {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.07);
+    }
+}
+
+/* LÍNEA LUMINOSA DE LA FOTOGRAFÍA */
+
+@keyframes nosotros-borde {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+
+/* ==========================================
+   ACCESIBILIDAD
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nosotros-hero .nosotros-etiqueta,
+    .nosotros-hero h1,
+    .nosotros-hero .texto-resaltado,
+    .nosotros-hero-texto > p:not(.nosotros-etiqueta),
+    .nosotros-hero .boton-primario,
+    .nosotros-hero-imagen,
+    .nosotros-hero-imagen img,
+    .nosotros-hero-imagen::after {
+        animation: none;
+    }
+
+    .nosotros-hero .texto-resaltado {
+        background-size: 100% 100%;
+    }
+
+    .nosotros-hero-imagen {
+        clip-path: none;
+    }
+
+    .nosotros-hero-imagen::after {
+        transform: scaleX(1);
+    }
+}
+
+
+/* ==========================================
+   ANIMACIÓN AL DESPLAZARSE - NUESTRA HISTORIA
+   ========================================== */
+
+@supports (animation-timeline: view()) {
+
+    /* FOTOGRAFÍA DESDE LA IZQUIERDA */
+
+    .nosotros-historia .historia-imagen {
+        animation: historia-foto linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 35%;
+    }
+
+    /* TEXTO DESDE ABAJO */
+
+    .nosotros-historia .historia-contenido {
+        animation: historia-texto linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 35%;
+    }
+
+    /* MOVIMIENTO DE LA FOTOGRAFÍA */
+
+    @keyframes historia-foto {
+        from {
+            opacity: 0;
+            transform: translateX(-45px) scale(0.96);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    /* APARICIÓN DEL TEXTO */
+
+    @keyframes historia-texto {
+        from {
+            opacity: 0;
+            transform: translateY(35px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nosotros-historia .historia-imagen,
+    .nosotros-historia .historia-contenido {
+        animation: none;
+    }
+}
+
+
+
+/* ==========================================
+   FERNER - NUESTRO COMPROMISO
+   ========================================== */
+
+.nosotros-compromiso {
+    padding: 75px 24px;
+    background-color: #FFF9F2;
+}
+
+.compromiso-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+/* TEXTO A LA IZQUIERDA */
+
+.compromiso-contenido {
+    min-width: 0;
+}
+
+.compromiso-contenido h2 {
+    margin: 10px 0 25px;
+
+    color: #0E4D3B;
+    font-size: clamp(30px, 3vw, 46px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.compromiso-contenido > p:not(.nosotros-etiqueta) {
+    margin: 0 0 19px;
+
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.compromiso-contenido > p:last-child {
+    margin-bottom: 0;
+}
+
+/* IMAGEN A LA DERECHA */
+
+.compromiso-imagen {
+    min-width: 0;
+    min-height: 430px;
+
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+/* ESPACIO TEMPORAL PARA LA FOTOGRAFÍA */
+
+.compromiso-imagen-pendiente {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    width: 100%;
+    min-height: 430px;
+    padding: 25px;
+
+    background-color: #E9E5DD;
+    border: 2px dashed #C9BCAB;
+    border-radius: 18px;
+
+    color: #0E4D3B;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.compromiso-imagen-pendiente i {
+    color: #E66C12;
+    font-size: 48px;
+}
+
+/* ESTILOS PARA LA FUTURA FOTOGRAFÍA */
+
+.compromiso-imagen img {
+    display: block;
+    width: 100%;
+    height: 430px;
+
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+
+    .compromiso-contenedor {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .compromiso-imagen,
+    .compromiso-imagen-pendiente {
+        min-height: 350px;
+    }
+
+    .compromiso-imagen img {
+        height: 350px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .nosotros-compromiso {
+        padding: 45px 18px;
+    }
+
+    .compromiso-contenido h2 {
+        font-size: 30px;
+    }
+
+    .compromiso-contenido > p:not(.nosotros-etiqueta) {
+        font-size: 15px;
+    }
+
+    .compromiso-imagen,
+    .compromiso-imagen-pendiente {
+        min-height: 270px;
+    }
+
+    .compromiso-imagen img {
+        height: 270px;
+    }
+}
+
+/* MODO OSCURO */
+
+body:has(#modo-oscuro:checked) .nosotros-compromiso {
+    background-color: #14231D;
+}
+
+body:has(#modo-oscuro:checked) .compromiso-contenido h2 {
+    color: #E8F1EB;
+}
+
+body:has(#modo-oscuro:checked)
+.compromiso-contenido > p:not(.nosotros-etiqueta) {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .compromiso-imagen-pendiente {
+    background-color: #223A30;
+    border-color: #49685B;
+    color: #FFFFFF;
+}
+
+
+
+/* ==========================================
+   ANIMACIÓN - NUESTRO COMPROMISO
+   ========================================== */
+
+/* Contenedor de la fotografía */
+
+.compromiso-imagen {
+    overflow: hidden;
+    border-radius: 20px;
+
+    animation: compromiso-entrada 1.2s ease both;
+}
+
+/* Fotografía con movimiento suave */
+
+.compromiso-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    animation: compromiso-camara 10s ease-in-out
+               1.2s infinite alternate;
+}
+
+/* Entrada desde la derecha */
+
+@keyframes compromiso-entrada {
+
+    from {
+        opacity: 0;
+        transform: translateX(45px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Acercamiento cinematográfico */
+
+@keyframes compromiso-camara {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+}
+
+/* Accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .compromiso-imagen,
+    .compromiso-imagen img {
+        animation: none;
+    }
+}

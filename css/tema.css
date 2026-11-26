@@ -1,0 +1,403 @@
+
+/*para el modo oscuro*/
+
+/*boton de cambio del tema*/
+.tema-checkbox {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+.tema-boton {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 1200;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 18px;
+
+    background-color: #0E4D3B;
+    color: #FFFFFF;
+    border: 2px solid #F28C28;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.tema-claro {
+    display: none;
+}
+.tema-checkbox:focus-visible + .tema-boton {
+    outline: 3px solid #F28C28;
+    outline-offset: 4px;
+}
+
+
+/* COLORES DEL MODO OSCURO */
+body:has(#modo-oscuro:checked) {
+    --color-fondo: #151E1B;
+    --color-texto: #F1F5F2;
+
+    --tema-superficie: #21322C;
+    --tema-titulo: #D5F0E6;
+    --tema-borde: #3B554C;
+
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+
+/* CAMBIO DEL BOTÓN */
+body:has(#modo-oscuro:checked) .tema-boton {
+    background-color: #F28C28;
+    color: #202020;
+}
+
+body:has(#modo-oscuro:checked) .tema-oscuro {
+    display: none;
+}
+
+body:has(#modo-oscuro:checked) .tema-claro {
+    display: inline;
+}
+
+
+/*fondos oscuros*/
+
+body:has(#modo-oscuro:checked) .encabezado-principal,
+body:has(#modo-oscuro:checked) .beneficios,
+body:has(#modo-oscuro:checked) .footer-principal,
+body:has(#modo-oscuro:checked) .footer-inferior,
+body:has(#modo-oscuro:checked) .nosotros-historia,
+body:has(#modo-oscuro:checked) .nosotros-testimonios,
+body:has(#modo-oscuro:checked) .proposito-tarjeta,
+body:has(#modo-oscuro:checked) .testimonio-tarjeta,
+body:has(#modo-oscuro:checked) .nav-movil nav {
+    background-color: var(--tema-superficie);
+}
+
+body:has(#modo-oscuro:checked) .hero,
+body:has(#modo-oscuro:checked) .programas,
+body:has(#modo-oscuro:checked) .nosotros-hero,
+body:has(#modo-oscuro:checked) .nosotros-proposito,
+body:has(#modo-oscuro:checked) .nosotros-valores {
+    background-color: var(--color-fondo);
+}
+
+
+/* ==========================================
+   TÍTULOS Y TEXTOS */
+
+body:has(#modo-oscuro:checked) .hero h1,
+body:has(#modo-oscuro:checked) .nosotros-hero h1,
+body:has(#modo-oscuro:checked) .historia-contenido h2,
+body:has(#modo-oscuro:checked) .proposito-encabezado h2,
+body:has(#modo-oscuro:checked) .proposito-tarjeta h3,
+body:has(#modo-oscuro:checked) .valores-encabezado h2,
+body:has(#modo-oscuro:checked) .valor-tarjeta h3,
+body:has(#modo-oscuro:checked) .testimonios-encabezado h2,
+body:has(#modo-oscuro:checked) .programas-encabezado h2,
+body:has(#modo-oscuro:checked) .razones-informacion h2 {
+    color: var(--tema-titulo);
+}
+
+/* Enlaces de navegación y footer */
+
+body:has(#modo-oscuro:checked) .menu a,
+body:has(#modo-oscuro:checked) .nav-movil-lista a,
+body:has(#modo-oscuro:checked) .footer-col a,
+body:has(#modo-oscuro:checked) .footer-legales a,
+body:has(#modo-oscuro:checked) .footer-inferior p {
+    color: var(--color-texto);
+}
+
+/* Otros textos con colores fijos */
+body:has(#modo-oscuro:checked)
+.testimonio-tarjeta blockquote p {
+    color: var(--color-texto);
+}
+
+/* Bordes de tarjetas */
+body:has(#modo-oscuro:checked) .proposito-tarjeta,
+body:has(#modo-oscuro:checked) .testimonio-tarjeta {
+    border-color: var(--tema-borde);
+}
+/* Destacado naranja */
+body:has(#modo-oscuro:checked) .texto-resaltado {
+    color: #202020;
+}
+/* Botones secundarios */
+body:has(#modo-oscuro:checked) .boton-secundario {
+    color: #D5F0E6;
+    border-color: #87D2B6;
+}
+/* Fondo del enlace activo en móvil */
+body:has(#modo-oscuro:checked)
+.nav-movil-lista a:hover,
+body:has(#modo-oscuro:checked)
+.nav-movil-lista a[aria-current="page"] {
+    background-color: #30473F;
+}
+/* Iconos de beneficios */
+body:has(#modo-oscuro:checked) .icono-beneficio {
+    stroke: #BCEAD9;
+}
+/* Fondo claro para conservar legibilidad del logo */
+body:has(#modo-oscuro:checked) .logo,
+body:has(#modo-oscuro:checked) .footer-logo-enlace {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+
+
+/* ==========================================
+   CORRECCIÓN DE COLORES EN MODO OSCURO
+   ========================================== */
+
+/* Encabezado completo */
+
+body:has(#modo-oscuro:checked) .encabezado {
+    background-color: #21322C;
+}
+
+/* Beneficios de la Home */
+
+body:has(#modo-oscuro:checked) .beneficio h2 {
+    color: #F1F5F2;
+}
+
+/* Sección de razones */
+
+body:has(#modo-oscuro:checked) .razones {
+    background-color: #21322C;
+}
+
+body:has(#modo-oscuro:checked) .razones-informacion p,
+body:has(#modo-oscuro:checked) .razones-lista li {
+    color: #F1F5F2;
+}
+
+/* Misión y visión */
+
+body:has(#modo-oscuro:checked) .proposito-tarjeta p {
+    color: #F1F5F2;
+}
+
+/* Valores */
+
+body:has(#modo-oscuro:checked) .valor-tarjeta p {
+    color: #F1F5F2;
+}
+
+/* Testimonios */
+
+body:has(#modo-oscuro:checked) .testimonio-tarjeta blockquote p {
+    color: #F1F5F2;
+}
+
+/* Etiquetas de testimonios */
+
+body:has(#modo-oscuro:checked) .testimonio-tipo {
+    background-color: #30473F;
+    color: #F1F5F2;
+}
+
+/* Textos del footer */
+
+body:has(#modo-oscuro:checked) .footer-col h3,
+body:has(#modo-oscuro:checked) .footer-col li,
+body:has(#modo-oscuro:checked) .footer-inferior p {
+    color: #F1F5F2;
+}
+
+/* Fondo de iconos de misión y visión */
+
+body:has(#modo-oscuro:checked) .proposito-icono {
+    background-color: #30473F;
+}
+
+
+
+/* ==========================================
+   MODO OSCURO - ¿POR QUÉ ELEGIR FERNER?
+   ========================================== */
+
+/* Fondo de la tarjeta completa */
+
+body:has(#modo-oscuro:checked) .razones-contenedor {
+    background-color: #21322C;
+    border-color: #3B554C;
+}
+
+/* Título principal */
+
+body:has(#modo-oscuro:checked) .razones-informacion h2 {
+    color: #D5F0E6;
+}
+
+/* Etiqueta naranja */
+
+body:has(#modo-oscuro:checked) .razones-etiqueta {
+    color: #F28C28;
+}
+
+/* Descripción */
+
+body:has(#modo-oscuro:checked) .razones-informacion p {
+    color: #F1F5F2;
+}
+
+/* Lista de beneficios */
+
+body:has(#modo-oscuro:checked) .razones-lista li {
+    color: #F1F5F2;
+}
+
+/* Separadores */
+
+body:has(#modo-oscuro:checked) .razones-lista {
+    border-color: #3B554C;
+}
+
+
+
+/* ==========================================
+   MODO OSCURO - ICONOS DE MISIÓN Y VISIÓN
+   ========================================== */
+
+/* Color de los iconos SVG */
+
+body:has(#modo-oscuro:checked) .proposito-icono svg {
+    stroke: #F28C28;
+}
+
+/* Fondo donde aparecen los iconos */
+
+body:has(#modo-oscuro:checked) .proposito-icono {
+    background-color: #30473F;
+    border: 1px solid #49685B;
+}
+
+/* Efecto al pasar el cursor */
+
+body:has(#modo-oscuro:checked)
+.proposito-tarjeta:hover .proposito-icono {
+    background-color: #3B554C;
+}
+
+
+
+/* ==========================================
+   MODO OSCURO - NUESTRO EQUIPO
+   ========================================== */
+
+body:has(#modo-oscuro:checked) .instructores-equipo {
+    background-color: #151E1B;
+}
+
+body:has(#modo-oscuro:checked) .equipo-encabezado h2 {
+    color: #D5F0E6;
+}
+
+body:has(#modo-oscuro:checked) .instructor-tarjeta {
+    background-color: #21322C;
+    border-color: #3B554C;
+}
+
+body:has(#modo-oscuro:checked) .instructor-informacion h3 {
+    color: #F1F5F2;
+}
+
+body:has(#modo-oscuro:checked) .instructor-especialidad {
+    color: #FFB45A;
+}
+
+body:has(#modo-oscuro:checked) .instructor-etiqueta {
+    background-color: #30473F;
+    color: #D5F0E6;
+}
+
+body:has(#modo-oscuro:checked) .equipo-nota {
+    color: #C5D6CF;
+}
+
+
+/* HABILIDADES DE INSTRUCTORES EN MODO OSCURO */
+
+body:has(#modo-oscuro:checked)
+.instructor-habilidades span {
+    background-color: #30473F;
+    color: #D5F0E6;
+}
+
+
+
+
+
+
+/*MODO OSCURO - METODOLOGÍA*/
+
+/* Fondo general */
+body:has(#modo-oscuro:checked)
+.instructores-metodologia {
+    background: #151E1B;
+}
+/* Encabezado */
+body:has(#modo-oscuro:checked)
+.metodologia-encabezado h2 {
+    color: #D5F0E6;
+}
+body:has(#modo-oscuro:checked)
+.metodologia-encabezado > p:last-child {
+    color: #E4EEE9;
+}
+/* Tarjetas normales */
+body:has(#modo-oscuro:checked)
+.metodologia-paso:not(.paso-destacado) {
+    background: linear-gradient(
+        145deg,
+        #273D34,
+        #1B2C25
+    );
+    border-color: #54796A;
+}
+/* Títulos de las tarjetas */
+body:has(#modo-oscuro:checked)
+.metodologia-paso h3 {
+    color: #E5FFF4;
+}
+/* Descripciones */
+body:has(#modo-oscuro:checked)
+.metodologia-paso p {
+    color: #F1F5F2;
+}
+/*Tarjeta central*/
+body:has(#modo-oscuro:checked)
+.metodologia-paso.paso-destacado {
+    background: linear-gradient(
+        145deg,
+        #17634B,
+        #073B2D
+    );
+
+    border-color: #FF981C;
+}
+/* Contenedores de iconos */
+body:has(#modo-oscuro:checked)
+.paso-icono {
+    background: transparent;
+}
+
+body:has(#modo-oscuro:checked)
+.instructores-cta {
+    background-color: #151E1B;
+}

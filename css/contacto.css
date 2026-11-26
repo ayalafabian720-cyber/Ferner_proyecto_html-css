@@ -1,0 +1,1467 @@
+
+/* ==========================================
+   FERNER - PÁGINA DE CONTACTO
+   ========================================== */
+
+/* 1. ESTRUCTURA GENERAL */
+
+main#contenido.contacto-pagina {
+    display: block;
+    width: 100%;
+    padding: 20px 24px 70px;
+    background-color: #FFF9F2;
+}
+
+.contacto-pagina,
+.contacto-pagina *,
+.contacto-pagina *::before,
+.contacto-pagina *::after,
+.contacto-chat-flotante,
+.contacto-chat-flotante * {
+    box-sizing: border-box;
+}
+
+.contacto-pagina section[id] {
+    scroll-margin-top: 130px;
+}
+
+.contacto-pagina a {
+    text-decoration: none;
+}
+
+
+
+/* ==========================================
+   2. HERO CINEMATOGRÁFICO DE CONTACTO
+   ========================================== */
+
+/* CONTENEDOR PRINCIPAL */
+
+.contacto-hero {
+    position: relative;
+    isolation: isolate;
+
+    max-width: 1280px;
+    min-height: 390px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #073B2D;
+    border-radius: 24px;
+    overflow: hidden;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+/* FOTOGRAFÍA CON MOVIMIENTO */
+
+.contacto-hero::before {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    z-index: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(4, 55, 39, 0.98) 0%,
+            rgba(4, 55, 39, 0.93) 28%,
+            rgba(4, 55, 39, 0.52) 52%,
+            rgba(4, 55, 39, 0.05) 85%
+        ),
+        url("../assets/img/contacto-hero.png");
+
+    background-size: cover;
+    background-position: center 43%;
+    background-repeat: no-repeat;
+
+    animation: contacto-camara 15s ease-in-out infinite alternate;
+}
+
+/* DESTELLO SOBRE LA IMAGEN */
+
+.contacto-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    background: linear-gradient(
+        110deg,
+        transparent 35%,
+        rgba(255, 174, 67, 0.10) 50%,
+        transparent 65%
+    );
+
+    transform: translateX(-130%);
+    animation: contacto-destello 10s ease-in-out infinite;
+
+    pointer-events: none;
+}
+
+/* CONTENIDO ENCIMA DE LA FOTOGRAFÍA */
+
+.contacto-hero-contenedor {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    padding: 50px 65px;
+}
+
+/* ETIQUETA NARANJA */
+
+.contacto-hero-etiqueta {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    margin: 0 0 18px;
+
+    color: #FFAA43;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    animation: contacto-entrada 0.8s ease both;
+}
+
+/* ICONO DE AUDÍFONOS */
+
+.contacto-hero-etiqueta i {
+    font-size: 25px;
+
+    animation: contacto-audifonos 3s ease-in-out infinite;
+}
+
+/* TÍTULO PRINCIPAL */
+
+.contacto-hero h1 {
+    max-width: 620px;
+    margin: 0 0 18px;
+
+    color: #FFFFFF;
+    font-size: clamp(36px, 4vw, 58px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1px;
+
+    animation: contacto-entrada 0.9s ease 0.2s both;
+}
+
+.contacto-hero h1 span {
+    display: block;
+    color: #FFFFFF;
+}
+
+/* DESCRIPCIÓN */
+
+.contacto-hero-contenedor > p:not(.contacto-hero-etiqueta) {
+    max-width: 470px;
+    margin: 0 0 27px;
+
+    color: #E7F2E9;
+    font-size: 16px;
+    line-height: 1.65;
+
+    animation: contacto-entrada 0.9s ease 0.4s both;
+}
+
+/* BOTÓN PRINCIPAL */
+
+.contacto-boton-hero {
+    position: relative;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    padding: 15px 24px;
+
+    background-color: #F28C28;
+    border-radius: 12px;
+
+    color: #17231D;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none;
+
+    box-shadow: 0 6px 18px rgba(242, 140, 40, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation: contacto-aparecer 1s ease 0.6s both;
+}
+
+/* BRILLO DEL BOTÓN */
+
+.contacto-boton-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+
+    width: 45%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.50),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+
+    pointer-events: none;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.contacto-boton-hero:hover {
+    background-color: #FFAA43;
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(242, 140, 40, 0.35),
+        0 0 15px rgba(242, 140, 40, 0.25);
+}
+
+.contacto-boton-hero:hover::before {
+    left: 140%;
+}
+
+.contacto-boton-hero i {
+    transition: transform 0.3s ease;
+}
+
+.contacto-boton-hero:hover i {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================
+   ANIMACIONES
+   ========================================== */
+
+/* ZOOM LENTO DE LA FOTOGRAFÍA */
+
+@keyframes contacto-camara {
+    from {
+        transform: scale(1.03) translateX(0);
+    }
+
+    to {
+        transform: scale(1.10) translateX(-1%);
+    }
+}
+
+/* ENTRADA DE LOS TEXTOS */
+
+@keyframes contacto-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* APARICIÓN DEL BOTÓN */
+
+@keyframes contacto-aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* DESTELLO CINEMATOGRÁFICO */
+
+@keyframes contacto-destello {
+    0%, 20% {
+        transform: translateX(-130%);
+    }
+
+    70%, 100% {
+        transform: translateX(130%);
+    }
+}
+
+/* MOVIMIENTO DE LOS AUDÍFONOS */
+
+@keyframes contacto-audifonos {
+    0%, 100% {
+        transform: rotate(-6deg);
+    }
+
+    50% {
+        transform: rotate(6deg);
+    }
+}
+
+
+
+/* ==========================================
+   3. ACCESOS RÁPIDOS
+   ========================================== */
+
+.contacto-accesos {
+    max-width: 1280px;
+    margin: 18px auto 22px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.contacto-acceso {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    min-width: 0;
+    padding: 16px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E6DDD1;
+    border-radius: 16px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+}
+
+.contacto-acceso:hover {
+    transform: translateY(-3px);
+    border-color: #F28C28;
+}
+
+.contacto-acceso > i:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.contacto-icono-verde {
+    background-color: #0E4D3B;
+}
+
+.contacto-icono-naranja {
+    background-color: #F0780E;
+}
+
+.contacto-acceso span {
+    display: grid;
+    gap: 5px;
+    min-width: 0;
+}
+
+.contacto-acceso strong {
+    color: #192E26;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.contacto-acceso small {
+    color: #616161;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.contacto-acceso .contacto-flecha {
+    margin-left: auto;
+    color: #0E4D3B;
+    font-size: 17px;
+}
+
+
+
+/* ==========================================
+   4. COLUMNAS PRINCIPALES
+   ========================================== */
+
+.contacto-columnas {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 20px;
+}
+
+
+.contacto-columna-izquierda,
+.contacto-columna-derecha {
+    display: grid;
+    gap: 20px;
+    min-width: 0;
+}
+
+.contacto-formulario-tarjeta,
+.contacto-asistente,
+.contacto-atencion {
+    min-width: 0;
+    overflow: hidden;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E6DDD1;
+    border-radius: 19px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ==========================================
+   5. FORMULARIO DE CONTACTO
+   ========================================== */
+
+.contacto-formulario-tarjeta {
+    padding: 26px;
+}
+
+.contacto-titulo-bloque {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.contacto-icono-titulo {
+    display: grid;
+    place-items: center;
+
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    background-color: #0E4D3B;
+    border-radius: 11px;
+
+    color: #FFFFFF;
+    font-size: 23px;
+}
+
+.contacto-sobretitulo {
+    margin: 0 0 3px;
+
+    color: #E66C12;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+.contacto-titulo-bloque h2 {
+    margin: 0;
+
+    color: #142F25;
+    font-size: clamp(22px, 2.1vw, 30px);
+    font-weight: 800;
+}
+
+.contacto-texto-intro {
+    margin: 14px 0 23px;
+
+    color: #4D5650;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* CAMPOS */
+
+.contacto-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.contacto-campo {
+    min-width: 0;
+}
+
+.contacto-campo-ancho {
+    grid-column: 1 / -1;
+}
+
+.contacto-campo label {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #223A30;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.contacto-campo input,
+.contacto-campo select,
+.contacto-campo textarea {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px 13px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #C9CFCC;
+    border-radius: 9px;
+
+    color: #242424;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.contacto-campo input,
+.contacto-campo select {
+    min-height: 46px;
+}
+
+.contacto-campo textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contacto-campo input:focus,
+.contacto-campo select:focus,
+.contacto-campo textarea:focus {
+    outline: 2px solid #F28C28;
+    outline-offset: 2px;
+}
+
+/* PRIVACIDAD */
+
+.contacto-privacidad {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin: 19px 0;
+
+    color: #4C514D;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.contacto-privacidad input {
+    margin-top: 4px;
+    accent-color: #0E4D3B;
+}
+
+.contacto-privacidad a {
+    color: #0E4D3B;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* BOTÓN DE ENVÍO */
+
+.contacto-boton-enviar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+    min-height: 46px;
+    padding: 12px 24px;
+
+    background-color: #F28C28;
+    border: none;
+    border-radius: 10px;
+
+    color: #18221B;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.contacto-boton-enviar:disabled {
+    opacity: 0.72;
+    cursor: not-allowed;
+}
+
+.contacto-nota-envio {
+    margin: 10px 0 0;
+
+    color: #737373;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   6. ATENCIÓN EN MAQUINARIA
+   ========================================== */
+
+.contacto-maquinaria {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 23px;
+
+    background-color: #EAF3E7;
+    border: 1px solid #DCE8D7;
+    border-radius: 17px;
+}
+
+.contacto-maquinaria:target {
+    outline: 3px solid #F28C28;
+    outline-offset: 3px;
+}
+
+.contacto-maquinaria-icono {
+    color: #E66C12;
+    font-size: 34px;
+}
+
+.contacto-maquinaria h2 {
+    margin: 0 0 7px;
+
+    color: #0E4D3B;
+    font-size: 19px;
+    line-height: 1.25;
+}
+
+.contacto-maquinaria p {
+    margin: 0;
+
+    color: #2E4135;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.contacto-boton-maquinaria {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    flex-shrink: 0;
+    padding: 11px 14px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #F28C28;
+    border-radius: 12px;
+
+    color: #C95706;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.contacto-boton-maquinaria:hover {
+    background-color: #FFF0DB;
+}
+
+
+/* ==========================================
+   7. ASISTENTE VIRTUAL FERNER
+   ========================================== */
+
+/* ASISTENTE ALINEADO A LA DERECHA */
+
+.contacto-asistente {
+    width: 100%;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+
+/*CABECERA VERDE*/
+
+.contacto-asistente-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 19px 22px;
+
+    background-color: #0E4D3B;
+    color: #FFFFFF;
+}
+
+.contacto-asistente-cabecera > div {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.contacto-asistente-cabecera i {
+    color: #FF9B2D;
+    font-size: 27px;
+}
+
+.contacto-asistente-cabecera h2 {
+    margin: 0;
+
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.contacto-asistente-cabecera span {
+    padding: 7px 11px;
+
+    background-color: #EDF4EB;
+    border-radius: 20px;
+
+    color: #0E4D3B;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* CUERPO DEL ASISTENTE */
+
+.contacto-asistente-cuerpo {
+    padding: 18px 20px 21px;
+    background-color: #FCF5E9;
+}
+
+.contacto-asistente-bienvenida {
+    display: grid;
+    grid-template-columns: 145px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+}
+
+.contacto-asistente-bienvenida img {
+    width: 100%;
+    max-height: 175px;
+
+    object-fit: contain;
+    object-position: center;
+    mix-blend-mode: multiply;
+}
+
+.contacto-asistente-bienvenida p {
+    margin: 0;
+    padding: 14px;
+
+    background-color: #FFFFFF;
+    border-radius: 15px 15px 15px 4px;
+
+    color: #1B3126;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.contacto-asistente-cuerpo h3 {
+    margin: 14px 0 10px;
+
+    color: #1A3025;
+    font-size: 14px;
+}
+
+/* PREGUNTAS DESPLEGABLES */
+
+.contacto-preguntas {
+    display: grid;
+    gap: 8px;
+}
+
+.contacto-preguntas details {
+    background-color: #FFFFFF;
+    border: 1px solid #E6DDD1;
+    border-radius: 11px;
+    overflow: hidden;
+}
+
+.contacto-preguntas summary {
+    position: relative;
+    padding: 12px 38px 12px 16px;
+
+    color: #193428;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.contacto-preguntas summary::-webkit-details-marker {
+    display: none;
+}
+
+.contacto-preguntas summary::after {
+    content: "+";
+
+    position: absolute;
+    right: 16px;
+    top: 9px;
+
+    color: #0E4D3B;
+    font-size: 21px;
+}
+
+.contacto-preguntas details[open] summary::after {
+    content: "−";
+}
+
+.contacto-preguntas details[open] summary {
+    background-color: #F4F7F1;
+    border-bottom: 1px solid #E6DDD1;
+}
+
+.contacto-preguntas details p {
+    margin: 0;
+    padding: 13px 15px;
+
+    color: #465449;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.contacto-preguntas details a {
+    color: #0E4D3B;
+    font-weight: 800;
+    text-decoration: underline;
+}
+
+.contacto-aclaracion-bot {
+    margin: 15px 0 0;
+
+    color: #6C6C6C;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   8. ATENCIÓN PERSONALIZADA
+   ========================================== */
+
+.contacto-atencion {
+    padding: 22px;
+}
+
+.contacto-atencion h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0 0 11px;
+
+    color: #0E4D3B;
+    font-size: 19px;
+}
+
+.contacto-atencion h2 i {
+    color: #E66C12;
+    font-size: 25px;
+}
+
+.contacto-atencion p {
+    color: #4B554D;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.contacto-atencion a {
+    color: #C55C0B;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.contacto-atencion .contacto-datos-pendientes {
+    margin-bottom: 0;
+    color: #737373;
+    font-size: 12px;
+}
+
+
+
+
+
+
+/* ==========================================
+   10. MODO OSCURO - CONTACTO
+   ========================================== */
+
+/* FONDO PRINCIPAL */
+
+body:has(#modo-oscuro:checked) main#contenido.contacto-pagina {
+    background-color: #14231D;
+}
+
+
+/* TARJETAS Y CONTENEDORES */
+
+body:has(#modo-oscuro:checked) .contacto-acceso,
+body:has(#modo-oscuro:checked) .contacto-formulario-tarjeta,
+body:has(#modo-oscuro:checked) .contacto-asistente,
+body:has(#modo-oscuro:checked) .contacto-atencion {
+    background-color: #223A30;
+    border-color: #49685B;
+}
+
+
+/* TÍTULOS Y TEXTOS PRINCIPALES */
+
+body:has(#modo-oscuro:checked) .contacto-acceso strong,
+body:has(#modo-oscuro:checked) .contacto-titulo-bloque h2,
+body:has(#modo-oscuro:checked) .contacto-campo label,
+body:has(#modo-oscuro:checked) .contacto-atencion h2 {
+    color: #FFFFFF;
+}
+
+
+/* TEXTOS SECUNDARIOS */
+
+body:has(#modo-oscuro:checked) .contacto-acceso small,
+body:has(#modo-oscuro:checked) .contacto-texto-intro,
+body:has(#modo-oscuro:checked) .contacto-privacidad,
+body:has(#modo-oscuro:checked) .contacto-atencion p,
+body:has(#modo-oscuro:checked) .contacto-nota-envio,
+body:has(#modo-oscuro:checked) .contacto-aclaracion-bot {
+    color: #DCEBE0;
+}
+
+
+/* FLECHAS DE LAS TARJETAS */
+
+body:has(#modo-oscuro:checked) .contacto-acceso .contacto-flecha {
+    color: #FFAA43;
+}
+
+body:has(#modo-oscuro:checked) .contacto-acceso:hover {
+    background-color: #304D40;
+    border-color: #FFAA43;
+}
+
+
+/* CAMPOS DEL FORMULARIO */
+
+body:has(#modo-oscuro:checked) .contacto-campo input,
+body:has(#modo-oscuro:checked) .contacto-campo select,
+body:has(#modo-oscuro:checked) .contacto-campo textarea {
+    background-color: #30473F;
+    border-color: #628071;
+    color: #FFFFFF;
+    color-scheme: dark;
+}
+
+
+/* TEXTOS DE EJEMPLO */
+
+body:has(#modo-oscuro:checked) .contacto-campo input::placeholder,
+body:has(#modo-oscuro:checked) .contacto-campo textarea::placeholder {
+    color: #CEDBD2;
+}
+
+
+/* ENLACES DE PRIVACIDAD Y ATENCIÓN */
+
+body:has(#modo-oscuro:checked) .contacto-privacidad a,
+body:has(#modo-oscuro:checked) .contacto-atencion a {
+    color: #FFAA43;
+}
+
+
+/* SECCIÓN DE MAQUINARIA */
+
+body:has(#modo-oscuro:checked) .contacto-maquinaria {
+    background-color: #294337;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .contacto-maquinaria h2,
+body:has(#modo-oscuro:checked) .contacto-maquinaria p {
+    color: #F2F7F3;
+}
+
+body:has(#modo-oscuro:checked) .contacto-boton-maquinaria {
+    background-color: #18382B;
+    border-color: #FFAA43;
+    color: #FFBA66;
+}
+
+body:has(#modo-oscuro:checked) .contacto-boton-maquinaria:hover {
+    background-color: #355747;
+}
+
+
+/* ASISTENTE VIRTUAL */
+
+body:has(#modo-oscuro:checked) .contacto-asistente-cuerpo {
+    background-color: #1C3027;
+}
+
+body:has(#modo-oscuro:checked) .contacto-asistente-bienvenida p {
+    background-color: #30473F;
+    color: #FFFFFF;
+}
+
+body:has(#modo-oscuro:checked) .contacto-asistente-cuerpo h3 {
+    color: #FFFFFF;
+}
+
+
+/* IMAGEN DEL ROBOT */
+
+body:has(#modo-oscuro:checked) .contacto-asistente-bienvenida img {
+    mix-blend-mode: normal;
+    background-color: #F8F2E9;
+    border-radius: 15px;
+}
+
+
+/* PREGUNTAS DESPLEGABLES */
+
+body:has(#modo-oscuro:checked) .contacto-preguntas details {
+    background-color: #30473F;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .contacto-preguntas summary {
+    color: #FFFFFF;
+}
+
+body:has(#modo-oscuro:checked) .contacto-preguntas summary::after {
+    color: #FFAA43;
+}
+
+body:has(#modo-oscuro:checked) .contacto-preguntas details[open] summary {
+    background-color: #395649;
+    border-color: #628071;
+}
+
+body:has(#modo-oscuro:checked) .contacto-preguntas details p {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .contacto-preguntas details a {
+    color: #FFAA43;
+}
+
+
+/* ENLACES Y CONTROLES DE FOCO */
+
+body:has(#modo-oscuro:checked) .contacto-pagina a:focus-visible,
+body:has(#modo-oscuro:checked) .contacto-pagina summary:focus-visible {
+    outline-color: #FFAA43;
+}
+
+
+/* ==========================================
+   11. RESPONSIVE TABLET
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .contacto-accesos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contacto-columnas {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-hero-contenedor {
+        padding: 45px 35px;
+    }
+}
+
+
+/* ==========================================
+   12. RESPONSIVE MÓVIL
+   ========================================== */
+
+@media (max-width: 650px) {
+
+    main#contenido.contacto-pagina {
+        padding: 12px 14px 50px;
+    }
+
+    
+.contacto-hero {
+    min-height: 460px;
+}
+
+/* IMAGEN Y DEGRADADO PARA CELULAR */
+
+.contacto-hero::before {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(5, 57, 40, 0.94) 0%,
+            rgba(5, 57, 40, 0.82) 45%,
+            rgba(5, 57, 40, 0.30) 100%
+        ),
+        url("../assets/img/contacto-hero.png");
+
+    background-size: cover;
+    background-position: 56% center;
+    background-repeat: no-repeat;
+}
+
+
+    .contacto-hero-contenedor {
+        padding: 32px 22px;
+    }
+
+    .contacto-hero h1 {
+        font-size: 36px;
+    }
+
+    .contacto-accesos {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-formulario-tarjeta {
+        padding: 20px 16px;
+    }
+
+    .contacto-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-campo-ancho {
+        grid-column: auto;
+    }
+
+    .contacto-titulo-bloque h2 {
+        font-size: 23px;
+    }
+
+    .contacto-maquinaria {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contacto-boton-maquinaria {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contacto-asistente-cabecera {
+        flex-wrap: wrap;
+    }
+
+    .contacto-asistente-cabecera h2 {
+        font-size: 19px;
+    }
+
+    .contacto-asistente-bienvenida {
+        grid-template-columns: 100px minmax(0, 1fr);
+    }
+
+    .contacto-asistente-bienvenida img {
+        max-height: 140px;
+    }
+
+    .contacto-chat-flotante {
+        right: 15px;
+        bottom: 95px;
+    }
+
+    .contacto-chat-flotante > summary {
+        padding: 11px 13px;
+    }
+}
+
+
+/* ==========================================
+   13. ACCESIBILIDAD
+   ========================================== */
+
+.contacto-pagina a:focus-visible,
+.contacto-pagina summary:focus-visible,
+.contacto-chat-flotante summary:focus-visible {
+    outline: 3px solid #F28C28;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .contacto-pagina a {
+        transition: none;
+    }
+}
+
+
+/* ==========================================
+   MAPA DE UBICACIÓN FERNER
+   ========================================== */
+
+/* MAPA DE UBICACIÓN - DISTRIBUCIÓN */
+
+.contacto-mapa {
+    width: 100%;
+    max-width: 1280px;
+    margin: 45px auto 0;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: center;
+    gap: 35px;
+
+    background-color: #EDF3E9;
+    border: 1px solid #DCE8D7;
+    border-radius: 22px;
+}
+
+
+/* INFORMACIÓN */
+
+.contacto-mapa-informacion {
+    padding: 20px;
+}
+
+.contacto-mapa-etiqueta {
+    color: #E66C12;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.contacto-mapa h2 {
+    margin: 15px 0;
+
+    color: #0E4D3B;
+    font-size: clamp(27px, 3vw, 39px);
+    line-height: 1.15;
+}
+
+.contacto-mapa-informacion > p:not(.contacto-mapa-etiqueta) {
+    color: #35473C;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.contacto-mapa-nota {
+    font-size: 12px !important;
+}
+
+/* BOTÓN */
+
+.contacto-mapa-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 18px;
+    padding: 14px 19px;
+
+    background-color: #F28C28;
+    border-radius: 12px;
+
+    color: #171717;
+    font-weight: 800;
+
+    transition: transform 0.3s ease;
+}
+
+.contacto-mapa-boton:hover {
+    transform: translateY(-4px);
+}
+
+/* MAPA */
+
+.contacto-mapa-visual {
+    overflow: hidden;
+    border: 3px solid #FFFFFF;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.contacto-mapa-visual iframe {
+    display: block;
+    width: 100%;
+    height: 390px;
+    border: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .contacto-mapa {
+        grid-template-columns: 1fr;
+        padding: 18px;
+        gap: 20px;
+    }
+
+    .contacto-mapa-informacion {
+        padding: 10px;
+    }
+
+    .contacto-mapa-visual iframe {
+        height: 300px;
+    }
+}
+
+/* MODO OSCURO */
+
+body:has(#modo-oscuro:checked) .contacto-mapa {
+    background-color: #223A30;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .contacto-mapa h2 {
+    color: #FFFFFF;
+}
+
+body:has(#modo-oscuro:checked)
+.contacto-mapa-informacion > p:not(.contacto-mapa-etiqueta) {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .contacto-mapa-visual {
+    border-color: #49685B;
+}
+
+
+
+/* ==========================================
+   PRESENTACIÓN Y ASISTENTE FERNER
+   ========================================== */
+
+/* DISTRIBUCIÓN DE LAS DOS PARTES */
+
+.contacto-columna-derecha {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.45fr);
+    align-items: center;
+    gap: 32px;
+}
+
+/* PRESENTACIÓN IZQUIERDA */
+
+.contacto-ayuda-presentacion {
+    min-width: 0;
+    padding: 25px 10px;
+}
+
+/* ETIQUETA NARANJA */
+
+.contacto-ayuda-etiqueta {
+    margin: 0 0 16px;
+    color: #E66C12;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+/* TÍTULO */
+
+.contacto-ayuda-presentacion h2 {
+    margin: 0 0 20px;
+    color: #0E4D3B;
+    font-size: clamp(30px, 3vw, 45px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.contacto-ayuda-presentacion h2 span {
+    display: block;
+    color: #E66C12;
+}
+
+/* DESCRIPCIÓN */
+
+.contacto-ayuda-descripcion {
+    margin: 0 0 25px;
+    color: #465449;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* LISTA DE SERVICIOS */
+
+.contacto-ayuda-lista {
+    display: grid;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: 1px solid #DED6CB;
+}
+
+.contacto-ayuda-lista p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    color: #263B30;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contacto-ayuda-lista i {
+    color: #E66C12;
+    font-size: 21px;
+    flex-shrink: 0;
+}
+
+/* ASISTENTE A LA DERECHA */
+
+.contacto-columna-derecha .contacto-asistente {
+    width: 100%;
+    max-width: 820px;
+    margin: 0;
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .contacto-columna-derecha {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contacto-ayuda-presentacion {
+        padding: 25px 10px;
+    }
+
+    .contacto-columna-derecha .contacto-asistente {
+        max-width: 820px;
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================
+   MODO OSCURO
+   ========================================== */
+
+body:has(#modo-oscuro:checked)
+.contacto-ayuda-presentacion h2 {
+    color: #FFFFFF;
+}
+
+body:has(#modo-oscuro:checked)
+.contacto-ayuda-descripcion,
+body:has(#modo-oscuro:checked)
+.contacto-ayuda-lista p {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked)
+.contacto-ayuda-lista {
+    border-color: #49685B;
+}

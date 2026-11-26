@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 160" role="img" aria-label="Símbolo de carretera de FERNER">
+ <path fill="#064D3B" d="M10 149 C42 86 83 39 154 19 C115 21 71 43 40 77 C25 95 14 120 10 149Z"/>
+ <path fill="#106B51" d="M57 149 C78 87 108 50 163 24 C141 46 119 91 109 149Z"/>
+ <path fill="#F28C28" d="M119 149 C129 105 143 70 173 42 C156 86 153 119 156 149Z"/>
+ <path fill="none" stroke="#F8F4EA" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 15" d="M53 139 C77 86 107 52 148 32"/>
+</svg>

@@ -1,0 +1,35 @@
+
+@import url("./reset.css");
+@import url("./variables.css");
+@import url("./layout.css");
+@import url("./componentes.css");
+@import url("./animaciones.css");
+@import url("./legales.css");
+@import url("./responsive.css");
+@import url("./tema.css");
+
+/*estilos generales*/
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: 4px;
+}
+
+
+

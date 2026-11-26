@@ -1,0 +1,2032 @@
+/* ==========================================
+   1. HERO DE LOS TRES EQUIPOS FERNER
+   ========================================== */
+
+.instructores-hero {
+    position: relative;
+    width: 100%;
+    background-color: var(--color-fondo);
+    overflow: hidden;
+}
+
+/* CONTENEDOR DEL CARRUSEL */
+.instructores-hero-contenedor {
+    position: relative;
+    max-width: 1600px;
+    height: 470px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* TÍTULO ACCESIBLE */
+
+.hero-titulo-accesible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/*controles html*/
+
+.hero-radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    clip-path: inset(50%);
+}
+
+/*cada presentacion*/
+
+.hero-equipo {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/*texto a la izquierda*/
+
+.instructores-hero-texto {
+    position: relative;
+    z-index: 3;
+
+    width: 38%;
+    padding: 35px 20px 35px 55px;
+}
+
+/* ETIQUETA */
+
+.instructores-etiqueta {
+    margin-bottom: 12px;
+
+    color: #E66C12;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+/* TÍTULOS */
+
+.instructores-hero-texto h2 {
+    margin: 0 0 18px;
+
+    color: var(--color-primario);
+    font-size: clamp(30px, 2.8vw, 43px);
+    font-weight: 800;
+    line-height: 1.12;
+}
+
+/* DESCRIPCIÓN */
+
+.instructores-hero-texto .hero-equipo-descripcion {
+    max-width: 450px;
+    margin: 0;
+
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* FOTOGRAFÍA PANORÁMICA */
+
+.instructores-hero-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 72%;
+    overflow: hidden;
+}
+
+.instructores-hero-visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    animation: movimiento-cine 10s ease-in-out infinite;
+}
+
+/* DEGRADADO QUE UNE EL TEXTO Y LA FOTO */
+
+.instructores-hero-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to right,
+        rgba(245,241,232,0.95) 0%,
+        rgba(245,241,232,0.65) 10%,
+        rgba(245,241,232,0.25) 19%,
+        transparent 30%
+    );
+
+    pointer-events: none;
+}
+
+/* ==========================================
+   FLECHAS FUNCIONALES
+   ========================================== */
+
+.hero-flechas {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-top: 25px;
+}
+
+.hero-flecha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: #0E4D3B;
+    border: 2px solid #F28C28;
+    border-radius: 50%;
+
+    color: #FFFFFF;
+    font-size: 21px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 8px rgba(242,140,40,0.4);
+
+    transition: 0.3s ease;
+}
+
+.hero-flecha:hover {
+    background-color: #F28C28;
+    color: #171717;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 18px rgba(242,140,40,0.8);
+}
+
+
+/* ==========================================
+   INDICADORES INFERIORES
+   ========================================== */
+
+.hero-controles {
+    position: absolute;
+    z-index: 10;
+
+    right: 25px;
+    bottom: 22px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px;
+
+    background-color: rgba(5,45,33,0.85);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 30px;
+}
+
+.hero-control-auto,
+.hero-punto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 32px;
+    min-width: 32px;
+    padding: 0 9px;
+
+    border-radius: 20px;
+
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.hero-control-auto {
+    margin-right: 4px;
+}
+
+.hero-control-auto:hover,
+.hero-punto:hover {
+    background-color: #366C56;
+}
+
+/* CONTROL SELECCIONADO */
+
+#hero-auto:checked ~ .instructores-hero-contenedor
+.hero-control-auto,
+
+#hero-conduccion:checked ~ .instructores-hero-contenedor
+.hero-punto-1,
+
+#hero-maquinaria:checked ~ .instructores-hero-contenedor
+.hero-punto-2,
+
+#hero-atencion:checked ~ .instructores-hero-contenedor
+.hero-punto-3 {
+    background-color: #F28C28;
+    color: #171717;
+}
+
+
+/* ==========================================
+   CAMBIO AUTOMÁTICO DE LOS TRES EQUIPOS
+   ========================================== */
+
+/* 18 SEGUNDOS EN TOTAL:
+   6 SEGUNDOS POR EQUIPO */
+
+#hero-auto:checked ~ .instructores-hero-contenedor
+.hero-equipo-1 {
+    animation: mostrar-equipo-1 10s infinite;
+}
+
+#hero-auto:checked ~ .instructores-hero-contenedor
+.hero-equipo-2 {
+    animation: mostrar-equipo-2 10s infinite;
+}
+
+#hero-auto:checked ~ .instructores-hero-contenedor
+.hero-equipo-3 {
+    animation: mostrar-equipo-3 10s infinite;
+}
+
+/* PRIMER EQUIPO */
+
+@keyframes mostrar-equipo-1 {
+
+    0%, 30% {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    33.33%, 96.67% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+/* SEGUNDO EQUIPO */
+
+@keyframes mostrar-equipo-2 {
+
+    0%, 30% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    33.33%, 63.33% {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    66.67%, 100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+/* TERCER EQUIPO */
+
+@keyframes mostrar-equipo-3 {
+
+    0%, 63.33% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    66.67%, 96.67% {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+
+/* ==========================================
+   NAVEGACIÓN MANUAL
+   ========================================== */
+#hero-conduccion:checked ~ .instructores-hero-contenedor
+.hero-equipo-1,
+
+#hero-maquinaria:checked ~ .instructores-hero-contenedor
+.hero-equipo-2,
+
+#hero-atencion:checked ~ .instructores-hero-contenedor
+.hero-equipo-3 {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    animation: none;
+}
+
+/* ==========================================
+   MOVIMIENTO CINEMATOGRÁFICO
+   ========================================== */
+
+@keyframes movimiento-cine {
+
+    0%, 100% {
+        transform: scale(1.02);
+    }
+
+    50% {
+        transform: scale(1.07);
+    }
+}
+
+
+/* ==========================================
+   MODO OSCURO
+   ========================================== */
+
+body:has(#modo-oscuro:checked) .instructores-hero {
+    background-color: #14231D;
+}
+
+body:has(#modo-oscuro:checked)
+.instructores-hero-texto h2 {
+    color: #CDE8D9;
+}
+
+body:has(#modo-oscuro:checked)
+.instructores-hero-texto .hero-equipo-descripcion {
+    color: #E3EEE7;
+}
+
+body:has(#modo-oscuro:checked)
+.instructores-etiqueta {
+    color: #FF963F;
+}
+
+body:has(#modo-oscuro:checked)
+.instructores-hero-visual::after {
+    background: linear-gradient(
+        to right,
+        #14231D 0%,
+        rgba(20,35,29,0.85) 12%,
+        rgba(20,35,29,0.35) 23%,
+        transparent 35%
+    );
+}
+
+
+/* ==========================================
+   RESPONSIVE TABLET
+   ========================================== */
+
+@media (max-width: 992px) {
+
+    .instructores-hero-contenedor {
+        height: 630px;
+    }
+
+    .hero-equipo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .instructores-hero-texto {
+        width: 100%;
+        padding: 35px 24px 20px;
+    }
+
+    .instructores-hero-texto h2 {
+        font-size: clamp(28px, 4vw, 39px);
+    }
+
+    .instructores-hero-visual {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 260px;
+        flex: 1;
+    }
+
+    .instructores-hero-visual::after {
+        display: none;
+    }
+
+    .hero-controles {
+        bottom: 18px;
+        right: 20px;
+    }
+}
+
+
+/* ==========================================
+   RESPONSIVE CELULAR
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .instructores-hero-contenedor {
+        height: 675px;
+    }
+
+    .instructores-hero-texto {
+        padding: 28px 18px 14px;
+    }
+
+    .instructores-hero-texto h2 {
+        font-size: clamp(27px, 7vw, 34px);
+        margin-bottom: 12px;
+    }
+
+    .instructores-hero-texto
+    .hero-equipo-descripcion {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .instructores-etiqueta {
+        font-size: 12px;
+    }
+
+    .hero-flechas {
+        margin-top: 15px;
+    }
+
+    .hero-flecha {
+        width: 39px;
+        height: 39px;
+        font-size: 18px;
+    }
+
+    .instructores-hero-visual {
+        min-height: 195px;
+    }
+
+    .instructores-hero-visual img {
+        object-position: center;
+    }
+
+    .hero-controles {
+        right: 12px;
+        bottom: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .instructores-hero-contenedor {
+        height: 730px;
+    }
+}
+
+
+/* ==========================================
+   ACCESIBILIDAD
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .instructores-hero-visual img {
+        animation: none;
+    }
+
+    #hero-auto:checked ~ .instructores-hero-contenedor
+    .hero-equipo {
+        animation: none;
+    }
+
+    #hero-auto:checked ~ .instructores-hero-contenedor
+    .hero-equipo-1 {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .hero-flecha {
+        transition: none;
+    }
+}
+
+
+/* ==========================================
+   4. NUESTRO EQUIPO DE INSTRUCTORES
+   ========================================== */
+
+.instructores-equipo {
+    background-color: #FFF9F2;
+    padding: 45px 24px 55px;
+}
+
+.equipo-contenedor {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* ENCABEZADO */
+
+.equipo-encabezado {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.equipo-encabezado h2 {
+    color: var(--color-primario);
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 800;
+    margin: 0 0 8px;
+}
+
+.equipo-encabezado > p:last-child {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* LAS SEIS TARJETAS */
+
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* TARJETA INDIVIDUAL */
+
+.instructor-tarjeta {
+    position: relative;
+    min-width: 0;
+    min-height: 185px;
+
+    display: grid;
+    grid-template-columns: 42% minmax(0, 1fr);
+
+    background-color: #F7EADC;
+    border: 1px solid #E8D8C7;
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 12px rgba(0,0,0,0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* ILUMINACIÓN INFERIOR */
+
+.instructor-tarjeta::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 18%;
+    right: 18%;
+    height: 3px;
+
+    background-color: #F28C28;
+    border-radius: 10px;
+
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+/* RETRATO */
+
+.instructor-foto {
+    min-width: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.instructor-foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+/* INFORMACIÓN */
+
+.instructor-informacion {
+    min-width: 0;
+    padding: 15px 9px 17px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+}
+
+.instructor-informacion h3 {
+    margin: 0;
+    color: #0E4D3B;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+}
+
+.instructor-especialidad {
+    margin: 0;
+    color: #D9660B;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.instructor-informacion > p:not(.instructor-especialidad) {
+    display: none;
+}
+
+/* ETIQUETA DE HABILIDAD */
+
+.instructor-etiqueta {
+    display: inline-block;
+    align-self: flex-start;
+
+    padding: 5px 7px;
+    background-color: #E3EEDC;
+    border-radius: 20px;
+
+    color: #0E4D3B;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* ==========================================
+   DETALLES DE LAS TARJETAS DE INSTRUCTORES
+   ========================================== */
+
+/* Especialidad con icono */
+
+.instructor-especialidad {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #D9660B;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.instructor-especialidad svg {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: #E66C12;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Estrellas decorativas */
+
+.instructor-estrellas {
+    color: #F28C28;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+/* Etiquetas de habilidades */
+
+.instructor-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.instructor-habilidades span {
+    display: inline-block;
+    padding: 4px 6px;
+
+    background-color: #E3EEDC;
+    border-radius: 20px;
+
+    color: #0E4D3B;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* EFECTO DE SELECCIÓN */
+.instructor-tarjeta:hover {
+    transform: translateY(-8px);
+    border-color: #F28C28;
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.13),
+        0 0 12px rgba(242,140,40,0.18);
+}
+.instructor-tarjeta:hover img {
+    transform: scale(1.08);
+}
+.instructor-tarjeta:hover::after {
+    transform: scaleX(1);
+}
+/* NOTA DE PERFILES ILUSTRATIVOS */
+.equipo-nota {
+    margin: 22px 0 0;
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+}
+
+
+
+
+/* ==========================================
+   5. NUESTRA METODOLOGÍA
+   ========================================== */
+
+.instructores-metodologia {
+    position: relative;
+    padding: 65px 24px 75px;
+    background: linear-gradient(
+        180deg,
+        #FFF9F2 0%,
+        #F3E7D5 100%
+    );
+    overflow: hidden;
+}
+
+.metodologia-contenedor {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* ENCABEZADO */
+
+.metodologia-encabezado {
+    max-width: 950px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.metodologia-encabezado h2 {
+    margin: 0 0 15px;
+    color: #0E4D3B;
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.metodologia-encabezado > p:last-child {
+    max-width: 730px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* CIRCUITO CON FOTOGRAFÍA DE FONDO */
+
+.metodologia-circuito {
+    position: relative;
+    padding: 34px 20px 24px;
+    border-radius: 30px;
+    isolation: isolate;
+    overflow: hidden;
+
+    background-image:
+    linear-gradient(
+        to right,
+        rgba(248, 243, 233, 0.28) 0%,
+        rgba(248, 243, 233, 0.14) 20%,
+        rgba(248, 243, 233, 0.06) 45%,
+        rgba(248, 243, 233, 0.10) 100%
+    ),
+    url("../assets/img/vista_del_conductor_en_pista_curva.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.20),
+        0 12px 30px rgba(0,0,0,0.08);
+}
+
+
+
+/* CINCO ETAPAS */
+.metodologia-pasos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+}
+/* TARJETA */
+.metodologia-paso {
+    position: relative;
+    min-width: 0;
+    min-height: 275px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 24px 18px;
+
+    background-color: #FFF9F0;
+    border: 2px solid #E9D5BA;
+    border-radius: 22px;
+
+    box-shadow: 0 10px 22px rgba(0,0,0,0.13);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.metodologia-paso {
+    position: relative;
+    z-index: 2;
+}
+.metodologia-paso {
+    position: relative;
+    z-index: 2;
+    backdrop-filter: blur(1px);
+}
+/* NÚMERO */
+
+.paso-numero {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F28C28;
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF;
+    border-radius: 50%;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ICONOS */
+
+.paso-icono {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #F9E7CF;
+    border-radius: 12px;
+}
+
+.paso-icono svg {
+    display: block;
+    width: 34px;
+    height: 34px;
+
+    fill: none;
+    stroke: #E66C12;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* TEXTOS */
+
+.metodologia-paso h3 {
+    margin: 0;
+    color: #0E4D3B;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.metodologia-paso p {
+    margin: 0;
+    color: #333333;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* TARJETA CENTRAL DESTACADA */
+
+.metodologia-paso.paso-destacado {
+    background: linear-gradient(
+        145deg,
+        #17634B,
+        #093D30
+    );
+
+    border-color: #F28C28;
+
+    box-shadow:
+        0 0 0 3px rgba(242,140,40,0.3),
+        0 0 25px rgba(242,140,40,0.45),
+        0 12px 25px rgba(0,0,0,0.2);
+}
+
+.paso-destacado h3,
+.paso-destacado p {
+    color: #FFFFFF;
+}
+
+.paso-destacado .paso-icono {
+    background-color: #285C4C;
+}
+
+.paso-destacado .paso-icono svg {
+    stroke: #FFB743;
+}
+
+/* EFECTO AL PASAR EL CURSOR */
+
+.metodologia-paso:hover {
+    transform: translateY(-9px);
+
+    box-shadow:
+        0 16px 30px rgba(0,0,0,0.18);
+}
+
+.metodologia-paso.paso-destacado:hover {
+    box-shadow:
+        0 0 30px rgba(242,140,40,0.65),
+        0 16px 30px rgba(0,0,0,0.2);
+}
+
+/* ==========================================
+   METODOLOGÍA - TABLET
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .metodologia-pasos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .metodologia-paso {
+        min-height: 240px;
+    }
+
+    .metodologia-circuito::before,
+    .metodologia-circuito::after {
+        display: none;
+    }
+
+    .metodologia-paso:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ==========================================
+   METODOLOGÍA - CELULAR
+   ========================================== */
+@media (max-width: 600px) {
+
+    .instructores-metodologia {
+        padding: 45px 18px;
+    }
+
+    .metodologia-encabezado {
+        margin-bottom: 28px;
+    }
+
+    .metodologia-circuito {
+        padding: 15px;
+    }
+
+    .metodologia-pasos {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .metodologia-paso,
+    .metodologia-paso:last-child {
+        grid-column: auto;
+        min-height: auto;
+    }
+
+    .metodologia-paso h3 {
+        font-size: 20px;
+    }
+
+    .metodologia-paso p {
+        font-size: 15px;
+    }
+}
+/* ACCESIBILIDAD */
+@media (prefers-reduced-motion: reduce) {
+
+    .metodologia-paso {
+        transition: none;
+    }
+
+    .metodologia-paso:hover {
+        transform: none;
+    }
+}
+
+
+
+
+
+
+
+/* ==========================================
+   2. RESPONSIVE TABLET
+   ========================================== */
+
+@media (max-width: 992px) {
+
+    .instructores-hero {
+        min-height: 0;
+    }
+
+    .instructores-hero-contenedor {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .instructores-hero-texto {
+        width: 100%;
+        padding: 45px 24px 25px;
+    }
+
+    .instructores-hero-visual {
+        position: relative;
+        width: 100%;
+        height: 350px;
+    }
+
+    .instructores-hero-visual::after {
+        display: none;
+    }
+    .instructores-hero-visual img {
+    height: 100%;
+}
+}
+
+
+/* ==========================================
+   3. RESPONSIVE MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .instructores-hero-texto {
+        padding: 35px 18px 25px;
+    }
+
+    .instructores-hero h1 {
+        font-size: clamp(28px, 8vw, 36px);
+    }
+
+    .instructores-hero-visual {
+        height: 230px;
+    }
+
+    .instructores-hero-visual img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+}
+
+
+/* ==========================================
+   3. RESPONSIVE MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .instructores-hero {
+        padding: 45px 18px;
+    }
+
+    .instructores-hero h1 {
+        font-size: clamp(30px, 8vw, 38px);
+    }
+
+    .instructores-hero-visual {
+        border-radius: 55px 12px 12px 12px;
+    }
+
+    .instructores-hero-visual img {
+        height: 270px;
+    }
+
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .instructores-hero-visual img {
+        transition: none;
+    }
+
+}
+
+
+
+/* ==========================================
+   RESPONSIVE DE NUESTRO EQUIPO
+   ========================================== */
+
+/* TABLET GRANDE */
+
+@media (max-width: 1200px) {
+
+    .equipo-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .instructor-tarjeta {
+        min-height: 200px;
+    }
+
+    .instructor-informacion {
+        padding: 18px 12px;
+    }
+
+}
+
+/* TABLET PEQUEÑA */
+
+@media (max-width: 750px) {
+
+    .equipo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .instructores-equipo {
+        padding: 40px 18px;
+    }
+
+    .equipo-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .instructor-tarjeta {
+        grid-template-columns: 38% minmax(0, 1fr);
+        min-height: 210px;
+    }
+
+    .instructor-informacion h3 {
+        font-size: 19px;
+    }
+
+    .instructor-especialidad {
+        font-size: 14px;
+    }
+
+    .instructor-informacion > p:not(.instructor-especialidad) {
+        display: block;
+        font-size: 13px;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .instructor-etiqueta {
+        font-size: 11px;
+    }
+
+}
+
+/* RESPETAR MOVIMIENTO REDUCIDO */
+@media (prefers-reduced-motion: reduce) {
+
+    .instructor-tarjeta,
+    .instructor-foto img,
+    .instructor-tarjeta::after {
+        transition: none;
+    }
+
+}
+
+@media (min-width: 1201px) {
+
+    .instructor-informacion {
+        padding: 12px 7px;
+        gap: 6px;
+    }
+
+    .instructor-informacion h3 {
+        font-size: 14px;
+    }
+
+    .instructor-habilidades span {
+        font-size: 9px;
+        padding: 4px 5px;
+    }
+}
+
+
+
+/* ==========================================
+   ESTILO VISUAL FINAL DE METODOLOGÍA
+   ========================================== */
+
+/* Tarjetas con apariencia de estaciones */
+
+.metodologia-paso {
+    border-radius: 30px 30px 24px 24px;
+
+    background: linear-gradient(
+        145deg,
+        #FFFDF8 0%,
+        #F8E6D1 100%
+    );
+
+    border: 2px solid #F3D2A9;
+
+    box-shadow:
+        0 12px 22px rgba(41, 28, 15, 0.22),
+        inset 0 3px 0 rgba(255,255,255,0.9);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Pequeña inclinación para dar dinamismo */
+
+@media (min-width: 1251px) {
+
+    .metodologia-paso:nth-child(1) {
+        transform: rotate(-2deg);
+    }
+
+    .metodologia-paso:nth-child(2) {
+        transform: rotate(1deg);
+    }
+
+    .metodologia-paso:nth-child(4) {
+        transform: rotate(-1deg);
+    }
+
+    .metodologia-paso:nth-child(5) {
+        transform: rotate(2deg);
+    }
+}
+
+/* Destacar el centro */
+
+.metodologia-paso.paso-destacado {
+    background: linear-gradient(
+        145deg,
+        #17634B,
+        #073B2D
+    );
+
+    border: 3px solid #FF981C;
+
+    box-shadow:
+        0 0 0 4px rgba(255,152,28,0.18),
+        0 0 22px rgba(255,133,0,0.65),
+        0 16px 28px rgba(0,0,0,0.25);
+}
+
+/* Numeración con relieve */
+
+.paso-numero {
+    box-shadow:
+        0 5px 10px rgba(0,0,0,0.18),
+        inset 0 2px 3px rgba(255,255,255,0.35);
+}
+
+/* Iconos con profundidad */
+
+.paso-icono {
+    border-radius: 15px;
+
+    box-shadow:
+        inset 0 2px 3px rgba(255,255,255,0.55),
+        0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* Efecto al pasar el cursor */
+
+.metodologia-paso:hover {
+    transform: translateY(-10px) rotate(0deg);
+
+    box-shadow:
+        0 18px 30px rgba(0,0,0,0.25),
+        0 0 15px rgba(242,140,40,0.35);
+}
+
+.metodologia-paso.paso-destacado:hover {
+    transform: translateY(-14px);
+    box-shadow:
+        0 0 28px rgba(255,140,0,0.75),
+        0 20px 30px rgba(0,0,0,0.3);
+}
+
+
+
+/* ==========================================
+   FLECHAS ILUMINADAS ENTRE ETAPAS
+   ========================================== */
+
+@media (min-width: 1251px) {
+
+    .metodologia-paso:not(:last-child)::after {
+        content: "»";
+
+        position: absolute;
+        right: -23px;
+        top: 58%;
+
+        transform: translateY(-50%);
+
+        color: #FF8C00;
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 1;
+
+        text-shadow:
+            0 0 5px #FFFFFF,
+            0 0 10px #FF8C00,
+            0 0 18px #FF8C00;
+
+        z-index: 5;
+        pointer-events: none;
+    }
+}
+
+
+
+/* ==========================================
+   ICONOS 3D GRANDES Y CENTRADOS
+   ========================================== */
+
+/* Estilo general */
+
+.metodologia-paso .paso-icono {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.metodologia-paso .paso-icono img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 10px 8px rgba(0,0,0,0.25)
+    );
+}
+
+/* ESCRITORIO */
+
+@media (min-width: 1251px) {
+
+    .metodologia-circuito {
+        padding-top: 100px;
+    }
+
+    .metodologia-paso {
+        padding-top: 88px;
+        min-height: 300px;
+    }
+
+    /* Colocar icono por encima */
+
+    .metodologia-paso .paso-icono,
+    .metodologia-paso:nth-child(even) .paso-icono {
+        position: absolute;
+
+        top: -45px;
+        left: 50%;
+        right: auto;
+
+        width: 120px;
+        height: 120px;
+
+        transform: translateX(-50%);
+        z-index: 3;
+    }
+
+    /* Número en la esquina */
+
+    .metodologia-paso .paso-numero {
+        position: absolute;
+        top: 17px;
+        left: 15px;
+        z-index: 4;
+    }
+}
+
+/* TABLET Y CELULAR */
+
+@media (max-width: 1250px) {
+
+    .metodologia-paso .paso-icono {
+        position: relative;
+
+        width: 95px;
+        height: 95px;
+
+        margin: 0 auto 8px;
+        align-self: center;
+
+        transform: none;
+    }
+}
+
+
+
+/*6. BANNER ESPECIAL DE AGENDAMIENTO*/
+
+.instructores-cta {
+    padding: 25px 24px 45px;
+    background-color: #FFF9F2;
+}
+
+.instructores-cta-contenedor {
+    position: relative;
+    max-width: 1600px;
+    min-height: 210px;
+    margin: 0 auto;
+    padding: 30px;
+
+    display: grid;
+    grid-template-columns: 24% 31% 22% 23%;
+    align-items: center;
+    gap: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8,60,44,0.75),
+            rgba(8,60,44,0.97) 45%,
+            rgba(8,60,44,0.90)
+        ),
+        url("../assets/img/footer-via.png");
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+/* Automóvil lateral */
+.instructores-cta-auto {
+    height: 165px;
+    width: 100%;
+
+    background-image:
+        url("../assets/img/conducir_carro.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 18px;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        black 65%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        black 65%,
+        transparent 100%
+    );
+}
+/*título*/
+.instructores-cta-titulo {
+    padding: 0 20px;
+}
+
+.instructores-cta-titulo h2 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: clamp(25px, 2.4vw, 39px);
+    font-weight: 800;
+    line-height: 1.12;
+}
+
+.instructores-cta-titulo span {
+    display: block;
+    text-decoration: underline;
+    text-decoration-color: #F28C28;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 8px;
+}
+
+/*Descripción*/
+.instructores-cta-texto {
+    padding: 15px 20px;
+    border-left: 1px solid rgba(255,255,255,0.4);
+}
+
+.instructores-cta-texto p {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/*botón luminoso*/
+
+.instructores-cta-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 65px;
+    padding: 15px;
+    border-radius: 16px;
+
+    background-color: #F28C28;
+    color: #171717;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+
+    box-shadow:
+        0 0 0 4px rgba(255,255,255,0.15),
+        0 0 20px rgba(255,140,0,0.65);
+
+    animation: pulso-agenda 2.2s ease-in-out infinite;
+}
+
+.instructores-cta-boton svg {
+    width: 23px;
+    height: 23px;
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Animación */
+
+@keyframes pulso-agenda {
+    0%, 100% {
+        box-shadow:
+            0 0 0 3px rgba(255,140,0,0.25),
+            0 0 12px rgba(255,140,0,0.45);
+    }
+
+    50% {
+        box-shadow:
+            0 0 0 9px rgba(255,140,0,0.12),
+            0 0 30px rgba(255,140,0,0.85);
+    }
+}
+
+.instructores-cta-boton:hover {
+    background-color: #FFA83D;
+}
+
+.instructores-cta-boton:focus-visible {
+    outline: 3px solid #FFFFFF;
+    outline-offset: 5px;
+}
+
+/*responsive*/
+
+@media (max-width: 1100px) {
+
+    .instructores-cta-contenedor {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+    }
+
+    .instructores-cta-auto {
+        display: none;
+    }
+
+    .instructores-cta-titulo {
+        padding: 0;
+    }
+
+    .instructores-cta-texto {
+        border-left: none;
+        padding: 0;
+    }
+
+    .instructores-cta-boton {
+        grid-column: 1 / -1;
+        max-width: 380px;
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .instructores-cta {
+        padding: 20px 15px 35px;
+    }
+
+    .instructores-cta-contenedor {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 35px 22px;
+        gap: 25px;
+    }
+
+    .instructores-cta-titulo h2 {
+        font-size: 30px;
+    }
+
+    .instructores-cta-texto {
+        padding: 0;
+    }
+
+    .instructores-cta-boton {
+        grid-column: auto;
+        max-width: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .instructores-cta-boton {
+        animation: none;
+    }
+}
+
+
+/* ==========================================
+   AJUSTE FINAL RESPONSIVE - CTA INSTRUCTORES
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    /* Espacio exterior */
+
+    .instructores-cta {
+        padding: 18px 15px 30px;
+    }
+
+    /* Contenedor principal */
+
+    .instructores-cta-contenedor {
+        width: 100%;
+        min-height: auto;
+        padding: 30px 20px;
+
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+
+        text-align: center;
+        border-radius: 24px;
+
+        background-position: 65% center;
+    }
+
+    /* Ocultar fotografía lateral */
+
+    .instructores-cta-auto {
+        display: none;
+    }
+
+    /*título*/
+    .instructores-cta-titulo {
+        padding: 0;
+    }
+
+    .instructores-cta-titulo h2 {
+        font-size: clamp(26px, 7vw, 32px);
+        line-height: 1.15;
+        letter-spacing: -0.5px;
+    }
+    /*subrayado naranja*/
+    .instructores-cta-titulo span {
+        text-decoration-thickness: 3px;
+        text-underline-offset: 6px;
+    }
+    /*descripcion*/
+
+    .instructores-cta-texto {
+        padding: 0;
+        border: none;
+    }
+
+    .instructores-cta-texto p {
+        max-width: 330px;
+        margin: 0 auto;
+
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    /*boton*/
+    .instructores-cta-boton {
+        grid-column: auto;
+
+        width: 100%;
+        max-width: 330px;
+        min-height: 55px;
+
+        margin: 5px auto 0;
+        padding: 12px 16px;
+
+        font-size: 15px;
+        border-radius: 14px;
+    }
+    .instructores-cta-boton svg {
+        width: 19px;
+        height: 19px;
+    }
+}
+
+
+/*celulares pequeños*/
+@media (max-width: 380px) {
+    .instructores-cta {
+        padding: 15px 12px 25px;
+    }
+    .instructores-cta-contenedor {
+        padding: 25px 16px;
+        gap: 17px;
+    }
+    .instructores-cta-titulo h2 {
+        font-size: 25px;
+    }
+    .instructores-cta-texto p {
+        font-size: 13px;
+    }
+    .instructores-cta-boton {
+        font-size: 14px;
+        min-height: 52px;
+    }
+}
+
+
+
+/*para mostrar el carro en celulares*/
+
+@media (max-width: 600px) {
+
+    /*organizar el banner en una columna*/
+
+    .instructores-cta-contenedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+
+        padding: 25px 18px;
+        text-align: center;
+    }
+
+    /*recuperar la imagen del automóvil*/
+    .instructores-cta-auto {
+        display: block;
+
+        width: 100%;
+        max-width: 300px;
+        height: 160px;
+
+        margin: 0 auto;
+
+        background-image:
+            url("../assets/img/conducir_carro.png");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        border-radius: 15px;
+
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    /*ajustar el título*/
+
+    .instructores-cta-titulo {
+        width: 100%;
+        padding: 0;
+    }
+
+    .instructores-cta-titulo h2 {
+        font-size: clamp(24px, 7vw, 30px);
+        line-height: 1.15;
+    }
+
+    /*ajustar la descripción*/
+
+    .instructores-cta-texto {
+        padding: 0;
+        border: none;
+    }
+
+    .instructores-cta-texto p {
+        max-width: 320px;
+        margin: 0 auto;
+
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /*botón naranja*/
+    .instructores-cta-boton {
+        width: 100%;
+        max-width: 320px;
+        min-height: 55px;
+
+        margin: 0 auto;
+        padding: 12px 15px;
+
+        font-size: 15px;
+    }
+
+}
+
+
+
+/* ==========================================
+   MODO OSCURO - HERO INSTRUCTORES
+   ========================================== */
+
+body:has(#modo-oscuro:checked) .instructores-hero {
+    background-color: #14231D;
+}
+
+/* TÍTULO VERDE CLARO */
+
+body:has(#modo-oscuro:checked) .instructores-hero h1 {
+    color: #CDE8D9;
+}
+
+/* DESCRIPCIÓN NARANJA CÁLIDO */
+
+body:has(#modo-oscuro:checked)
+.instructores-hero-texto > p:not(.instructores-etiqueta) {
+    color: #FFBB70;
+}
+
+/* ETIQUETA NARANJA */
+
+body:has(#modo-oscuro:checked) .instructores-etiqueta {
+    color: #FF963F;
+}
+
+
+/*ajuste responsive en hero instructores*/
+
+@media (max-width: 900px) {
+    .instructores-hero-contenedor {
+        display: flex;
+        flex-direction: column;
+    }
+    .instructores-hero-texto {
+        width: 100%;
+        padding: 35px 22px;
+    }
+    .instructores-hero h1 {
+        font-size: clamp(29px, 6vw, 39px);
+        line-height: 1.2;
+    }
+    .instructores-hero-visual {
+        position: relative;
+        width: 100%;
+        height: 270px;
+    }
+    .instructores-hero-visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .instructores-hero-visual::after {
+        display: none;
+    }
+}
+
+
+
+/*EFECTO CINEMATOGRÁFICO - INSTRUCTORES*/
+
+/* Evitar que la imagen se salga del espacio */
+.instructores-hero-visual {
+    overflow: hidden;
+}
+/* Animación de la fotografía */
+.instructores-hero-visual img {
+    transform-origin: center;
+    animation: movimiento-cine 10s ease-in-out infinite;
+}
+/* Movimiento de cámara */
+@keyframes movimiento-cine {
+
+    0%, 100% {
+        transform: scale(1.02) translateX(0);
+    }
+
+    50% {
+        transform: scale(1.08) translateX(-1%);
+    }
+
+}
+/*accesibilidad*/
+@media (prefers-reduced-motion: reduce) {
+    .instructores-hero-visual img {
+        animation: none;
+    }
+}
+
+
+/* ==========================================
+   INSTRUCTORES DE MAQUINARIA
+   ========================================== */
+
+/* Separación entre los dos equipos */
+.equipo-maquinaria-encabezado {
+    margin-top: 65px;
+}
+/* Encuadre de las nuevas fotografías */
+.equipo-maquinaria-grid .instructor-foto img {
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+
+/* =====================================
+   EQUIPO DE ATENCIÓN AL CLIENTE
+   ===================================== */
+
+.equipo-atencion-encabezado {
+    margin-top: 70px;
+}
+
+.equipo-atencion-grid {
+    margin-top: 28px;
+}

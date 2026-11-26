@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 670 170" role="img" aria-labelledby="logo-title logo-desc">
+<title id="logo-title">FERNER Academia de Conducción</title>
+<desc id="logo-desc">Carretera curva verde y naranja junto a la palabra FERNER</desc>
+<!-- Símbolo vial: tres bandas curvas que avanzan hacia el horizonte -->
+<g transform="translate(3,0)">
+ <path fill="#064D3B" d="M7 145 C39 82 80 35 151 15 C112 17 68 39 37 73 C22 91 11 116 7 145Z"/>
+ <path fill="#106B51" d="M54 145 C75 83 105 46 160 20 C138 42 116 87 106 145Z"/>
+ <path fill="#F28C28" d="M116 145 C126 101 140 66 170 38 C153 82 150 115 153 145Z"/>
+ <path fill="none" stroke="#F8F4EA" stroke-width="4" stroke-linecap="round" stroke-dasharray="9 15" d="M50 135 C74 82 104 48 145 28"/>
+</g>
+<g fill="#0E4D3B" font-family="Montserrat, Arial, Helvetica, sans-serif">
+ <text x="192" y="99" font-size="83" font-weight="800" letter-spacing="0">FERNER</text>
+ <text x="198" y="134" font-size="23" font-weight="600" letter-spacing="2.5">ACADEMIA DE CONDUCCIÓN</text>
+</g>
+</svg>

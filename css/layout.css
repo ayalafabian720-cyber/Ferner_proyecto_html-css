@@ -1,0 +1,1584 @@
+
+/* barra informativa */
+
+.barra-informativa {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 6px 16px;
+}
+
+.barra-informativa p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* encabezado principal */
+
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.encabezado-principal {
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    padding: 24px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+
+/* logotipo */
+
+.logo {
+    color: var(--color-primario);
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+}
+
+.logo span {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    display: block;
+    width: 205px;
+    height: auto;
+}
+
+
+/* navegación */
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    list-style: none;
+}
+
+
+/* hero principal */
+
+.hero {
+    background-color: var(--color-fondo);
+    padding: 45px 24px;
+}
+
+.hero-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 35px;
+}
+
+
+/* contenido del hero */
+
+.hero-contenido {
+    min-width: 0;
+}
+
+.hero h1 {
+    margin: 20px 0;
+
+    color: #202020;
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.hero-descripcion {
+    max-width: 540px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+
+/* imagen del hero */
+
+.hero-imagen {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 90px 12px 12px 12px;
+}
+
+.hero-imagen img {
+    display: block;
+    width: 100%;
+    height: 410px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* beneficios de ferner */
+
+.beneficios {
+    background-color: #FFFFFF;
+    padding: 22px 24px;
+}
+
+.beneficios-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: center;
+}
+
+.beneficio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-width: 0;
+    padding: 12px 14px;
+    text-align: left;
+}
+
+.beneficio:not(:last-child) {
+    border-right: 1px solid #D6D6D6;
+}
+
+.beneficio h2 {
+    margin: 0;
+
+    color: #202020;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* iconos */
+
+.bi {
+    color: #E66C12;
+    font-size: 23px;
+}
+
+
+/* programas de formación */
+
+.programas {
+    padding: 65px 24px 75px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #FFF9F2 0%,
+            transparent 62%
+        ),
+        #F5F1E8;
+}
+
+.programas-contenedor {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+/* encabezado de programas */
+
+.programas .programas-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 32px;
+}
+
+.programas .programas-encabezado h2 {
+    position: relative;
+    max-width: 850px;
+
+    margin: 0 0 12px;
+    padding-left: 38px;
+
+    color: #0E4D3B;
+    font-size: clamp(32px, 3.6vw, 52px);
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: -0.5px;
+    line-height: 1.12;
+}
+
+
+/* detalle naranja del título */
+
+.programas .programas-encabezado h2::before {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 8px;
+
+    width: 13px;
+    height: 45px;
+
+    background-color: #F28C28;
+    transform: skewX(-28deg);
+}
+
+.programas .programas-encabezado p {
+    margin: 0;
+
+    color: #303B34;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+/* enlace a todos los cursos */
+
+.programas .enlace-programas {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+
+    padding: 10px 0;
+
+    color: #0E4D3B;
+    border-bottom: 2px solid #F28C28;
+
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition:
+        gap 0.3s ease,
+        color 0.3s ease;
+}
+
+.programas .enlace-programas i {
+    color: #F28C28;
+    font-size: 25px;
+}
+
+.programas .enlace-programas:hover {
+    gap: 19px;
+    color: #E66C12;
+}
+
+
+/* distribución cinematográfica */
+
+.programas .programas-grid {
+    display: grid;
+    grid-template-columns: repeat(14, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 295px);
+    gap: 18px;
+}
+
+
+/* tarjeta principal de automóvil */
+
+.programas .tarjeta-destacada {
+    grid-column: span 6;
+    grid-row: span 2;
+}
+
+
+/* tarjeta horizontal de motocicleta */
+
+.programas .tarjeta-horizontal {
+    grid-column: span 8;
+    grid-row: span 1;
+    justify-content: center;
+}
+
+
+/* tarjetas de maquinaria y refuerzo */
+
+.programas .tarjeta-maquinaria,
+.programas .tarjeta-refuerzo {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+
+/* tarjetas completas como enlace */
+
+.programas .tarjeta-curso {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+
+    background-color: #102C22;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 22px;
+
+    color: #FFFFFF;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+
+/* fotografías de fondo */
+
+.programas .tarjeta-curso-imagen {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.programas .tarjeta-curso-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.5s ease;
+}
+
+
+/* degradado sobre las fotografías */
+
+.programas .tarjeta-curso-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        180deg,
+        transparent 22%,
+        rgba(4, 24, 17, 0.12) 42%,
+        rgba(4, 24, 17, 0.62) 70%,
+        rgba(4, 24, 17, 0.94) 100%
+    );
+}
+
+
+/* degradado especial de motocicleta */
+
+.programas .tarjeta-horizontal .tarjeta-curso-imagen::after {
+    background: linear-gradient(
+        90deg,
+        rgba(4, 30, 21, 0.96) 0%,
+        rgba(4, 30, 21, 0.76) 35%,
+        rgba(4, 30, 21, 0.20) 76%,
+        transparent 100%
+    );
+}
+
+
+/* información superpuesta */
+
+.programas .tarjeta-curso-contenido {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 11px;
+
+    width: 100%;
+    padding: 27px 75px 27px 27px;
+
+    background: transparent;
+    color: #FFFFFF;
+}
+
+
+/* etiquetas de los programas */
+
+.programas .tarjeta-curso-etiqueta {
+    display: inline-block;
+    width: fit-content;
+
+    padding: 7px 13px;
+
+    background-color: rgba(11, 51, 38, 0.82);
+    border: 1px solid rgba(241, 221, 160, 0.85);
+    border-radius: 30px;
+
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+
+/* títulos de las tarjetas */
+
+.programas .tarjeta-curso-contenido h3 {
+    margin: 0;
+
+    color: #FFFFFF;
+    font-size: clamp(24px, 2.2vw, 34px);
+    font-weight: 800;
+    font-style: normal;
+    letter-spacing: -0.4px;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+
+/* descripciones de los programas */
+
+.programas .tarjeta-curso-contenido p {
+    max-width: 420px;
+    margin: 0;
+
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* automóvil principal */
+
+.programas .tarjeta-destacada .tarjeta-curso-contenido {
+    padding: 38px 90px 38px 38px;
+    gap: 15px;
+}
+
+.programas .tarjeta-destacada .tarjeta-curso-contenido h3 {
+    font-size: clamp(35px, 3.4vw, 49px);
+}
+
+.programas .tarjeta-destacada .tarjeta-curso-contenido p {
+    font-size: 17px;
+}
+
+
+/* motocicleta panorámica */
+
+.programas .tarjeta-horizontal .tarjeta-curso-contenido {
+    width: 61%;
+    padding: 30px 15px 30px 35px;
+}
+
+.programas .tarjeta-horizontal .tarjeta-curso-contenido h3 {
+    font-size: clamp(29px, 2.7vw, 39px);
+}
+
+.programas .tarjeta-horizontal .tarjeta-curso-imagen img {
+    object-position: center 55%;
+}
+
+
+/* maquinaria y refuerzo */
+
+.programas .tarjeta-maquinaria .tarjeta-curso-contenido,
+.programas .tarjeta-refuerzo .tarjeta-curso-contenido {
+    padding: 22px 60px 24px 24px;
+    gap: 9px;
+}
+
+.programas .tarjeta-maquinaria .tarjeta-curso-contenido h3,
+.programas .tarjeta-refuerzo .tarjeta-curso-contenido h3 {
+    font-size: 26px;
+}
+
+.programas .tarjeta-maquinaria .tarjeta-curso-contenido p,
+.programas .tarjeta-refuerzo .tarjeta-curso-contenido p {
+    font-size: 12px;
+}
+
+
+/* flechas circulares de las tarjetas */
+
+.programas .tarjeta-curso::after {
+    content: "→";
+
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    background-color: rgba(4, 30, 21, 0.35);
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+
+    color: #FFFFFF;
+    font-size: 25px;
+    line-height: 1;
+
+    pointer-events: none;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* flecha destacada del automóvil */
+
+.programas .tarjeta-destacada::after {
+    width: 50px;
+    height: 50px;
+
+    background-color: #F28C28;
+    border-color: #F28C28;
+}
+
+
+/* interacción de las tarjetas */
+
+.programas .tarjeta-curso:hover {
+    transform: translateY(-7px);
+    border-color: #F28C28;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22);
+}
+
+.programas .tarjeta-curso:hover img {
+    transform: scale(1.07);
+    filter: brightness(1.08);
+}
+
+.programas .tarjeta-curso:hover::after {
+    transform: translateX(4px);
+    background-color: #F28C28;
+}
+
+
+/* navegación con teclado */
+
+.programas .tarjeta-curso:focus-visible,
+.programas .enlace-programas:focus-visible {
+    outline: 3px solid #F28C28;
+    outline-offset: 4px;
+}
+
+
+/* programas en tablets */
+
+@media (max-width: 1050px) {
+
+    .programas .programas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+        grid-auto-rows: minmax(285px, auto);
+    }
+
+    .programas .tarjeta-destacada {
+        grid-column: 1;
+        grid-row: span 2;
+    }
+
+    .programas .tarjeta-horizontal,
+    .programas .tarjeta-maquinaria {
+        grid-column: 2;
+        grid-row: auto;
+    }
+
+    .programas .tarjeta-refuerzo {
+        grid-column: 1 / -1;
+        grid-row: auto;
+        min-height: 300px;
+    }
+
+    .programas .tarjeta-horizontal {
+        justify-content: flex-end;
+    }
+
+    .programas .tarjeta-horizontal .tarjeta-curso-imagen::after {
+        background: linear-gradient(
+            180deg,
+            transparent 10%,
+            rgba(4, 24, 17, 0.38) 45%,
+            rgba(4, 24, 17, 0.95) 100%
+        );
+    }
+
+    .programas .tarjeta-horizontal .tarjeta-curso-contenido {
+        width: 100%;
+        padding: 24px 65px 24px 24px;
+    }
+
+    .programas .tarjeta-horizontal .tarjeta-curso-contenido h3 {
+        font-size: 28px;
+    }
+}
+
+
+/* programas en celulares */
+
+@media (max-width: 700px) {
+
+    .programas {
+        padding: 45px 18px 60px;
+    }
+
+    .programas .programas-encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+    }
+
+    .programas .programas-encabezado h2 {
+        font-size: 34px;
+        padding-left: 30px;
+        letter-spacing: -0.8px;
+    }
+
+    .programas .programas-encabezado h2::before {
+        width: 10px;
+        height: 32px;
+        top: 5px;
+    }
+
+    .programas .programas-encabezado p {
+        font-size: 14px;
+    }
+
+    .programas .programas-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+        gap: 17px;
+    }
+
+    .programas .tarjeta-destacada,
+    .programas .tarjeta-horizontal,
+    .programas .tarjeta-maquinaria,
+    .programas .tarjeta-refuerzo {
+        grid-column: 1;
+        grid-row: auto;
+        min-height: 330px;
+    }
+
+    .programas .tarjeta-destacada {
+        min-height: 410px;
+    }
+
+    .programas .tarjeta-curso-contenido,
+    .programas .tarjeta-destacada .tarjeta-curso-contenido,
+    .programas .tarjeta-horizontal .tarjeta-curso-contenido,
+    .programas .tarjeta-maquinaria .tarjeta-curso-contenido,
+    .programas .tarjeta-refuerzo .tarjeta-curso-contenido {
+        width: 100%;
+        padding: 24px 75px 25px 23px;
+    }
+
+    .programas .tarjeta-destacada .tarjeta-curso-contenido h3,
+    .programas .tarjeta-horizontal .tarjeta-curso-contenido h3,
+    .programas .tarjeta-maquinaria .tarjeta-curso-contenido h3,
+    .programas .tarjeta-refuerzo .tarjeta-curso-contenido h3 {
+        font-size: clamp(25px, 7vw, 34px);
+    }
+
+    .programas .tarjeta-destacada .tarjeta-curso-contenido p,
+    .programas .tarjeta-horizontal .tarjeta-curso-contenido p,
+    .programas .tarjeta-maquinaria .tarjeta-curso-contenido p,
+    .programas .tarjeta-refuerzo .tarjeta-curso-contenido p {
+        font-size: 14px;
+    }
+
+    .programas .tarjeta-horizontal .tarjeta-curso-imagen::after {
+        background: linear-gradient(
+            180deg,
+            transparent 12%,
+            rgba(4, 24, 17, 0.35) 45%,
+            rgba(4, 24, 17, 0.95) 100%
+        );
+    }
+}
+
+
+/* celulares pequeños */
+
+@media (max-width: 380px) {
+
+    .programas .tarjeta-curso::after {
+        right: 12px;
+        bottom: 18px;
+        width: 38px;
+        height: 38px;
+    }
+}
+
+
+/* modo oscuro de programas */
+
+body:has(#modo-oscuro:checked) .programas {
+    background: #14231D;
+}
+
+body:has(#modo-oscuro:checked)
+.programas .programas-encabezado h2 {
+    color: #FFFFFF;
+}
+
+body:has(#modo-oscuro:checked)
+.programas .programas-encabezado p {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked)
+.programas .enlace-programas {
+    color: #FFAA43;
+}
+
+
+/* razones para elegir ferner */
+
+.razones {
+    background-color: var(--color-fondo);
+    padding: 0 24px 48px;
+}
+
+.razones-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 12px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1fr 1.1fr;
+    align-items: center;
+    gap: 28px;
+
+    background-color: #FAF8F3;
+    border: 1px solid #DDD5C9;
+    border-radius: 18px;
+}
+
+
+/* fotografía de razones */
+
+.razones-imagen img {
+    display: block;
+    width: 100%;
+    height: 235px;
+
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+
+/* información de razones */
+
+.razones-etiqueta {
+    margin: 0 0 8px;
+    color: #E66C12;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.razones-informacion h2 {
+    margin: 0 0 12px;
+    color: var(--color-primario);
+    font-size: clamp(24px, 2vw, 30px);
+    line-height: 1.15;
+}
+
+.razones-informacion > p:last-child {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* lista de ventajas */
+
+.razones-lista {
+    margin: 0;
+    padding: 8px 0 8px 26px;
+    list-style: none;
+    border-left: 1px solid #D6D1C8;
+}
+
+.razones-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 17px;
+    font-size: 15px;
+}
+
+.razones-lista li:last-child {
+    margin-bottom: 0;
+}
+
+.razones-lista li::before {
+    content: none;
+}
+
+
+/* pie de página sencillo */
+
+.pie-pagina {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 25px 16px;
+}
+
+
+/* footer general */
+
+.footer-ferner {
+    background-color: #F8F4EC;
+    margin-top: 24px;
+    border-top: 1px solid #D9D2C7;
+}
+
+
+/* banner de agendamiento */
+
+.footer-cta {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(12, 79, 60, 0.98) 0%,
+            rgba(12, 79, 60, 0.95) 45%,
+            rgba(12, 79, 60, 0.65) 75%,
+            rgba(12, 79, 60, 0.15) 100%
+        ),
+        url("../assets/img/footer-via.png");
+
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+}
+
+.footer-cta-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 27px 28px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 24px;
+}
+
+
+/* icono del banner */
+
+.footer-cta-icono {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-cta-icono svg {
+    width: 36px;
+    height: 36px;
+
+    fill: none;
+    stroke: #FFB54B;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* texto del banner */
+
+.footer-cta-texto h2 {
+    margin: 0 0 7px;
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.footer-cta-texto p {
+    margin: 0;
+    color: #FFD087;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.footer-cta-divisor {
+    width: 1px;
+    height: 54px;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* botón de agendamiento */
+
+.footer-cta-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    min-width: 200px;
+    padding: 17px 27px;
+
+    background-color: #F28C28;
+    color: #FFFFFF;
+    border-radius: 30px;
+
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.footer-cta-boton::after {
+    content: "→";
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.footer-cta-boton:hover {
+    background-color: #FF9F3B;
+    transform: translateY(-3px);
+    box-shadow: 0 9px 23px rgba(0, 0, 0, 0.2);
+}
+
+
+/* footer principal */
+
+.footer-principal {
+    background-color: #F8F4EC;
+    border-top: 4px solid #F28C28;
+}
+
+.footer-principal-contenedor {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 28px 55px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 0.9fr 0.9fr 1.15fr 0.85fr;
+    gap: 34px;
+    align-items: start;
+}
+
+
+/* columnas del footer */
+
+.footer-col {
+    min-width: 0;
+}
+
+.footer-col h3 {
+    position: relative;
+    margin: 0 0 24px;
+    padding-bottom: 12px;
+
+    color: #0E4D3B;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.footer-col h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 35px;
+    height: 3px;
+
+    background-color: #F28C28;
+    border-radius: 5px;
+}
+
+.footer-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 12px;
+    color: #26372F;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-col a {
+    color: #26372F;
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #D66813;
+}
+
+
+/* flechas decorativas de enlaces */
+
+.footer-col:not(.footer-brand) ul a::before {
+    content: "›";
+    display: inline-block;
+
+    margin-right: 8px;
+    color: #F28C28;
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 0.8;
+
+    transition: transform 0.3s ease;
+}
+
+.footer-col:not(.footer-brand) ul a:hover::before {
+    transform: translateX(4px);
+}
+
+
+/* identidad de ferner */
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.footer-logo {
+    margin: 0;
+    color: var(--color-primario);
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.footer-sublogo {
+    margin: 4px 0 0;
+    color: #2A2A2A;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.footer-logo-enlace {
+    display: inline-block;
+    width: 255px;
+    max-width: 100%;
+}
+
+.footer-logo-enlace img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* frase de marca */
+
+.footer-frase {
+    max-width: 300px;
+    margin: 0;
+
+    color: #33483C;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+
+/* iconos de especialidades */
+
+.footer-especialidades {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 11px;
+}
+
+.footer-especialidades span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    background-color: #EAECD9;
+    border-radius: 14px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.footer-especialidades i {
+    color: #0E4D3B;
+    font-size: 25px;
+}
+
+.footer-especialidades span:hover {
+    transform: translateY(-4px);
+    background-color: #DDE7D5;
+}
+
+
+/* datos de contacto */
+
+.footer-contacto li {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    overflow-wrap: anywhere;
+}
+
+.footer-contacto i {
+    flex-shrink: 0;
+    color: #E66C12;
+    font-size: 19px;
+    line-height: 1.3;
+}
+
+
+/* redes sociales */
+
+.footer-redes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-redes img {
+    display: block;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    object-fit: contain;
+    flex-shrink: 0;
+    opacity: 1;
+
+    transition: transform 0.3s ease;
+}
+
+.footer-redes img:hover {
+    transform: translateY(-4px);
+}
+
+
+/* franja inferior */
+
+.footer-inferior {
+    background-color: #F0EADF;
+    border-top: 1px solid #DED5C8;
+}
+
+.footer-inferior-contenedor {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 22px 155px 22px 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-inferior-contenedor p {
+    margin: 0;
+    color: #293830;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.footer-legales {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-legales a {
+    color: #293830;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legales a:hover {
+    color: #D66813;
+}
+
+.footer-legales a + a {
+    padding-left: 20px;
+    border-left: 1px solid #D5A36E;
+}
+
+
+/* footer en tablets */
+
+@media (max-width: 1100px) {
+
+    .footer-principal-contenedor {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/* footer en celulares */
+
+@media (max-width: 700px) {
+
+    .footer-cta-contenedor {
+        grid-template-columns: 1fr;
+        justify-items: start;
+        gap: 15px;
+        padding: 28px 20px;
+    }
+
+    .footer-cta-divisor {
+        display: none;
+    }
+
+    .footer-cta-texto h2 {
+        font-size: 20px;
+    }
+
+    .footer-cta-boton {
+        width: 100%;
+    }
+
+    .footer-principal-contenedor {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px 22px;
+        padding: 38px 20px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-logo-enlace {
+        width: 240px;
+    }
+
+    .footer-inferior-contenedor {
+        padding: 22px 20px 90px;
+        align-items: flex-start;
+    }
+}
+
+
+/* footer en celulares pequeños */
+
+@media (max-width: 480px) {
+
+    .footer-principal-contenedor {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-brand {
+        grid-column: 1;
+    }
+
+    .footer-col h3 {
+        margin-bottom: 17px;
+    }
+
+    .footer-legales {
+        gap: 14px;
+    }
+}
+
+
+/* modo oscuro del footer */
+
+body:has(#modo-oscuro:checked) .footer-ferner {
+    background-color: #192F25;
+    border-top-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .footer-principal {
+    background-color: #192F25;
+}
+
+body:has(#modo-oscuro:checked) .footer-col h3 {
+    color: #FFFFFF;
+}
+
+body:has(#modo-oscuro:checked) .footer-col li,
+body:has(#modo-oscuro:checked) .footer-col a,
+body:has(#modo-oscuro:checked) .footer-frase {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .footer-col a:hover {
+    color: #FFAA43;
+}
+
+body:has(#modo-oscuro:checked) .footer-especialidades span {
+    background-color: #30473F;
+}
+
+body:has(#modo-oscuro:checked) .footer-especialidades i {
+    color: #FFAA43;
+}
+
+body:has(#modo-oscuro:checked) .footer-inferior {
+    background-color: #102219;
+    border-top-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .footer-inferior p,
+body:has(#modo-oscuro:checked) .footer-legales a {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .footer-legales a:hover {
+    color: #FFAA43;
+}
+
+
+/* carrusel de cinco fotografías */
+
+.hero-carrusel {
+    position: relative;
+    width: 100%;
+    height: 510px;
+
+    overflow: hidden;
+    border-radius: 80px 16px 16px 16px;
+}
+
+
+/* fotografías superpuestas */
+
+.hero-carrusel img {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 0;
+
+    animation:
+        carrusel-ferner 15s linear infinite,
+        acercamiento 8s ease-in-out infinite alternate;
+}
+
+
+/* orden de las fotografías */
+
+.hero-carrusel img:nth-child(1) {
+    animation-delay: 0s, 0s;
+}
+
+.hero-carrusel img:nth-child(2) {
+    animation-delay: -12s, 0s;
+}
+
+.hero-carrusel img:nth-child(3) {
+    animation-delay: -9s, 0s;
+}
+
+.hero-carrusel img:nth-child(4) {
+    animation-delay: -6s, 0s;
+}
+
+.hero-carrusel img:nth-child(5) {
+    animation-delay: -3s, 0s;
+}
+
+
+/* transición del carrusel */
+
+@keyframes carrusel-ferner {
+
+    0%, 16% {
+        opacity: 1;
+    }
+
+    20%, 96% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* movimiento suave de cámara */
+
+@keyframes acercamiento {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+}
+
+
+/* carrusel en celulares */
+
+@media (max-width: 768px) {
+
+    .hero-carrusel {
+        height: 300px;
+        border-radius: 35px 12px 12px 12px;
+    }
+}
+
+
+/* animaciones al desplazarse */
+
+@supports (animation-timeline: view()) {
+
+    .programas .programas-encabezado {
+        animation: programas-titulo linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 28%;
+    }
+
+    .programas .tarjeta-curso {
+        animation: programas-aparecer linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 20%;
+    }
+}
+
+
+/* aparición del encabezado */
+
+@keyframes programas-titulo {
+
+    from {
+        opacity: 0;
+        translate: 0 25px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+
+/* aparición de las tarjetas */
+
+@keyframes programas-aparecer {
+
+    from {
+        opacity: 0;
+        translate: 0 40px;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+
+/* accesibilidad y movimiento reducido */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-carrusel img {
+        animation: none;
+        opacity: 0;
+        transform: none;
+    }
+
+    .hero-carrusel img:first-child {
+        opacity: 1;
+    }
+
+    .programas .programas-encabezado,
+    .programas .tarjeta-curso {
+        animation: none;
+        opacity: 1;
+        translate: none;
+    }
+
+    .programas .tarjeta-curso,
+    .programas .tarjeta-curso img,
+    .programas .tarjeta-curso::after,
+    .footer-cta-boton,
+    .footer-redes img,
+    .footer-especialidades span,
+    .footer-col a {
+        transition: none;
+    }
+
+    .programas .tarjeta-curso:hover,
+    .programas .tarjeta-curso:hover img,
+    .programas .tarjeta-curso:hover::after,
+    .footer-cta-boton:hover,
+    .footer-redes img:hover {
+        transform: none;
+    }
+}

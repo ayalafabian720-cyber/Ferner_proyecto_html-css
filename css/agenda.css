@@ -1,0 +1,1418 @@
+
+/* ==========================================
+   FERNER - PÁGINA DE AGENDA
+   ========================================== */
+
+/* DISTRIBUCIÓN GENERAL */
+
+.agenda-pagina {
+    background-color: #FFF9F2;
+}
+
+.agenda-pagina,
+.agenda-pagina *,
+.agenda-pagina *::before,
+.agenda-pagina *::after {
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   1. HERO CINEMATOGRÁFICO DE AGENDA
+   ========================================== */
+
+.agenda-hero {
+    position: relative;
+    isolation: isolate;
+    min-height: 390px;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #073B2D;
+    overflow: hidden;
+}
+
+
+/* FOTOGRAFÍA CON MOVIMIENTO DE CÁMARA */
+
+.agenda-hero::before {
+    content: "";
+    position: absolute;
+    inset: -20px;
+    z-index: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 57, 40, 0.86) 0%,
+            rgba(5, 57, 40, 0.72) 25%,
+            rgba(5, 57, 40, 0.36) 53%,
+            rgba(5, 57, 40, 0.00) 100%
+        ),
+        url("../assets/img/agenda-asesoria.png");
+
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+
+    transform-origin: 70% center;
+    animation: agenda-camara 12s ease-in-out infinite alternate;
+}
+
+
+/* DESTELLO NARANJA EN LA PARTE INFERIOR */
+
+.agenda-hero::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -35%;
+    z-index: 1;
+
+    width: 35%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #F28C28,
+        #FFE1A3,
+        #F28C28,
+        transparent
+    );
+
+    box-shadow: 0 0 16px rgba(242, 140, 40, 0.8);
+
+    animation: agenda-destello 6s linear infinite;
+    pointer-events: none;
+}
+
+
+/* CONTENIDO PRINCIPAL */
+
+.agenda-hero-contenedor {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 45px 24px;
+}
+
+
+/* ETIQUETA NARANJA */
+
+.agenda-etiqueta {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    margin: 0 0 16px;
+    padding: 10px 18px;
+
+    background-color: #F28C28;
+    border-radius: 25px;
+
+    color: #171717;
+    font-size: 13px;
+    font-weight: 800;
+
+    animation: agenda-entrada 0.8s ease both;
+}
+
+
+/* ICONO DE CALENDARIO */
+
+.agenda-etiqueta i {
+    color: #171717;
+    font-size: 17px;
+
+    animation: agenda-icono 3s ease-in-out infinite;
+}
+
+
+/* TÍTULO PRINCIPAL */
+
+.agenda-hero h1 {
+    max-width: 630px;
+    margin: 0 0 24px;
+
+    color: #FFFFFF;
+    font-size: clamp(34px, 3.5vw, 52px);
+    font-weight: 800;
+    line-height: 1.1;
+
+    animation: agenda-entrada 0.9s ease 0.2s both;
+}
+
+
+/* FRASE DESTACADA */
+
+.agenda-hero h1 span {
+    position: relative;
+    display: block;
+    width: fit-content;
+
+    color: #FFAE43;
+}
+
+
+/* SUBRAYADO LUMINOSO ANIMADO */
+
+.agenda-hero h1 span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        #F28C28,
+        #FFE1A3,
+        #F28C28
+    );
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 12px rgba(255, 174, 67, 0.65);
+
+    transform-origin: left;
+    animation: agenda-subrayado 1s ease 1s both;
+}
+
+
+/* DESCRIPCIÓN */
+
+.agenda-hero-descripcion {
+    max-width: 510px;
+    margin: 0 0 25px;
+
+    color: #F0F5F1;
+    font-size: 16px;
+    line-height: 1.6;
+
+    animation: agenda-entrada 0.9s ease 0.45s both;
+}
+
+
+/* BOTONES */
+
+.agenda-hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+
+    animation: agenda-entrada 0.9s ease 0.7s both;
+}
+
+.agenda-hero-principal,
+.agenda-hero-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 48px;
+    padding: 13px 23px;
+
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+.agenda-hero-principal {
+    width: fit-content;
+    padding: 13px 23px;
+
+    background-color: #F28C28;
+    color: #171717;
+    border-radius: 30px;
+
+    box-shadow: 0 6px 20px rgba(242, 140, 40, 0.28);
+}
+
+.agenda-hero-principal i {
+    color: #171717;
+}
+
+.agenda-hero-principal:hover {
+    transform: translateY(-4px);
+    background-color: #FFAA43;
+}
+
+
+/* BOTÓN SECUNDARIO */
+
+.agenda-hero-secundario {
+    width: fit-content;
+    padding: 10px 5px;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: #F28C28;
+    text-underline-offset: 6px;
+}
+
+.agenda-hero-secundario:hover {
+    transform: translateX(4px);
+    background-color: transparent;
+    color: #FFAA43;
+}
+
+
+/* ==========================================
+   ANIMACIONES FERNER MOTION
+   ========================================== */
+
+/* MOVIMIENTO CINEMATOGRÁFICO */
+
+@keyframes agenda-camara {
+    from {
+        transform: scale(1.02) translateX(0);
+    }
+
+    to {
+        transform: scale(1.12) translateX(-1%);
+    }
+}
+
+
+/* ENTRADA PROGRESIVA DEL CONTENIDO */
+
+@keyframes agenda-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* LÍNEA DEBAJO DEL TÍTULO */
+
+@keyframes agenda-subrayado {
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+
+/* DESTELLO QUE RECORRE EL HERO */
+
+@keyframes agenda-destello {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(400%);
+    }
+}
+
+
+/* MOVIMIENTO DEL CALENDARIO */
+
+@keyframes agenda-icono {
+    0%, 100% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-12deg) scale(1.12);
+    }
+}
+
+
+/* ==========================================
+   2. FORMULARIO Y RESUMEN
+   ========================================== */
+
+.agenda-seccion {
+    padding: 45px 24px;
+}
+
+.agenda-contenido {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(300px, 0.9fr);
+    gap: 24px;
+    align-items: start;
+}
+
+
+/* PANEL DEL FORMULARIO */
+
+.agenda-formulario {
+    min-width: 0;
+    padding: 30px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E7DDD0;
+    border-radius: 20px;
+
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+}
+
+
+/* TÍTULO */
+
+.agenda-titulo-formulario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.agenda-titulo-formulario > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+
+    background-color: #0E4D3B;
+    border-radius: 12px;
+
+    color: #FFFFFF;
+    font-size: 27px;
+}
+
+.agenda-titulo-formulario p {
+    margin: 0 0 4px;
+
+    color: #E66C12;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.agenda-titulo-formulario h2 {
+    margin: 0;
+
+    color: #0E4D3B;
+    font-size: clamp(24px, 2.5vw, 32px);
+    font-weight: 800;
+}
+
+.agenda-introduccion {
+    margin: 0 0 25px;
+
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* BLOQUES DEL FORMULARIO */
+
+.agenda-bloque {
+    min-width: 0;
+    margin: 0 0 28px;
+    padding: 22px 0 0;
+
+    border: none;
+    border-top: 1px solid #E4DBD0;
+}
+
+.agenda-bloque legend {
+    float: left;
+    width: 100%;
+
+    margin-bottom: 20px;
+    padding: 0;
+
+    color: #0E4D3B;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.agenda-bloque legend span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+
+    background-color: #F28C28;
+    border-radius: 50%;
+
+    color: #171717;
+    font-size: 12px;
+}
+
+
+/* GRID DE CAMPOS */
+
+.agenda-campos {
+    clear: both;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.agenda-campo {
+    min-width: 0;
+}
+
+.agenda-ancho-total {
+    grid-column: 1 / -1;
+}
+
+
+/* ETIQUETAS */
+
+.agenda-campo label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #25372F;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* INPUTS Y SELECTORES */
+
+.agenda-campo input,
+.agenda-campo select,
+.agenda-campo textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+
+    padding: 13px 14px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #CFCFCF;
+    border-radius: 9px;
+
+    color: #222222;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.agenda-campo input,
+.agenda-campo select {
+    min-height: 47px;
+}
+
+.agenda-campo textarea {
+    resize: vertical;
+    min-height: 105px;
+}
+
+.agenda-campo input:focus,
+.agenda-campo select:focus,
+.agenda-campo textarea:focus {
+    outline: 2px solid #F28C28;
+    outline-offset: 2px;
+    border-color: #F28C28;
+}
+
+
+/* ENLACE DE MAQUINARIA */
+
+.agenda-enlace-maquinaria {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    clear: both;
+    margin-top: 18px;
+    padding: 15px;
+
+    background-color: #EDF3E9;
+    border-radius: 12px;
+
+    color: #0E4D3B;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.agenda-enlace-maquinaria i {
+    color: #E66C12;
+    font-size: 24px;
+}
+
+.agenda-enlace-maquinaria:hover {
+    background-color: #DFEBD9;
+}
+
+
+/* ACLARACIONES */
+
+.agenda-aclaracion {
+    margin: 12px 0 0;
+
+    color: #646464;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.agenda-aclaracion i {
+    color: #E66C12;
+    margin-right: 5px;
+}
+
+
+/* PRIVACIDAD Y BOTÓN */
+
+.agenda-final-formulario {
+    border-top: 1px solid #E4DBD0;
+    padding-top: 22px;
+}
+
+.agenda-privacidad {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    color: #444444;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.agenda-privacidad input {
+    margin-top: 4px;
+    accent-color: #0E4D3B;
+}
+
+.agenda-privacidad a {
+    color: #0E4D3B;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.agenda-enviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    min-height: 55px;
+
+    background-color: #F28C28;
+    border: none;
+    border-radius: 12px;
+
+    color: #171717;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.agenda-enviar:disabled {
+    cursor: not-allowed;
+}
+
+
+/* ==========================================
+   3. RESUMEN DE TU SOLICITUD
+   ========================================== */
+
+.agenda-resumen {
+    min-width: 0;
+    position: sticky;
+    top: 135px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E7DDD0;
+    border-radius: 20px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ENCABEZADO VERDE */
+
+.agenda-resumen-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 20px;
+
+    background-color: #0E4D3B;
+    color: #FFFFFF;
+}
+
+.agenda-resumen-cabecera i {
+    font-size: 25px;
+}
+
+.agenda-resumen-cabecera h2 {
+    margin: 0;
+
+    color: #FFFFFF;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.agenda-resumen-cuerpo {
+    padding: 22px;
+}
+
+
+/* CUANDO NO HAY CURSO SELECCIONADO */
+
+.agenda-resumen-vacio {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.agenda-resumen-vacio i {
+    color: #E66C12;
+    font-size: 42px;
+}
+
+.agenda-resumen-vacio h3 {
+    margin: 12px 0;
+
+    color: #0E4D3B;
+    font-size: 20px;
+}
+
+.agenda-resumen-vacio p {
+    color: #555555;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* TARJETAS CON INFORMACIÓN DEL CURSO */
+
+.agenda-resumen-item {
+    display: none;
+
+    padding-bottom: 22px;
+    border-bottom: 1px solid #E6DDD2;
+}
+
+.agenda-resumen-item img {
+    display: block;
+    width: 100%;
+    height: 160px;
+
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.agenda-resumen-item h3 {
+    margin: 0 0 8px;
+
+    color: #0E4D3B;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.agenda-resumen-item p {
+    margin: 0 0 14px;
+
+    color: #555555;
+    font-size: 14px;
+}
+
+.agenda-resumen-item strong {
+    display: block;
+
+    color: #0E4D3B;
+    font-size: 27px;
+    font-weight: 900;
+}
+
+
+/* ==========================================
+   RESUMEN DINÁMICO SIN JAVASCRIPT
+   ========================================== */
+
+/* OCULTAR MENSAJE CUANDO SE SELECCIONA */
+
+.agenda-contenido:has(
+    #agenda-programa option:checked:not([value=""])
+) .agenda-resumen-vacio {
+    display: none;
+}
+
+
+/* MOSTRAR EL PROGRAMA CORRESPONDIENTE */
+
+.agenda-contenido:has(#agenda-programa option[value="a2"]:checked)
+.agenda-resumen-item[data-programa="a2"],
+
+.agenda-contenido:has(#agenda-programa option[value="b1"]:checked)
+.agenda-resumen-item[data-programa="b1"],
+
+.agenda-contenido:has(#agenda-programa option[value="c1"]:checked)
+.agenda-resumen-item[data-programa="c1"],
+
+.agenda-contenido:has(#agenda-programa option[value="c2"]:checked)
+.agenda-resumen-item[data-programa="c2"],
+
+.agenda-contenido:has(#agenda-programa option[value="combo"]:checked)
+.agenda-resumen-item[data-programa="combo"],
+
+.agenda-contenido:has(#agenda-programa option[value="refuerzo"]:checked)
+.agenda-resumen-item[data-programa="refuerzo"],
+
+.agenda-contenido:has(#agenda-programa option[value="tractor"]:checked)
+.agenda-resumen-item[data-programa="tractor"],
+
+.agenda-contenido:has(#agenda-programa option[value="excavadora"]:checked)
+.agenda-resumen-item[data-programa="excavadora"],
+
+.agenda-contenido:has(#agenda-programa option[value="retro"]:checked)
+.agenda-resumen-item[data-programa="retro"],
+
+.agenda-contenido:has(#agenda-programa option[value="montacargas"]:checked)
+.agenda-resumen-item[data-programa="montacargas"],
+
+.agenda-contenido:has(#agenda-programa option[value="cosechadora"]:checked)
+.agenda-resumen-item[data-programa="cosechadora"],
+
+.agenda-contenido:has(#agenda-programa option[value="minicargador"]:checked)
+.agenda-resumen-item[data-programa="minicargador"],
+
+/* TRES MÁQUINAS NUEVAS */
+
+.agenda-contenido:has(#agenda-programa option[value="bulldozer"]:checked)
+.agenda-resumen-item[data-programa="bulldozer"],
+
+.agenda-contenido:has(#agenda-programa option[value="motoniveladora"]:checked)
+.agenda-resumen-item[data-programa="motoniveladora"],
+
+.agenda-contenido:has(#agenda-programa option[value="rodillo"]:checked)
+.agenda-resumen-item[data-programa="rodillo"] {
+    display: block;
+}
+
+
+/* ==========================================
+   BENEFICIOS DEL RESUMEN
+   ========================================== */
+
+.agenda-resumen-beneficios {
+    padding-top: 22px;
+}
+
+.agenda-resumen-beneficios h3 {
+    margin: 0 0 17px;
+
+    color: #0E4D3B;
+    font-size: 16px;
+}
+
+.agenda-resumen-beneficios p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin-bottom: 13px;
+
+    color: #333333;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.agenda-resumen-beneficios i {
+    color: #16814C;
+    font-size: 18px;
+}
+
+.agenda-resumen-nota {
+    margin-top: 20px;
+    padding: 14px;
+
+    background-color: #F5F1E8;
+    border-radius: 10px;
+
+    color: #555555;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================
+   4. CÓMO FUNCIONA
+   ========================================== */
+
+.agenda-proceso {
+    padding: 15px 24px 65px;
+}
+
+.agenda-proceso-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background-color: #EDF3EB;
+    border-radius: 20px;
+}
+
+.agenda-proceso h2 {
+    margin: 0 0 28px;
+
+    color: #0E4D3B;
+    font-size: clamp(24px, 2.5vw, 32px);
+    text-align: center;
+}
+
+.agenda-proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.agenda-proceso-grid article {
+    padding: 22px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #DCE7DA;
+    border-radius: 14px;
+}
+
+.agenda-proceso-grid i {
+    color: #E66C12;
+    font-size: 32px;
+}
+
+.agenda-proceso-grid h3 {
+    margin: 13px 0 8px;
+
+    color: #0E4D3B;
+    font-size: 17px;
+}
+
+.agenda-proceso-grid p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   5. RESPONSIVE TABLET
+   ========================================== */
+
+@media (max-width: 992px) {
+
+    .agenda-contenido {
+        grid-template-columns: 1fr;
+    }
+
+    .agenda-resumen {
+        position: static;
+    }
+
+    .agenda-hero {
+        background-position: 60% center;
+    }
+
+    .agenda-proceso-grid {
+        gap: 15px;
+    }
+}
+
+
+/* ==========================================
+   6. RESPONSIVE MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .agenda-hero {
+        min-height: 430px;
+    }
+
+    /* FOTOGRAFÍA EN CELULARES */
+
+    .agenda-hero::before {
+        background:
+            linear-gradient(
+                rgba(5, 57, 40, 0.72),
+                rgba(5, 57, 40, 0.80)
+            ),
+            url("../assets/img/agenda-asesoria.png");
+
+        background-size: cover;
+        background-position: 65% center;
+        background-repeat: no-repeat;
+    }
+
+    .agenda-hero-contenedor {
+        padding: 40px 18px;
+    }
+
+    .agenda-hero h1 {
+        font-size: 34px;
+    }
+
+    .agenda-hero-descripcion {
+        font-size: 14px;
+    }
+
+    /* BOTONES COMPACTOS */
+
+    .agenda-hero-botones {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .agenda-hero-principal,
+    .agenda-hero-secundario {
+        width: auto;
+    }
+
+    /* FORMULARIO */
+
+    .agenda-seccion {
+        padding: 25px 14px;
+    }
+
+    .agenda-formulario {
+        padding: 22px 16px;
+    }
+
+    .agenda-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .agenda-ancho-total {
+        grid-column: auto;
+    }
+
+    .agenda-bloque legend {
+        font-size: 16px;
+    }
+
+    .agenda-titulo-formulario h2 {
+        font-size: 24px;
+    }
+
+    .agenda-resumen-cuerpo {
+        padding: 18px;
+    }
+
+    /* PROCESO */
+
+    .agenda-proceso {
+        padding: 10px 14px 35px;
+    }
+
+    .agenda-proceso-contenedor {
+        padding: 22px 16px;
+    }
+
+    .agenda-proceso-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ==========================================
+   7. MODO OSCURO DE AGENDA
+   ========================================== */
+
+body:has(#modo-oscuro:checked) .agenda-pagina {
+    background-color: #14231D;
+}
+
+body:has(#modo-oscuro:checked) .agenda-formulario,
+body:has(#modo-oscuro:checked) .agenda-resumen {
+    background-color: #223A30;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .agenda-titulo-formulario h2,
+body:has(#modo-oscuro:checked) .agenda-bloque legend,
+body:has(#modo-oscuro:checked) .agenda-resumen-item h3,
+body:has(#modo-oscuro:checked) .agenda-resumen-item strong,
+body:has(#modo-oscuro:checked) .agenda-resumen-vacio h3,
+body:has(#modo-oscuro:checked) .agenda-resumen-beneficios h3 {
+    color: #F2F7F3;
+}
+
+body:has(#modo-oscuro:checked) .agenda-introduccion,
+body:has(#modo-oscuro:checked) .agenda-campo label,
+body:has(#modo-oscuro:checked) .agenda-resumen-item p,
+body:has(#modo-oscuro:checked) .agenda-resumen-vacio p,
+body:has(#modo-oscuro:checked) .agenda-resumen-beneficios p,
+body:has(#modo-oscuro:checked) .agenda-aclaracion,
+body:has(#modo-oscuro:checked) .agenda-privacidad {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .agenda-campo input,
+body:has(#modo-oscuro:checked) .agenda-campo select,
+body:has(#modo-oscuro:checked) .agenda-campo textarea {
+    background-color: #30473F;
+    border-color: #628071;
+    color: #FFFFFF;
+    color-scheme: dark;
+}
+
+body:has(#modo-oscuro:checked) .agenda-campo input::placeholder,
+body:has(#modo-oscuro:checked) .agenda-campo textarea::placeholder {
+    color: #C6D4CC;
+}
+
+body:has(#modo-oscuro:checked) .agenda-enlace-maquinaria,
+body:has(#modo-oscuro:checked) .agenda-resumen-nota {
+    background-color: #30473F;
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .agenda-privacidad a {
+    color: #FFAE43;
+}
+
+body:has(#modo-oscuro:checked) .agenda-proceso-contenedor {
+    background-color: #20352B;
+}
+
+body:has(#modo-oscuro:checked) .agenda-proceso h2 {
+    color: #FFFFFF;
+}
+
+body:has(#modo-oscuro:checked) .agenda-proceso-grid article {
+    background-color: #30473F;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .agenda-proceso-grid h3,
+body:has(#modo-oscuro:checked) .agenda-proceso-grid p {
+    color: #F2F7F3;
+}
+
+
+/* ==========================================
+   8. ACCESIBILIDAD
+   ========================================== */
+
+.agenda-pagina a:focus-visible,
+.agenda-pagina button:focus-visible {
+    outline: 3px solid #F28C28;
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   9. DESTINOS DE CURSOS
+   ========================================== */
+
+/* DESTINOS DE LOS ENLACES */
+
+.agenda-destino {
+    display: block;
+    height: 0;
+    scroll-margin-top: 130px;
+}
+
+
+/* AVISO AL LLEGAR DESDE UN CURSO */
+
+.agenda-aviso-seleccion {
+    display: none;
+
+    margin: 0 0 18px;
+    padding: 13px;
+
+    background-color: #FFF0DC;
+    border-left: 4px solid #F28C28;
+    border-radius: 8px;
+
+    color: #503719;
+    font-size: 13px;
+}
+
+
+/* MOSTRAR EL AVISO SI AÚN NO CONFIRMA */
+
+/* Se comprueba que el selector siga
+   en su opción inicial y ningún radio
+   de confirmación esté marcado. */
+
+.agenda-contenido:has(.agenda-destino:target)
+:has(#agenda-programa option[value=""]:checked)
+.agenda-aviso-seleccion {
+    display: block;
+}
+
+.agenda-contenido:has(.agenda-radio:checked)
+.agenda-aviso-seleccion {
+    display: none;
+}
+
+
+/* OCULTAR EL RESUMEN VACÍO */
+
+.agenda-contenido:has(.agenda-destino:target)
+.agenda-resumen-vacio {
+    display: none;
+}
+
+
+/* ==========================================
+   CURSO IDENTIFICADO DESDE OTRA PÁGINA
+   ========================================== */
+
+/* CONDUCCIÓN */
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-a2:target)
+.agenda-resumen-item[data-programa="a2"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-b1:target)
+.agenda-resumen-item[data-programa="b1"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-c1:target)
+.agenda-resumen-item[data-programa="c1"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-c2:target)
+.agenda-resumen-item[data-programa="c2"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-combo:target)
+.agenda-resumen-item[data-programa="combo"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-refuerzo:target)
+.agenda-resumen-item[data-programa="refuerzo"],
+
+
+/* MAQUINARIA EXISTENTE */
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-tractor:target)
+.agenda-resumen-item[data-programa="tractor"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-excavadora:target)
+.agenda-resumen-item[data-programa="excavadora"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-retro:target)
+.agenda-resumen-item[data-programa="retro"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-montacargas:target)
+.agenda-resumen-item[data-programa="montacargas"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-cosechadora:target)
+.agenda-resumen-item[data-programa="cosechadora"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-minicargador:target)
+.agenda-resumen-item[data-programa="minicargador"],
+
+
+/* NUEVAS MÁQUINAS INDUSTRIALES */
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-bulldozer:target)
+.agenda-resumen-item[data-programa="bulldozer"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-motoniveladora:target)
+.agenda-resumen-item[data-programa="motoniveladora"],
+
+.agenda-contenido:has(#agenda-programa option[value=""]:checked):has(#curso-rodillo:target)
+.agenda-resumen-item[data-programa="rodillo"] {
+    display: block;
+}
+
+
+/* ==========================================
+   10. CONFIRMACIÓN DEL CURSO
+   ========================================== */
+
+/* OCULTAR LOS RADIO SIN DESACTIVARLOS */
+
+.agenda-radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+
+/* SI VIENE DESDE CURSOS, NO REPETIR
+   LA SELECCIÓN EN EL FORMULARIO */
+
+.agenda-contenido:has(.agenda-destino:target)
+.agenda-campo:has(#agenda-programa) {
+    display: none;
+}
+
+
+/* BOTÓN DE CONTINUAR */
+
+.agenda-accion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 22px;
+    padding: 15px 18px;
+
+    background-color: #F28C28;
+    border-radius: 10px;
+
+    color: #171717;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+.agenda-accion:hover {
+    background-color: #FFAA43;
+}
+
+
+/* ACCESIBILIDAD DE LOS RADIO */
+
+.agenda-radio:focus-visible ~ .agenda-bloque {
+    outline-offset: 3px;
+}
+
+
+/* MENSAJE DE CONFIRMACIÓN */
+
+.agenda-confirmacion {
+    display: none;
+
+    margin-bottom: 20px;
+    padding: 15px;
+
+    background-color: #E7F3E9;
+    border-left: 4px solid #16814C;
+    border-radius: 9px;
+
+    color: #0E4D3B;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.agenda-confirmacion i {
+    margin-right: 8px;
+}
+
+
+/* MOSTRAR CONFIRMACIÓN AL MARCAR */
+
+.agenda-contenido:has(.agenda-radio:checked)
+.agenda-confirmacion {
+    display: block;
+}
+
+
+/* OCULTAR AVISO INICIAL AL CONFIRMAR */
+
+.agenda-contenido:has(.agenda-radio:checked)
+.agenda-aviso-seleccion {
+    display: none;
+}
+
+
+/* BOTÓN CONFIRMADO */
+
+.agenda-contenido:has(.agenda-radio:checked)
+.agenda-accion {
+    background-color: #0E4D3B;
+    color: #FFFFFF;
+}
+
+
+/* MODO OSCURO */
+
+body:has(#modo-oscuro:checked)
+.agenda-aviso-seleccion {
+    background-color: #30473F;
+    color: #FFE0AD;
+}
+
+body:has(#modo-oscuro:checked)
+.agenda-confirmacion {
+    background-color: #30473F;
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked)
+.agenda-contenido:has(.agenda-radio:checked)
+.agenda-accion {
+    background-color: #16814C;
+    color: #FFFFFF;
+}
+
+
+/* ==========================================
+   11. MOVIMIENTO REDUCIDO
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .agenda-hero::before,
+    .agenda-hero::after,
+    .agenda-etiqueta,
+    .agenda-etiqueta i,
+    .agenda-hero h1,
+    .agenda-hero h1 span::after,
+    .agenda-hero-descripcion,
+    .agenda-hero-botones {
+        animation: none;
+    }
+
+    .agenda-hero h1 span::after {
+        transform: scaleX(1);
+    }
+
+    .agenda-hero-principal,
+    .agenda-hero-secundario,
+    .agenda-accion {
+        transition: none;
+    }
+
+    .agenda-hero-principal:hover,
+    .agenda-hero-secundario:hover {
+        transform: none;
+    }
+}

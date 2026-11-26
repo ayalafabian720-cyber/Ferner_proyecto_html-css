@@ -1,0 +1,1808 @@
+
+/* distribución general de cursos */
+
+main#contenido {
+    --curso-verde: #0E4D3B;
+    --curso-verde-oscuro: #07382B;
+    --curso-naranja: #F28C28;
+    --curso-crema: #FFF9F2;
+
+    display: block;
+    width: 100%;
+    padding: 0;
+    background-color: #FFF9F2;
+}
+
+main#contenido,
+main#contenido *,
+main#contenido *::before,
+main#contenido *::after {
+    box-sizing: border-box;
+}
+
+main#contenido > section {
+    width: 100%;
+    min-width: 0;
+}
+
+#programas,
+#maquinaria {
+    scroll-margin-top: 125px;
+}
+
+
+/* portada principal de cursos */
+
+.portada-cursos {
+    background-color: #F5F1E8;
+    padding: 60px 24px;
+    overflow: hidden;
+}
+
+.portada-cursos-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 45px;
+}
+
+.portada-cursos-texto {
+    min-width: 0;
+}
+
+.portada-cursos-etiqueta {
+    margin: 0 0 15px;
+
+    color: #E66C12;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    animation: cursos-entrada 0.7s ease 0.1s both;
+}
+
+.portada-cursos h1 {
+    margin: 0 0 20px;
+
+    color: #202020;
+    font-size: clamp(32px, 3vw, 46px);
+    font-weight: 800;
+    line-height: 1.15;
+
+    animation: cursos-entrada 0.9s ease 0.3s both;
+}
+
+.portada-cursos h1 span {
+    display: block;
+    color: #0E4D3B;
+
+    animation: cursos-revelar 1.2s ease 0.7s both;
+}
+
+.portada-cursos-descripcion {
+    max-width: 550px;
+    margin: 0 0 25px;
+
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.7;
+
+    animation: cursos-entrada 0.9s ease 0.6s both;
+}
+
+
+/* botones de la portada */
+
+.portada-cursos-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 25px;
+
+    animation: cursos-entrada 0.9s ease 0.9s both;
+}
+
+.portada-boton-principal,
+.portada-boton-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 13px 21px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.portada-boton-principal {
+    background-color: #F28C28;
+    color: #202020;
+}
+
+.portada-boton-principal:hover {
+    background-color: #FFAB4A;
+    transform: translateY(-3px);
+}
+
+.portada-boton-secundario {
+    background-color: transparent;
+    border: 2px solid #0E4D3B;
+    color: #0E4D3B;
+}
+
+.portada-boton-secundario:hover {
+    background-color: #0E4D3B;
+    color: #FFFFFF;
+    transform: translateY(-3px);
+}
+
+
+/* beneficios de la portada */
+
+.portada-cursos-beneficios {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+
+    animation: cursos-entrada 0.9s ease 1.1s both;
+}
+
+.portada-cursos-beneficios > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    min-width: 0;
+    padding: 12px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #DDD5C9;
+    border-radius: 10px;
+}
+
+.portada-cursos-beneficios i {
+    flex-shrink: 0;
+    color: #E66C12;
+    font-size: 20px;
+}
+
+.portada-cursos-beneficios span {
+    color: #202020;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* fotografía de la portada */
+
+.portada-cursos-imagen {
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 70px 16px 16px 16px;
+
+    animation: cursos-foto-entrada 1.3s ease 0.3s both;
+}
+
+.portada-cursos-imagen img {
+    display: block;
+    width: 100%;
+    height: 450px;
+
+    object-fit: cover;
+    object-position: 75% center;
+
+    transform-origin: center;
+    animation: cursos-camara 12s ease-in-out 1.6s infinite alternate;
+}
+
+
+/* animaciones de la portada */
+
+@keyframes cursos-entrada {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cursos-revelar {
+    from {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes cursos-foto-entrada {
+    from {
+        opacity: 0;
+        transform: translateX(45px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes cursos-camara {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+
+/* sección de programas de conducción */
+
+.cursos-programas {
+    padding: 65px 24px 75px;
+    background-color: #FFF9F2;
+}
+
+.cursos-programas .programas-contenedor {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+
+/* encabezado de programas */
+
+.cursos-programas .programas-encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    width: 100%;
+    margin: 0 auto 30px;
+
+    text-align: center;
+}
+
+.cursos-programas .programas-etiqueta {
+    margin: 0;
+
+    color: #E66C12;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.cursos-programas .programas-encabezado h2 {
+    max-width: 900px;
+    margin: 0;
+
+    color: #0E4D3B;
+    font-size: clamp(30px, 3vw, 44px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.cursos-programas .programas-encabezado > p:last-child {
+    max-width: 760px;
+    margin: 0;
+
+    color: #333333;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* filtros de cursos */
+
+.programas-filtros {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+.programas-filtros input[type="radio"] {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.programa-filtro {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 43px;
+    padding: 11px 22px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #DED6CB;
+    border-radius: 30px;
+
+    color: #0E4D3B;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.programa-filtro:hover {
+    transform: translateY(-3px);
+    border-color: #F28C28;
+}
+
+.programas-filtros input:checked + .programa-filtro {
+    background-color: #0E4D3B;
+    color: #FFFFFF;
+    border-color: #0E4D3B;
+}
+
+.programas-filtros input:focus-visible + .programa-filtro {
+    outline: 3px solid #F28C28;
+    outline-offset: 3px;
+}
+
+
+/* funcionamiento de filtros */
+
+.programas-contenedor:has(#curso-motos:checked)
+.programa-tarjeta:not([data-tipo="motocicleta"]) {
+    display: none;
+}
+
+.programas-contenedor:has(#curso-autos:checked)
+.programa-tarjeta:not([data-tipo="automovil"]) {
+    display: none;
+}
+
+.programas-contenedor:has(#curso-publico:checked)
+.programa-tarjeta:not([data-tipo="publico"]) {
+    display: none;
+}
+
+.programas-contenedor:has(#curso-otros:checked)
+.programa-tarjeta:not([data-tipo="otros"]) {
+    display: none;
+}
+
+
+/* distribución de seis cursos */
+
+.cursos-programas .programas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+
+/* tarjetas de conducción */
+
+.programa-tarjeta {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E3D7C9;
+    border-radius: 19px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 17px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.programa-tarjeta:hover {
+    transform: translateY(-7px);
+    border-color: #F28C28;
+
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.14);
+}
+
+
+/* imágenes de conducción */
+
+.programa-imagen {
+    position: relative;
+    height: 225px;
+    overflow: hidden;
+
+    background-color: #E7E2D9;
+}
+
+.programa-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+.programa-popular .programa-imagen img {
+    object-position: center 60%;
+}
+
+.programa-tarjeta:hover .programa-imagen img {
+    transform: scale(1.06);
+}
+
+
+/* etiquetas de las imágenes */
+
+.programa-categoria {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+
+    padding: 8px 14px;
+
+    background-color: #F28C28;
+    border-radius: 20px;
+
+    color: #171717;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.programa-popular {
+    border-color: #F28C28;
+}
+
+.programa-popular-etiqueta {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: 10px 12px;
+
+    background-color: #0E4D3B;
+    color: #FFFFFF;
+
+    font-size: 11px;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+/* información de las tarjetas */
+
+.programa-informacion {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 13px;
+
+    padding: 24px;
+}
+
+.programa-informacion h3 {
+    margin: 0;
+
+    color: #0E4D3B;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.programa-descripcion {
+    margin: 0;
+
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* datos de los cursos */
+
+.programa-datos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.programa-datos li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    min-height: 36px;
+    padding: 8px 10px;
+
+    background-color: #EFF3EE;
+    border-radius: 10px;
+
+    color: #26362F;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* iconos de los datos */
+
+.programa-datos li::before {
+    content: "";
+
+    display: block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+
+    background-color: #0E4D3B;
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+
+/* icono de duración */
+
+.programa-datos li:nth-child(1)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E");
+
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 7v5l3 2'/%3E%3C/svg%3E");
+}
+
+
+/* icono de edad */
+
+.programa-datos li:nth-child(2)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3Cpath d='M4 21v-2a8 8 0 0 1 16 0v2'/%3E%3C/svg%3E");
+
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3Cpath d='M4 21v-2a8 8 0 0 1 16 0v2'/%3E%3C/svg%3E");
+}
+
+
+/* icono de categoría */
+
+.programa-datos li:nth-child(3)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='4' width='20' height='16' rx='2'/%3E%3Ccircle cx='8' cy='10' r='2'/%3E%3Cpath d='M5 16c0-2 6-2 6 0M14 9h5M14 13h5'/%3E%3C/svg%3E");
+
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2' y='4' width='20' height='16' rx='2'/%3E%3Ccircle cx='8' cy='10' r='2'/%3E%3Cpath d='M5 16c0-2 6-2 6 0M14 9h5M14 13h5'/%3E%3C/svg%3E");
+}
+
+
+/* iconos especiales de refuerzo */
+
+.cursos-programas .programa-tarjeta:last-child
+.programa-datos li:nth-child(2)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round'%3E%3Cpath d='M3 20h18M4 20v-6h4v6M10 20V9h4v11M16 20V4h4v16'/%3E%3C/svg%3E");
+
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linejoin='round'%3E%3Cpath d='M3 20h18M4 20v-6h4v6M10 20V9h4v11M16 20V4h4v16'/%3E%3C/svg%3E");
+}
+
+.cursos-programas .programa-tarjeta:last-child
+.programa-datos li:nth-child(3)::before {
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='12' cy='12' r='1.5'/%3E%3C/svg%3E");
+
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Ccircle cx='12' cy='12' r='1.5'/%3E%3C/svg%3E");
+}
+
+
+/* precios de los cursos */
+
+.programa-precios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: auto;
+    padding-top: 17px;
+}
+
+.programa-precio-anterior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.programa-precio-anterior del {
+    color: #777777;
+    font-size: 13px;
+}
+
+.programa-descuento {
+    padding: 5px 9px;
+
+    background-color: #D96913;
+    border-radius: 6px;
+
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.programa-precio {
+    display: block;
+
+    color: #0E4D3B;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 1.15;
+    text-align: center;
+}
+
+.programa-desde {
+    color: #0E4D3B;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* botones de conducción */
+
+.programa-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    width: 100%;
+    min-height: 48px;
+    margin-top: 5px;
+    padding: 12px 15px;
+
+    background-color: #F28C28;
+    border-radius: 25px;
+
+    color: #171717;
+    text-align: center;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.programa-boton:hover {
+    background-color: #FFAD4D;
+    transform: translateY(-2px);
+}
+
+
+/* capacitaciones en maquinaria */
+
+.cursos-maquinaria {
+    padding: 70px 24px 80px;
+    background-color: #F5F1E8;
+}
+
+.maquinaria-contenedor {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+
+/* encabezado de maquinaria */
+
+.maquinaria-encabezado {
+    max-width: 850px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.maquinaria-etiqueta {
+    margin: 0 0 12px;
+
+    color: #E66C12;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.maquinaria-encabezado h2 {
+    margin: 0 0 14px;
+
+    color: #0E4D3B;
+    font-size: clamp(30px, 3vw, 44px);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.maquinaria-encabezado > p:last-child {
+    margin: 0;
+
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* distribución de nueve máquinas */
+
+.maquinaria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* tarjetas de maquinaria */
+
+.maquinaria-tarjeta {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+
+    background-color: #FFFFFF;
+    border: 1px solid #DDD5C9;
+    border-radius: 19px;
+    overflow: hidden;
+
+    box-shadow: 0 6px 17px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.maquinaria-tarjeta:hover {
+    transform: translateY(-6px);
+    border-color: #F28C28;
+
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.13);
+}
+
+
+/* fotografías de maquinaria */
+
+.maquinaria-tarjeta > img {
+    display: block;
+    width: 100%;
+    height: 235px;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+.maquinaria-tarjeta:hover > img {
+    transform: scale(1.025);
+}
+
+
+/* información de maquinaria */
+
+.maquinaria-informacion {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 12px;
+
+    min-width: 0;
+    padding: 24px;
+}
+
+.maquinaria-categoria {
+    color: #E66C12;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+}
+
+.maquinaria-informacion h3 {
+    margin: 0;
+
+    color: #0E4D3B;
+    font-size: 23px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.maquinaria-informacion p {
+    margin: 0;
+
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* datos de las capacitaciones */
+
+.maquinaria-datos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 4px;
+}
+
+.maquinaria-datos span {
+    padding: 8px 10px;
+
+    background-color: #F5F1E8;
+    border-radius: 8px;
+
+    color: #33483C;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+
+/* precios de maquinaria */
+
+.maquinaria-precio {
+    display: block;
+
+    margin-top: auto;
+    padding-top: 15px;
+
+    color: #0E4D3B;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 1.2;
+}
+
+
+/* botones de maquinaria */
+
+.maquinaria-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 12px 16px;
+
+    background-color: #F28C28;
+    border-radius: 10px;
+
+    color: #202020;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.maquinaria-boton:hover {
+    background-color: #FFAD4D;
+    transform: translateY(-2px);
+}
+
+
+/* preguntas frecuentes */
+
+.cursos-faq {
+    padding: 65px 24px;
+    margin: 0;
+
+    background-color: #FFF9F2;
+}
+
+.faq-contenedor {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.faq-encabezado {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.faq-encabezado h2 {
+    margin: 0 0 12px;
+
+    color: #0E4D3B;
+    font-size: clamp(30px, 3vw, 42px);
+    font-weight: 800;
+}
+
+.faq-encabezado p {
+    margin: 0;
+
+    color: #333333;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* preguntas desplegables */
+
+.faq-pregunta {
+    margin-bottom: 12px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E7DCCE;
+    border-radius: 13px;
+    overflow: hidden;
+
+    transition: border-color 0.3s ease;
+}
+
+.faq-pregunta summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 20px 23px;
+
+    color: #222222;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    list-style: none;
+    cursor: pointer;
+}
+
+.faq-pregunta summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-pregunta summary::after {
+    content: "+";
+    flex-shrink: 0;
+
+    color: #0E4D3B;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.faq-pregunta[open] summary::after {
+    content: "−";
+}
+
+.faq-pregunta[open] {
+    border-color: #F28C28;
+}
+
+.faq-respuesta {
+    padding: 0 23px 22px;
+}
+
+.faq-respuesta p {
+    margin: 0;
+
+    color: #444444;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* banner final de agendamiento */
+
+.cursos-cta {
+    position: relative;
+
+    min-height: 150px;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 60, 42, 0.98) 0%,
+            rgba(3, 60, 42, 0.92) 48%,
+            rgba(3, 60, 42, 0.30) 100%
+        ),
+        url("../assets/img/footer-via.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.cursos-cta-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    max-width: 1350px;
+    min-height: 150px;
+    margin: 0 auto;
+    padding: 30px 24px;
+}
+
+.cursos-cta-icono {
+    flex-shrink: 0;
+    font-size: 43px;
+}
+
+.cursos-cta-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.cursos-cta-texto h2 {
+    margin: 0 0 8px;
+
+    color: #FFFFFF;
+    font-size: clamp(26px, 2.8vw, 38px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.cursos-cta-texto p {
+    margin: 0;
+
+    color: #FFFFFF;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* botón del banner */
+
+.cursos-cta-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-shrink: 0;
+
+    min-height: 55px;
+    padding: 15px 25px;
+
+    background-color: #F28C28;
+    border-radius: 30px;
+
+    color: #171717;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 800;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+
+    animation: cursos-pulso 3s ease-in-out infinite;
+}
+
+.cursos-cta-boton:hover {
+    background-color: #FFAD4D;
+    transform: translateY(-3px);
+}
+
+@keyframes cursos-pulso {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(242, 140, 40, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 0 0 10px rgba(242, 140, 40, 0);
+    }
+}
+
+
+/* modo oscuro de la página */
+
+body:has(#modo-oscuro:checked) main#contenido {
+    background-color: #151E1B;
+}
+
+
+/* modo oscuro de la portada */
+
+body:has(#modo-oscuro:checked) .portada-cursos {
+    background-color: #14231D;
+}
+
+body:has(#modo-oscuro:checked) .portada-cursos h1 {
+    color: #FFFFFF;
+}
+
+body:has(#modo-oscuro:checked) .portada-cursos h1 span {
+    color: #FFAA43;
+}
+
+body:has(#modo-oscuro:checked) .portada-cursos-descripcion {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .portada-cursos-beneficios > div {
+    background-color: #223A30;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .portada-cursos-beneficios span {
+    color: #FFFFFF;
+}
+
+body:has(#modo-oscuro:checked) .portada-boton-secundario {
+    color: #FFFFFF;
+    border-color: #FFAA43;
+}
+
+body:has(#modo-oscuro:checked) .portada-boton-secundario:hover {
+    background-color: #FFAA43;
+    color: #202020;
+}
+
+
+/* modo oscuro de los programas */
+
+body:has(#modo-oscuro:checked) .cursos-programas {
+    background-color: #151E1B;
+}
+
+body:has(#modo-oscuro:checked)
+.cursos-programas .programas-encabezado h2 {
+    color: #D5F0E6;
+}
+
+body:has(#modo-oscuro:checked)
+.cursos-programas .programas-encabezado > p:last-child {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .programa-filtro {
+    background-color: #263C33;
+    color: #E4EEE9;
+    border-color: #54796A;
+}
+
+body:has(#modo-oscuro:checked)
+.programas-filtros input:checked + .programa-filtro {
+    background-color: #F28C28;
+    color: #171717;
+    border-color: #F28C28;
+}
+
+body:has(#modo-oscuro:checked) .programa-tarjeta {
+    background-color: #21322C;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .programa-informacion h3,
+body:has(#modo-oscuro:checked) .programa-precio,
+body:has(#modo-oscuro:checked) .programa-desde {
+    color: #D5F0E6;
+}
+
+body:has(#modo-oscuro:checked) .programa-descripcion {
+    color: #F1F5F2;
+}
+
+body:has(#modo-oscuro:checked) .programa-datos li {
+    background-color: #30473F;
+    color: #F1F5F2;
+}
+
+body:has(#modo-oscuro:checked) .programa-datos li::before {
+    background-color: #F7A33D;
+}
+
+body:has(#modo-oscuro:checked) .programa-precio-anterior del {
+    color: #BFCFC7;
+}
+
+
+/* modo oscuro de maquinaria */
+
+body:has(#modo-oscuro:checked) .cursos-maquinaria {
+    background-color: #14231D;
+}
+
+body:has(#modo-oscuro:checked) .maquinaria-encabezado h2 {
+    color: #E8F1EB;
+}
+
+body:has(#modo-oscuro:checked)
+.maquinaria-encabezado > p:last-child {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .maquinaria-tarjeta {
+    background-color: #223A30;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .maquinaria-informacion h3,
+body:has(#modo-oscuro:checked) .maquinaria-precio {
+    color: #E8F1EB;
+}
+
+body:has(#modo-oscuro:checked) .maquinaria-informacion p {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .maquinaria-datos span {
+    background-color: #30473F;
+    color: #F1F5F2;
+}
+
+
+/* modo oscuro de preguntas frecuentes */
+
+body:has(#modo-oscuro:checked) .cursos-faq {
+    background-color: #151E1B;
+}
+
+body:has(#modo-oscuro:checked) .faq-encabezado h2 {
+    color: #D5F0E6;
+}
+
+body:has(#modo-oscuro:checked) .faq-encabezado p {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .faq-pregunta {
+    background-color: #2B4438;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .faq-pregunta summary,
+body:has(#modo-oscuro:checked) .faq-respuesta p {
+    color: #F1F5F2;
+}
+
+body:has(#modo-oscuro:checked) .faq-pregunta summary::after {
+    color: #F28C28;
+}
+
+body:has(#modo-oscuro:checked) .faq-pregunta[open] {
+    border-color: #F28C28;
+}
+
+
+/* adaptación para pantallas medianas */
+
+@media (max-width: 1050px) {
+
+    .portada-cursos-contenedor {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .portada-cursos-imagen img {
+        height: 370px;
+    }
+
+    .cursos-programas .programas-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .maquinaria-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+
+/* adaptación para tablets */
+
+@media (max-width: 760px) {
+
+    .portada-cursos {
+        padding: 45px 20px;
+    }
+
+    .portada-cursos h1 {
+        font-size: clamp(32px, 5.5vw, 42px);
+    }
+
+    .portada-cursos-imagen img {
+        height: 330px;
+    }
+
+    .cursos-programas {
+        padding: 50px 20px 60px;
+    }
+
+    .cursos-maquinaria {
+        padding: 55px 20px 65px;
+    }
+
+    .cursos-faq {
+        padding: 55px 20px;
+    }
+
+    .cursos-cta-contenedor {
+        flex-wrap: wrap;
+    }
+
+    .cursos-cta-boton {
+        width: 100%;
+    }
+}
+
+
+/* adaptación para celulares */
+
+@media (max-width: 560px) {
+
+    .portada-cursos {
+        padding: 35px 18px 45px;
+    }
+
+    .portada-cursos h1 {
+        font-size: 32px;
+    }
+
+    .portada-cursos-descripcion {
+        font-size: 15px;
+    }
+
+    .portada-cursos-botones {
+        flex-direction: column;
+    }
+
+    .portada-boton-principal,
+    .portada-boton-secundario {
+        width: 100%;
+    }
+
+    .portada-cursos-beneficios {
+        grid-template-columns: 1fr;
+    }
+
+    .portada-cursos-imagen {
+        border-radius: 40px 14px 14px 14px;
+    }
+
+    .portada-cursos-imagen img {
+        height: 270px;
+    }
+
+
+    /* programas en celulares */
+
+    .cursos-programas {
+        padding: 45px 16px 55px;
+    }
+
+    .cursos-programas .programas-encabezado h2 {
+        font-size: 30px;
+    }
+
+    .cursos-programas .programas-encabezado > p:last-child {
+        font-size: 14px;
+    }
+
+    .programas-filtros {
+        gap: 8px;
+    }
+
+    .programa-filtro {
+        min-height: 40px;
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    .cursos-programas .programas-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .programa-imagen {
+        height: 220px;
+    }
+
+    .programa-informacion {
+        padding: 21px;
+    }
+
+    .programa-informacion h3 {
+        font-size: 22px;
+    }
+
+    .programa-precio {
+        font-size: 27px;
+    }
+
+
+    /* maquinaria en celulares */
+
+    .cursos-maquinaria {
+        padding: 50px 16px 60px;
+    }
+
+    .maquinaria-encabezado h2 {
+        font-size: 30px;
+    }
+
+    .maquinaria-encabezado > p:last-child {
+        font-size: 14px;
+    }
+
+    .maquinaria-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .maquinaria-tarjeta > img {
+        height: 220px;
+    }
+
+    .maquinaria-informacion {
+        padding: 21px;
+    }
+
+    .maquinaria-informacion h3 {
+        font-size: 22px;
+    }
+
+    .maquinaria-precio {
+        font-size: 27px;
+    }
+
+
+    /* preguntas frecuentes en celulares */
+
+    .cursos-faq {
+        padding: 45px 16px;
+    }
+
+    .faq-encabezado h2 {
+        font-size: 30px;
+    }
+
+    .faq-pregunta summary {
+        padding: 17px;
+        font-size: 14px;
+    }
+
+    .faq-respuesta {
+        padding: 0 17px 18px;
+    }
+
+    .faq-respuesta p {
+        font-size: 13px;
+    }
+
+
+    /* banner final en celulares */
+
+    .cursos-cta-contenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .cursos-cta-icono {
+        font-size: 36px;
+    }
+
+    .cursos-cta-texto h2 {
+        font-size: 29px;
+    }
+
+    .cursos-cta-texto p {
+        font-size: 14px;
+    }
+
+    .cursos-cta-boton {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+
+/* accesibilidad */
+
+main#contenido a:focus-visible,
+main#contenido summary:focus-visible {
+    outline: 3px solid #F28C28;
+    outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portada-cursos-etiqueta,
+    .portada-cursos h1,
+    .portada-cursos h1 span,
+    .portada-cursos-descripcion,
+    .portada-cursos-botones,
+    .portada-cursos-beneficios,
+    .portada-cursos-imagen,
+    .portada-cursos-imagen img,
+    .cursos-cta-boton {
+        animation: none;
+    }
+
+    .portada-cursos h1 span {
+        clip-path: none;
+    }
+
+    .programa-tarjeta,
+    .programa-imagen img,
+    .programa-filtro,
+    .programa-boton,
+    .maquinaria-tarjeta,
+    .maquinaria-tarjeta > img,
+    .maquinaria-boton,
+    .portada-boton-principal,
+    .portada-boton-secundario {
+        transition: none;
+    }
+
+    .programa-tarjeta:hover,
+    .programa-tarjeta:hover .programa-imagen img,
+    .programa-filtro:hover,
+    .programa-boton:hover,
+    .maquinaria-tarjeta:hover,
+    .maquinaria-tarjeta:hover > img,
+    .maquinaria-boton:hover {
+        transform: none;
+    }
+}
+
+
+/* ==========================================
+   TABLA COMPARATIVA DE CURSOS
+   ========================================== */
+
+.comparativa-cursos {
+    padding: 60px 24px;
+    background-color: #F5F1E8;
+}
+
+.comparativa-contenedor {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ENCABEZADO */
+
+.comparativa-encabezado {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.comparativa-etiqueta {
+    color: #E66C12;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.comparativa-encabezado h2 {
+    margin: 10px 0 14px;
+    color: #0E4D3B;
+    font-size: clamp(30px, 3vw, 44px);
+    font-weight: 800;
+}
+
+.comparativa-encabezado > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* CONTENEDOR DE LA TABLA */
+
+.comparativa-desplazamiento {
+    overflow-x: auto;
+    background-color: #FFFFFF;
+    border: 1px solid #DDD5C9;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* TABLA */
+
+.comparativa-tabla {
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* ENCABEZADOS */
+
+.comparativa-tabla th {
+    padding: 21px 20px;
+    background-color: #0E4D3B;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* CELDAS */
+
+.comparativa-tabla td {
+    padding: 20px;
+    border-bottom: 1px solid #E8DED2;
+    color: #29372F;
+    font-size: 14px;
+}
+
+.comparativa-tabla tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* FRANJAS ALTERNADAS */
+
+.comparativa-tabla tbody tr:nth-child(even) {
+    background-color: #FAF7F1;
+}
+
+/* EFECTO HOVER */
+
+.comparativa-tabla tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.comparativa-tabla tbody tr:hover {
+    background-color: #FFF0DC;
+}
+
+/* PRECIOS */
+
+.comparativa-tabla .comparativa-precio {
+    color: #0E4D3B;
+    font-size: 16px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+/* COMBO DESTACADO */
+
+.comparativa-tabla .comparativa-destacado {
+    background-color: #E8F1E6;
+}
+
+.comparativa-destacado td:first-child {
+    font-weight: 800;
+}
+
+/* BOTONES */
+
+.comparativa-tabla td a {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #F28C28;
+    border-radius: 20px;
+    color: #171717;
+    font-size: 12px;
+    font-weight: 800;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.comparativa-tabla td a:hover {
+    background-color: #FFAD4D;
+}
+
+/* NOTA */
+
+.comparativa-nota {
+    margin: 20px 0 0;
+    text-align: center;
+    color: #666666;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+
+    .comparativa-cursos {
+        padding: 45px 12px;
+    }
+
+    .comparativa-encabezado h2 {
+        font-size: 30px;
+    }
+
+    .comparativa-encabezado > p:last-child {
+        font-size: 14px;
+    }
+}
+
+/* MODO OSCURO */
+
+body:has(#modo-oscuro:checked) .comparativa-cursos {
+    background-color: #14231D;
+}
+
+body:has(#modo-oscuro:checked) .comparativa-encabezado h2,
+body:has(#modo-oscuro:checked) .comparativa-encabezado > p:last-child {
+    color: #E4EEE9;
+}
+
+body:has(#modo-oscuro:checked) .comparativa-desplazamiento {
+    background-color: #223A30;
+    border-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .comparativa-tabla td {
+    color: #E4EEE9;
+    border-bottom-color: #49685B;
+}
+
+body:has(#modo-oscuro:checked) .comparativa-tabla tbody tr:nth-child(even) {
+    background-color: #294438;
+}
+
+body:has(#modo-oscuro:checked) .comparativa-tabla tbody tr:hover {
+    background-color: #365445;
+}
+
+body:has(#modo-oscuro:checked) .comparativa-tabla .comparativa-precio {
+    color: #FFAA43;
+}
+
+body:has(#modo-oscuro:checked) .comparativa-tabla .comparativa-destacado {
+    background-color: #365445;
+}
+
+body:has(#modo-oscuro:checked) .comparativa-nota {
+    color: #E4EEE9;
+}
+
+/* MOVIMIENTO REDUCIDO */
+
+@media (prefers-reduced-motion: reduce) {
+    .comparativa-tabla tbody tr,
+    .comparativa-tabla td a {
+        transition: none;
+    }
+}

@@ -1,0 +1,202 @@
+
+/*enlace del menu*/
+.menu a {
+    color: var(--color-texto);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a[aria-current="page"] {
+    color: var(--color-secundario);
+}
+
+.menu a[aria-current="page"] {
+    border-bottom: 3px solid var(--color-acento);
+}
+
+/*botones*/
+.boton-agendar,
+.boton-primario,
+.boton-secundario {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: var(--radio-borde);
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.boton-agendar,
+.boton-primario {
+    background-color: var(--color-acento);
+    color: #202020;
+}
+
+.boton-secundario {
+    border: 2px solid var(--color-primario);
+    color: var(--color-primario);
+}
+
+.boton-agendar:hover,
+.boton-primario:hover {
+    background-color: #D97413;
+    transform: translateY(-2px);
+}
+
+.boton-secundario:hover {
+    background-color: #E0EAE3;
+}
+
+/*contenedor de los botones*/
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+/*DETALLES VISUALES DEL HERO*/
+.hero-etiqueta {
+    color: #F26812;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.texto-resaltado {
+    background-color: #F5B65E;
+    padding: 0 5px;
+    border-radius: 3px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+/* ICONOS DE LOS BENEFICIOS */
+
+.icono-beneficio {
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: var(--color-primario);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.enlace-programas {
+    color: #E66C12;
+    font-weight: 700;
+    font-size: 16px;
+    border-bottom: 2px solid #E66C12;
+    padding-bottom: 5px;
+}
+
+
+
+/* ICONOS DE REDES SOCIALES */
+
+.footer-redes {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-redes img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+
+
+/* MENÚ MÓVIL */
+
+.nav-movil {
+    display: none;
+}
+
+.nav-movil summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid var(--color-primario);
+    border-radius: 8px;
+
+    cursor: pointer;
+    list-style: none;
+}
+
+.nav-movil summary::-webkit-details-marker {
+    display: none;
+}
+
+.nav-movil summary svg {
+    display: block;
+    width: 25px;
+    height: 25px;
+
+    fill: none;
+    stroke: var(--color-primario);
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+
+/*contenedor del menu desplegable*/
+.nav-movil nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 100;
+
+    width: min(280px, 85vw);
+    padding: 8px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #DDD5C9;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+
+/*LISTA DEL MENÚ MÓVIL*/
+.nav-movil-lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-movil-lista li {
+    list-style: none;
+}
+
+
+/*enlaces para dispositivos moviles*/
+.nav-movil-lista a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 14px;
+    color: var(--color-primario);
+    border-radius: 6px;
+    font-size: 15px;
+    line-height: 1.3;
+}
+.nav-movil-lista a:hover,
+.nav-movil-lista a[aria-current="page"] {
+    background-color: var(--color-fondo);
+}
+
+.nav-movil-lista a:focus-visible {
+    outline: 3px solid var(--color-acento);
+    outline-offset: -3px;
+}
+
+

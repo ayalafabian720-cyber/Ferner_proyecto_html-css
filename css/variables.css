@@ -1,0 +1,18 @@
+
+:root {
+    /*Colores de FERNER*/
+    --color-primario: #0E4D3B;
+    --color-secundario: #1F6F5C;
+    --color-acento: #F28C28;
+    --color-fondo: #F5F1E8;
+    --color-texto: #2E2E2E;
+    --color-blanco: #FFFFFF;
+
+    /*tipografía*/
+    --fuente-principal: Arial, Helvetica, sans-serif;
+
+    /*medidas reutilizables*/
+    --ancho-maximo: 1200px;
+    --radio-borde: 8px;
+    --espacio-base: 16px;
+}
